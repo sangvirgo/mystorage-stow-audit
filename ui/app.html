@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="vi" data-mode="fixed" data-state="welcome">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STOW (responsive fix prototype)</title>
+<!--
+  A rebuild of the Stow chat screen from screenshots and measurements, not Stow's code.
+  ?mode=original  approximates the behaviour measured on stow.mystorage.vn: content centred in a fixed-height area that
+                  cannot scroll, composer laid over it (heading clipped and shortcuts hidden on small screens),
+                  attachment rows squeezing the chat, closed menu left in the tab order. Same kind of failure, not Stow's CSS.
+  ?mode=fixed     same look, with the fixes. ?state=welcome | chat
+-->
+<style>
+  :root {
+    --bg:#fbfcfe; --panel:#fff; --text:#1a2233; --muted:#6b7689; --line:#dfe4ec; --brand:#3a75c4; --brand-dark:#1f5fbf;
+    --bubble:#2f6fbd; --ok:#1f8f5f; --header-h:57px;
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--text); font:15px/1.5 "Noto Sans","Segoe UI",system-ui,sans-serif; -webkit-text-size-adjust:100%; }
+  button, textarea { font:inherit; color:inherit; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  :focus-visible { outline:3px solid var(--brand-dark); outline-offset:2px; }
+
+  /* ---------- shared look ---------- */
+  .top { height:var(--header-h); display:flex; align-items:center; justify-content:space-between; padding:0 16px; background:var(--panel); border-bottom:1px solid var(--line); }
+  .icon-btn, .flag { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; background:none; border:0; border-radius:10px; cursor:pointer; }
+  .flag { border:1px solid var(--line); background:var(--panel); width:40px; height:40px; }
+  .flag i { display:block; width:20px; height:14px; background:#c8102e; position:relative; border-radius:2px; }
+  .flag i::after { content:"★"; color:#ffde00; font-size:10px; line-height:14px; position:absolute; inset:0; text-align:center; }
+  .logo { font:800 22px/1 "Roboto Condensed","Arial Narrow","Noto Sans",sans-serif; letter-spacing:.14em; color:var(--brand); text-align:center; }
+  .logo small { display:block; font:600 6px/1 "Noto Sans",sans-serif; letter-spacing:.3em; color:var(--muted); margin-top:3px; }
+
+  .stage { background:var(--bg); }
+  .hero { display:flex; flex-direction:column; align-items:center; text-align:center; width:min(100%, 620px); padding:0 24px; }
+  .hex { width:84px; height:84px; margin-bottom:16px; }
+  .hero h2 { margin:0 0 12px; font:800 40px/1.1 "Roboto Condensed","Arial Narrow","Noto Sans",sans-serif; font-stretch:condensed; }
+  .hero p { margin:0 0 20px; color:var(--muted); max-width:460px; font-size:14.5px; line-height:1.55; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; width:100%; }
+  .chip { flex:1 1 150px; min-width:0; min-height:46px; padding:9px 13px; text-align:left; background:var(--panel); border:1px solid var(--line); border-radius:14px; cursor:pointer; }
+  .hint { margin:16px 0 0; font-size:12px; color:#8b94a5; }
+
+  .dock { width:100%; padding:8px 16px calc(6px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); }
+  .dock-inner { width:min(100%, 720px); margin:0 auto; }
+  .composer { background:var(--panel); border:1px solid var(--line); border-radius:28px; padding:12px 14px 8px; box-shadow:0 6px 22px rgba(30,60,120,.08); }
+  .composer textarea { display:block; width:100%; min-height:44px; max-height:120px; resize:none; border:0; outline:0; background:transparent; }
+  .composer textarea::placeholder { color:#98a1b2; }
+  .tools { display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:6px; }
+  .tool { display:inline-flex; align-items:center; justify-content:center; min-width:44px; height:44px; background:none; border:0; border-radius:22px; color:var(--brand); cursor:pointer; }
+  .live { font-weight:700; font-size:13px; gap:6px; padding:0 8px; }
+  .send { width:44px; height:44px; border:0; border-radius:50%; background:var(--brand); color:#fff; cursor:pointer; }
+  .send:disabled { display:none; }  /* like Stow: no send button until there is text */
+  .send.stop { background:#1a2233; }
+  .disclaimer { margin:6px 0 0; text-align:center; font-size:11px; color:#8b94a5; }
+
+  .chat { width:min(100%, 720px); padding:16px; display:flex; flex-direction:column; gap:14px; }
+  .bubble { align-self:flex-end; max-width:85%; background:var(--bubble); color:#fff; padding:9px 14px; border-radius:16px 16px 4px 16px; }
+  .thinking { display:flex; align-items:center; gap:8px; color:var(--muted); }
+  .thinking svg { width:18px; height:18px; }
+  .demo-note { align-self:flex-start; max-width:85%; background:#fff3d6; color:#6b4a00; border:1px solid #f0d9a0; border-radius:12px; padding:8px 12px; font-size:14px; }
+  .item-card { display:flex; align-items:center; gap:10px; padding:8px 12px; background:var(--panel); border:1px solid var(--line); border-radius:12px; font-size:14px; }
+  .item-card b { flex:1; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pill { background:#e5f0fb; color:var(--brand-dark); border-radius:999px; padding:1px 10px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .attach { display:flex; flex-direction:column; gap:8px; padding:10px 12px; background:#f3f6fb; border:1px solid var(--line); border-radius:14px; }
+  .attach-head { display:flex; justify-content:space-between; font-size:13px; }
+  .attach-head .ready { color:var(--ok); }
+  .thumb { width:64px; height:64px; border-radius:10px; border:1px solid var(--line); background:linear-gradient(90deg,#fde9a8 33%,#f9b6c0 33% 66%,#b9dcf8 66%); position:relative; }
+  .thumb button { position:absolute; top:-6px; right:-6px; width:22px; height:22px; border-radius:50%; border:0; background:#3b4658; color:#fff; font-size:12px; cursor:pointer; }
+  .compact-attach { display:none; }
+
+  /* ---------- drawer ---------- */
+  #drawer { position:fixed; top:0; bottom:0; left:0; width:min(272px, 86vw); background:var(--panel); border-right:1px solid var(--line); padding:12px 16px; transform:translateX(-100%); transition:transform .2s; z-index:20; overflow-y:auto; }
+  #drawer.open { transform:none; }
+  #scrim { position:fixed; inset:0; background:rgba(20,30,50,.35); opacity:0; pointer-events:none; transition:opacity .2s; z-index:10; }
+  #scrim.open { opacity:1; pointer-events:auto; }
+  .drawer-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+  .new-chat { display:flex; gap:8px; align-items:center; width:100%; padding:10px 12px; background:none; border:1px solid var(--line); border-radius:10px; cursor:pointer; }
+  .recent { margin:16px 0 4px; font-size:12px; color:var(--muted); } .empty { font-size:13px; color:var(--muted); margin:0; }
+
+  /* ---------- ORIGINAL: approximates the behaviour measured on stow.mystorage.vn ---------- */
+  html[data-mode="original"] .app { position:relative; height:100vh; overflow:hidden; }
+  html[data-mode="original"] .top { position:absolute; inset:0 0 auto 0; z-index:2; }
+  html[data-mode="original"] .stage { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; }
+  html[data-mode="original"] .dock { position:absolute; inset:auto 0 0 0; z-index:2; }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .stage { justify-content:flex-start; padding-top:var(--header-h); }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .chat { flex:1; overflow-y:auto; }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .stage { bottom:0; padding-bottom:var(--dock-h, 300px); }
+
+  /* ---------- FIXED ---------- */
+  html[data-mode="fixed"] .app { height:100vh; height:100dvh; display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+  html[data-mode="fixed"] .stage { overflow-y:auto; overscroll-behavior:contain; display:flex; flex-direction:column; align-items:center; padding:16px 0; }
+  /* margin-block:auto centres the content only when it fits; when it does not, it starts at the top and scrolls */
+  html[data-mode="fixed"] .hero { margin-block:auto; }
+  html[data-mode="fixed"] .chat { margin-block:0 auto; }
+  html[data-mode="fixed"] .chat, html[data-mode="fixed"] .bubble { min-width:0; overflow-wrap:anywhere; }
+  html[data-mode="fixed"] .composer textarea { min-width:0; }
+  html[data-mode="fixed"] .attach-block[hidden] { display:none; }
+  html[data-mode="fixed"] .item-card, html[data-mode="fixed"] .attach { display:none; }
+  html[data-mode="fixed"] .compact-attach { display:flex; align-items:center; gap:8px; overflow-x:auto; padding:0 0 8px; }
+  html[data-mode="fixed"] .compact-attach .thumb { width:36px; height:36px; flex:none; }
+  html[data-mode="fixed"] .compact-attach .pill, html[data-mode="fixed"] .compact-attach .file { flex:none; }
+  html[data-mode="fixed"] .file { display:inline-flex; align-items:center; gap:6px; background:#f3f6fb; border:1px solid var(--line); border-radius:999px; padding:2px 10px 2px 4px; font-size:13px; min-height:44px; }
+  html[data-mode="fixed"] .file .ready { color:var(--ok); }
+  @media (max-height:640px), (max-width:360px) {
+    html[data-mode="fixed"] .hex { display:none; }
+    html[data-mode="fixed"] .hero h2 { font-size:28px; }
+    html[data-mode="fixed"] .hero p { margin-bottom:14px; }
+    html[data-mode="fixed"] .hint { display:none; }
+  }
+  @media (max-width:520px) { .hero h2 { font-size:34px; line-height:1.06; } .hero { padding:0 20px; } }
+  @media (max-width:300px) { .hero { padding:0 12px; } .dock { padding-inline:10px; } .composer { padding-inline:10px; } }
+  /* Fixed: short landscape screens get a one-row composer and a slimmer header so the chat keeps room. */
+  @media (max-height:420px) {
+    html[data-mode="fixed"] { --header-h:48px; }
+    html[data-mode="fixed"] .disclaimer { display:none; }
+    html[data-mode="fixed"] .composer { display:flex; align-items:flex-end; gap:6px; padding:4px 10px; border-radius:24px; }
+    html[data-mode="fixed"] .composer textarea { flex:1; min-height:44px; align-self:center; }
+    html[data-mode="fixed"] .tools { flex-wrap:nowrap; }
+    html[data-mode="fixed"] .tool.live { display:none; }
+  }
+
+  html[data-state="welcome"] .chat, html[data-state="welcome"] .compact-attach, html[data-state="welcome"] .attach-block, html[data-state="typed"] .attach-block { display:none; }
+  html[data-state="chat"] .hero, html[data-state="typed"] .hero { display:none; }
+  /* While a reply is being generated Stow shows only "+" and the stop button. */
+  html[data-state="chat"] .tool:not(:first-child) { display:none; }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <button class="icon-btn" id="menu-btn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <div class="logo" role="img" aria-label="STOW by MyStorage">STOW<small>BY MYSTORAGE</small></div>
+    <button class="flag" type="button" aria-label="Cờ Tiếng Việt"><i></i></button>
+  </header>
+
+  <main class="stage" id="stage" tabindex="-1">
+    <section class="hero" id="hero" aria-labelledby="hello">
+      <svg class="hex" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 6l29 17v34L40 74 11 57V23z" fill="none" stroke="#3a75c4" stroke-width="7" stroke-linejoin="round"/><path d="M26 30l26 10-12 4-4 12z" fill="#3a75c4"/></svg>
+      <h2 id="hello">Xin chào — em là STOW, trợ lý bán hàng AI của MyStorage.</h2>
+      <p>Mình có thể hỏi em về MyStorage, các dịch vụ hoặc giá thuê. Có thể chat bằng văn bản, hoặc chuyển sang live (thoại hoặc video) bất cứ lúc nào.</p>
+      <div class="chips">
+        <button class="chip" type="button">Giới thiệu về MyStorage</button>
+        <button class="chip" type="button">STOW có những dịch vụ gì?</button>
+        <button class="chip" type="button">Báo giá lưu trữ giúp em</button>
+      </div>
+      <p class="hint">Gõ bên dưới · chạm mic để nói · hoặc mở camera để live</p>
+    </section>
+
+    <div class="chat" id="log" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Cuộc trò chuyện">
+      <div class="bubble">Giới thiệu về MyStorage</div>
+      <div class="thinking"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 6l29 17v34L40 74 11 57V23z" fill="none" stroke="#3a75c4" stroke-width="9"/></svg><span>STOW is thinking…</span></div>
+    </div>
+  </main>
+
+  <footer class="dock" id="dock">
+    <div class="dock-inner">
+      <div class="attach-block">
+        <div class="item-card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a75c4" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/></svg><b>Cabin Suitcase (20 inch), Medium Suitcase (24 inch)…</b><span class="pill">3 đồ vật</span></div>
+        <div class="attach"><div class="attach-head"><span>1 image attached</span><span class="ready">✓ Ready</span></div><div class="thumb"><button type="button" aria-label="Gỡ ảnh đính kèm">✕</button></div></div>
+        <div class="compact-attach"><span class="pill">3 đồ vật</span><span class="file"><span class="thumb" aria-hidden="true"></span>1 ảnh <span class="ready">✓ Sẵn sàng</span></span></div>
+      </div>
+      <form class="composer" id="composer" onsubmit="return false">
+        <label class="sr-only" for="msg">Hỏi về kho, kích thước, hoặc giá thuê</label>
+        <textarea id="msg" rows="1" placeholder="Hỏi về kho, kích thước, hoặc giá thuê…"></textarea>
+        <div class="tools">
+          <button class="tool" type="button" aria-label="Đính kèm ảnh"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button class="tool" type="button" aria-label="Đọc để nhập"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></button>
+          <button class="tool live" type="button" aria-label="Bắt đầu trò chuyện thoại"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>Nói trực tiếp</button>
+          <button class="send" id="send" type="submit" aria-label="Gửi" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </form>
+      <p class="disclaimer">STOW có thể nhầm. Anh/chị kiểm tra giá trước khi đặt nhé.</p>
+    </div>
+  </footer>
+
+  <div id="scrim"></div>
+  <aside id="drawer" aria-label="Menu điều hướng">
+    <div class="drawer-head"><div class="logo" role="img" aria-label="STOW">STOW</div><button class="icon-btn" id="close-btn" type="button" aria-label="Đóng menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <button class="new-chat" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Cuộc trò chuyện mới</button>
+    <p class="recent">Gần đây</p><p class="empty">Chưa có cuộc trò chuyện nào.</p>
+  </aside>
+</div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const root = document.documentElement;
+  root.dataset.mode = params.get('mode') === 'original' ? 'original' : 'fixed';
+  root.dataset.state = params.get('state') === 'chat' ? 'chat' : 'welcome';
+
+  const $ = (id) => document.getElementById(id);
+  const drawer = $('drawer'), scrim = $('scrim'), menuBtn = $('menu-btn');
+  const fixed = root.dataset.mode === 'fixed';
+  if (fixed) {
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', 'true');
+    const remove = document.createElement('button');
+    remove.type = 'button'; remove.className = 'icon-btn'; remove.textContent = '✕';
+    remove.setAttribute('aria-label', 'Gỡ ảnh đính kèm');
+    remove.onclick = () => { document.querySelector('.attach-block').hidden = true; $('msg').focus(); };
+    document.querySelector('.compact-attach').append(remove);
+    document.querySelectorAll('.tool, .flag').forEach(button => {
+      button.disabled = true;
+      button.title = 'Không có trong bản demo bố cục';
+    });
+  }
+
+  // Original behaviour leaves the closed drawer focusable (measured on stow.mystorage.vn).
+  // The fix marks it inert and aria-hidden while closed.
+  function setDrawer(open) {
+    drawer.classList.toggle('open', open);
+    scrim.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    if (fixed) {
+      document.querySelectorAll('.top, .stage, .dock').forEach(el => { el.inert = open; });
+      if (!open) menuBtn.focus();
+      drawer.inert = !open; drawer.setAttribute('aria-hidden', String(!open));
+    }
+    if (open && fixed) $('close-btn').focus();
+    if (!open && fixed) menuBtn.focus();
+  }
+  if (fixed) { drawer.inert = true; drawer.setAttribute('aria-hidden', 'true'); }
+  else { menuBtn.removeAttribute('aria-expanded'); menuBtn.removeAttribute('aria-controls'); $('msg').removeAttribute('id'); document.querySelector('label.sr-only').remove(); $('log').removeAttribute('role'); $('log').removeAttribute('aria-live'); }
+  menuBtn.onclick = () => setDrawer(true);
+  $('close-btn').onclick = () => setDrawer(false);
+  scrim.onclick = () => setDrawer(false);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false); });
+  drawer.addEventListener('keydown', e => {
+    if (!fixed || e.key !== 'Tab') return;
+    const buttons = [...drawer.querySelectorAll('button:not(:disabled)')];
+    const first = buttons[0], last = buttons.at(-1);
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  const msg = document.querySelector('textarea'), send = $('send');
+  const sendIcon = send.innerHTML;
+  function resetSend() { send.classList.remove('stop'); send.setAttribute('aria-label', 'Gửi'); send.innerHTML = sendIcon; send.disabled = !msg.value.trim(); }
+  msg.addEventListener('input', () => { send.disabled = root.dataset.state !== 'chat' && msg.value.trim() === ''; });
+  if (fixed) document.querySelector('.new-chat').onclick = () => {
+    root.dataset.state = 'welcome'; msg.value = ''; $('log').replaceChildren();
+    document.querySelector('.attach-block').hidden = true; resetSend(); setDrawer(false); msg.focus();
+  };
+  // This page is a layout demo: "Gửi" only shows the message locally. Nothing is sent anywhere.
+  $('composer').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (fixed && root.dataset.state === 'chat') {
+      root.dataset.state = 'typed'; document.querySelector('.thinking')?.remove(); resetSend(); msg.focus(); return;
+    }
+    const text = msg.value.trim();
+    if (!text || root.dataset.state === 'chat') return;
+    const log = $('log');
+    if (root.dataset.state === 'welcome') { root.dataset.state = 'typed'; log.replaceChildren(); }
+    const bubble = document.createElement('div'); bubble.className = 'bubble'; bubble.textContent = text;
+    const note = document.createElement('div'); note.className = 'demo-note'; note.textContent = 'Bản demo bố cục: tin nhắn không được gửi tới Stow.';
+    log.append(bubble, note);
+    msg.value = ''; send.disabled = true;
+    $('stage').scrollTop = $('stage').scrollHeight;
+  });
+  document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => { msg.value = c.textContent; send.disabled = false; msg.focus(); }));
+
+  if (root.dataset.state === 'chat') { send.classList.add('stop'); send.disabled = false; send.setAttribute('aria-label', 'Dừng'); send.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="2" fill="#fff"/></svg>'; }
+  // Original mode: the chat area is whatever is left above the stacked dock.
+  if (!fixed && root.dataset.state === 'chat') { const setDock = () => root.style.setProperty('--dock-h', $('dock').offsetHeight + 'px'); setDock(); addEventListener('resize', setDock); }
+</script>
+</body>
+</html>

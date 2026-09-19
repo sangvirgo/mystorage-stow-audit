@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stow responsive fix: before and after</title>
+<style>
+  :root { --bg:#f3f5f9; --panel:#fff; --text:#1b2330; --muted:#5b6678; --line:#d4dae5; --accent:#1f5fbf; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161d; --panel:#1a2029; --text:#e6eaf0; --muted:#9aa5b6; --line:#2d3646; --accent:#6ea2f5; } }
+  * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui, sans-serif; }
+  header, .controls, .note { max-width:1100px; margin:0 auto; padding:12px 16px; }
+  h1 { margin:0 0 4px; font-size:1.4rem; } .muted { color:var(--muted); font-size:.9rem; }
+  .controls { display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; }
+  fieldset { border:1px solid var(--line); border-radius:8px; padding:6px 10px; margin:0; background:var(--panel); } legend { font-size:.8rem; color:var(--muted); padding:0 4px; }
+  label { margin-right:10px; white-space:nowrap; } select { font:inherit; color:var(--text); background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:4px 8px; }
+  :focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .stage { display:flex; justify-content:center; padding:8px 16px 24px; overflow-x:auto; }
+  iframe { border:1px solid var(--line); border-radius:6px; background:#fff; max-width:100%; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Stow chat screen: original behaviour vs responsive fix</h1>
+  <p class="muted">A rebuild of the Stow welcome and conversation screens from screenshots and measurements. "Original behaviour" approximates the failures measured on stow.mystorage.vn (same kind of failure, not Stow's own CSS). "Fixed" is the same look with the fixes. Pick a small device to see the difference.</p>
+</header>
+<form class="controls" aria-label="Preview options" onsubmit="return false">
+  <fieldset><legend>Behaviour</legend><label><input type="radio" name="mode" value="original"> Original</label><label><input type="radio" name="mode" value="fixed" checked> Fixed</label></fieldset>
+  <fieldset><legend>Screen</legend><label><input type="radio" name="state" value="welcome" checked> Welcome</label><label><input type="radio" name="state" value="chat"> Conversation with image</label></fieldset>
+  <label>Device <select id="device">
+    <option value="320x568" selected>320 × 568 (small phone, where Stow breaks)</option>
+    <option value="280x480">280 × 480</option><option value="360x640">360 × 640</option><option value="390x844">390 × 844</option>
+    <option value="414x736">414 × 736</option><option value="568x320">568 × 320 (landscape)</option><option value="844x390">844 × 390 (landscape)</option>
+    <option value="768x1024">768 × 1024 (tablet)</option><option value="1100x640">1100 × 640 (desktop)</option>
+  </select></label>
+  <a id="open" href="app.html" target="_blank" rel="noopener">Open on its own page</a>
+</form>
+<div class="stage"><iframe id="frame" title="Stow chat screen preview" width="320" height="568"></iframe></div>
+<p class="note muted">Checks (both modes, nine viewport sizes, keyboard order, labels): <a href="layout-results.md">layout-results.md</a>. Regenerate with <code>node prototype/ui/check-layout.mjs</code>.</p>
+<script>
+  const frame = document.getElementById('frame'), device = document.getElementById('device'), open = document.getElementById('open');
+  const val = (n) => document.querySelector('input[name=' + n + ']:checked').value;
+  function update() {
+    const [w, h] = device.value.split('x').map(Number);
+    frame.width = w; frame.height = h;
+    const q = '?mode=' + val('mode') + '&state=' + val('state');
+    frame.src = 'app.html' + q; open.href = 'app.html' + q;
+  }
+  document.querySelectorAll('input, select').forEach((e) => e.addEventListener('change', update));
+  update();
+</script>
+</body>
+</html>
