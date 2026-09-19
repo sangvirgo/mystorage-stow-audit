@@ -63,6 +63,8 @@
 <script>
 const D = JSON.parse(document.getElementById('data').textContent);
 const el = (tag, props = {}, ...kids) => { const n = Object.assign(document.createElement(tag), props); n.append(...kids); return n; };
+const REPORT_NO = { A: 'F-5', B: 'F-6', C: 'F-1', D: 'F-7', E: 'F-7', F: 'F-2', G: 'F-3', H: 'F-8', M: 'minor note' };
+const label = (t) => t.replace(/\bF-([A-M])\b/g, (m, l) => 'report ' + REPORT_NO[l]);
 const rows = { dev: D.dev.rows, holdout: D.holdout.rows };
 const frac = (items) => items.length ? items.filter((i) => i.pass).length + '/' + items.length : 'not run';
 const total = (set, key) => frac(rows[set].flatMap((r) => r[key]));
@@ -88,9 +90,10 @@ function otherFailures(row, ans) {
 
 function panel(label, row, ans) {
   const box = el('div');
-  box.append(el('p', { className: 'small muted', textContent: label }), badge(ans.pass), answerBlock(ans));
+  box.append(el('p', { className: 'small muted', textContent: label }), badge(ans.pass));
   const other = otherFailures(row, ans);
   if (other.length) box.append(el('p', { className: 'small', textContent: 'Failed check: ' + other.join('; ') }));
+  box.append(answerBlock(ans));
   return box;
 }
 
@@ -106,7 +109,7 @@ function render() {
   document.getElementById('orig').replaceChildren(origAns ? panel(origLabel, row, origAns) : el('p', { textContent: 'Not run.' }));
 
   const ev = el('div');
-  ev.append(el('h3', { textContent: 'Customer asked' }), el('div', { className: 'answer', textContent: row.question }), el('p', { className: 'small muted', textContent: row.finding }));
+  ev.append(el('h3', { textContent: 'Customer asked' }), el('div', { className: 'answer', textContent: row.question }), el('p', { className: 'badge note', textContent: 'Problem: ' + label(row.finding) }));
   const list = el('ul', { className: 'checks' });
   const mark = (ans, text) => !ans ? '-' : failedHas(ans, text) ? '✗ fails' : '✓ ok';
   for (const [kind, texts] of [['Must include', row.expectedFacts], ['Must not say', row.prohibited]]) {
@@ -132,8 +135,8 @@ function init() {
   renderTotals();
   const sel = document.getElementById('case');
   for (const set of ['dev', 'holdout']) {
-    const g = el('optgroup', { label: set === 'dev' ? 'Development cases (from real findings)' : 'Holdout cases (frozen before tuning)' });
-    for (const r of rows[set]) g.append(el('option', { value: set + ':' + r.id, textContent: r.id + ' - ' + r.finding }));
+    const g = el('optgroup', { label: set === 'dev' ? 'A. Questions from my audit findings (used while building the fix)' : 'B. Extra questions written before tuning (to check the fix is not over-fitted)' });
+    for (const r of rows[set]) g.append(el('option', { value: set + ':' + r.id, textContent: r.id + ' - ' + label(r.finding) }));
     sel.append(g);
   }
   sel.onchange = () => { const [set, id] = sel.value.split(':'); current = { set, id, run: 0 }; render(); };

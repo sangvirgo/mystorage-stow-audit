@@ -1,4 +1,4 @@
-The last thing I built with an AI coding tool is KilnFlow (github.com/sangvirgo/kilnflow, live at task.tansang.dpdns.org): a system for a ceramics workshop. A staff member types an order in free Vietnamese, and one orchestrator plus five agents (parser, estimator, risk/QC, scheduler, knowledge chatbot) turn it into a batch that moves through seven production stages, with alerts and buttons in Telegram. I built it with Claude Code and Codex on NestJS, Next.js and MySQL.
+The last thing I built with an AI coding tool is KilnFlow (github.com/sangvirgo/kilnflow): a system for a ceramics workshop. A staff member types an order in free Vietnamese, and one orchestrator plus five agents (parser, estimator, risk/QC, scheduler, knowledge chatbot) turn it into a batch that moves through seven production stages, with alerts and buttons in Telegram. I built it with Claude Code and Codex on NestJS, Next.js and MySQL.
 
 The AI got the happy path running quickly. What I had to fix myself:
 

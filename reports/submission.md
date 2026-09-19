@@ -8,7 +8,7 @@ date: "19 September 2026"
 
 **Live prototypes (no install):** [Answer Inspector](https://sangvirgo.github.io/mystorage-stow-audit/demo/) · [Chat screen rebuild](https://sangvirgo.github.io/mystorage-stow-audit/ui/) · **Code and evidence:** [github.com/sangvirgo/mystorage-stow-audit](https://github.com/sangvirgo/mystorage-stow-audit) · **Time spent:** 8 hours
 
-**Earlier projects:** [KilnFlow, multi-agent AI workflow](https://github.com/sangvirgo/kilnflow) (live demo: [task.tansang.dpdns.org](https://task.tansang.dpdns.org/)) · [Secure Task and Document Management Platform](https://github.com/sangvirgo/task-doc-microservices) · [GitHub profile](https://github.com/sangvirgo) · CV on the first page.
+**Earlier projects:** [KilnFlow, multi-agent AI workflow](https://github.com/sangvirgo/kilnflow) · [Secure Task and Document Management Platform](https://github.com/sangvirgo/task-doc-microservices) · [GitHub profile](https://github.com/sangvirgo) · CV on the first page.
 
 # 1. Summary
 
