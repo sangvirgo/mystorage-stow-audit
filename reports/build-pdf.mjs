@@ -12,7 +12,7 @@ try {
   await page.pdf({
     path: output,
     format: 'A4',
-    margin: { top: '18mm', bottom: '18mm', left: '17mm', right: '17mm' },
+    margin: { top: '15mm', bottom: '16mm', left: '15mm', right: '15mm' },
     printBackground: true,
     displayHeaderFooter: true,
     headerTemplate: '<span></span>',

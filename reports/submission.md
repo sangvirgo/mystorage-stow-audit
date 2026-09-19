@@ -15,7 +15,7 @@ I used stow.mystorage.vn as a customer, on my own account, and compared what Sto
 The findings I would fix first, ranked by what they do to a customer's decision, MyStorage's revenue or its customers' trust:
 
 | # | Finding | Evidence | Severity | What it changes |
-|---|---|---|---|---|
+|----|------------------|--------|------|-----------|
 | F-1 | **"About 40% cheaper" for valet storage contradicts Stow's own prices** (its own quotes give 20 to 29%) | 7 chats, 5 of them fresh | Medium | The number a customer uses to choose between two products |
 | F-2 | **Wine storage specification is wrong** (55–65% and about 15°C, against a published 60–70% and 12–15°C) | T10, T19, T31 | Medium | Trust in a condition-sensitive product |
 | F-3 | **Delivery and warehouse hours are wrong**, and the published 30% urgent-delivery surcharge is denied | T04, T20, T30 | Medium | Customers turn up or book when nobody is there |
@@ -24,7 +24,21 @@ The findings I would fix first, ranked by what they do to a customer's decision,
 | F-6 | **Booking questions often get no booking link, phone or email** | T03 and a fresh re-test | Medium | Conversion at the moment of intent |
 | F-7 | **The one figure the customer asked for is left out**: insurance limits and the luggage starting price | T05, T28; T07, T16, T25 | Low–Medium | The customer cannot judge the offer |
 
-Also confirmed: a fixed "exactly 10%" six-month discount where the FAQ says 5–10% (F-8), and a group of small-screen layout, keyboard and screen-reader problems (F-9 to F-13, section 4).
+Also confirmed: a fixed "exactly 10%" six-month discount where the FAQ says 5–10% (F-8).
+
+The interface findings (section 4), all Low–Medium, are reproduced by measurement and screenshots on the real page:
+
+| # | Finding | Evidence | What it changes |
+|----|--------------------|-----------|-----------|
+| F-9 | On a small phone (320×568) the welcome heading is cut under the header and a suggested question is covered by the composer | Measurements, screenshots, DevTools by hand | First impression on small phones |
+| F-10 | In landscape (568×320, 667×375, 844×390) none of the three suggested questions is visible at rest | 3 viewports, hit-tests, screenshot | First interaction on a rotated phone |
+| F-11 | With an image attached at 320×568 the chat keeps only about 170 px | Screenshot | Reading the answer while attaching |
+| F-12 | Keyboard focus: the closed menu is still tabbable, and the open menu does not take focus | 16-step focus sequences | Keyboard and switch users |
+| F-13 | Screen-reader metadata missing: no live region for replies, unlabelled composer, menu opener without state | DOM measurement | Screen-reader users |
+| F-14 | A JavaScript error on every page load | Every load | Monitoring noise, future regressions |
+| F-15 | Replies take 7 to 77 seconds with only a static "thinking…" | Harness timings | Drop-off while waiting |
+
+Smaller observations are listed in section 5.
 
 **Prototypes.** (1) A grounded-answer pipeline with an evaluation set (10 development and 12 held-out cases), compared with a plain prompt on the same model. (2) A rebuild of the Stow chat screen with the small-screen and keyboard problems fixed, next to an approximation of the original behaviour.
 
@@ -57,7 +71,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** Compute percentages in code from the two prices shown and state both prices; never let the model recall a percentage. The prototype does this.
 
-![T27 (fresh chat): "exactly 10%" and "about 40%"](../evidence/remaining50/T27-answer.png){ width=4.4in }
+![T27 (fresh chat): "exactly 10%" and "about 40%"](../evidence/remaining50/T27-answer.png){ width=3.7in }
 
 ## F-2 Wine storage specification is wrong (Medium)
 
@@ -71,7 +85,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** One structured specification record with a source URL, quoted rather than paraphrased.
 
-![T31: wrong humidity range, homepage-only source](../evidence/remaining50/T31-answer.png){ width=4.2in }
+![T31: wrong humidity range, homepage-only source](../evidence/remaining50/T31-answer.png){ width=3.7in }
 
 ## F-3 Delivery and warehouse hours are wrong (Medium)
 
@@ -85,7 +99,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** Keep four separate facts (warehouse hours, delivery notice, self-storage access, support hours) and cite the terms page.
 
-![T30: weekend and surcharge rules that do not match the terms](../evidence/remaining50/T30-answer.png){ width=4.2in }
+![T30: weekend and surcharge rules that do not match the terms](../evidence/remaining50/T30-answer.png){ width=3.7in }
 
 ## F-4 A customer answer exposes internal pricing mechanics (Medium, needs confirmation)
 
@@ -99,7 +113,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** Allow-list the fields a customer answer may contain; never print internal IDs or formulas; label prices as quotes that are revalidated at booking.
 
-![R429-T23: surge, promotion code and live unit count in a customer answer](../evidence/retry429/R429-T23-answer.png){ width=4.2in }
+![R429-T23: surge, promotion code and live unit count in a customer answer](../evidence/retry429/R429-T23-answer.png){ width=3.7in }
 
 ## F-5 A new District 7 branch is announced with no source (Medium)
 
@@ -111,7 +125,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** Ground location and roadmap facts in a dated record and cite it; say "our team can confirm" otherwise.
 
-![T32: District 7 opening and the 40% claim again, in an unaccented Vietnamese question](../evidence/remaining50/T32-answer.png){ width=4.2in }
+![T32: District 7 opening and the 40% claim again, in an unaccented Vietnamese question](../evidence/remaining50/T32-answer.png){ width=3.7in }
 
 ## F-6 Booking answers often have no booking link or contact (Medium)
 
@@ -125,7 +139,7 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 
 **Fix.** Enforce "end with the booking link and contact" after generation, not only in the prompt. The prototype does this.
 
-![T03: booking answer with no booking path](../evidence/screenshots/T03.png){ width=4.2in }
+![T03: booking answer with no booking path](../evidence/screenshots/T03.png){ width=3.7in }
 
 ## F-7 The figure the customer asked for is left out (Low–Medium)
 
@@ -133,34 +147,108 @@ Severity: High means a customer may make a materially wrong purchase or trust de
 - **Luggage** (T07, T16, T25): asked for a price for two suitcases in District 1, Stow gives locker sizes, "per locker, not per suitcase", a four-hour minimum and a link, but no price. The [luggage page](https://www.mystorage.vn/services/luggage-storage-saigon/) says from 54,000 VND per hour. Whether that applies to the Ministop locker, and the four-hour minimum, I could not verify, so I do **not** suggest multiplying 54,000 by six.
 - **Fix.** State the published starting price as a starting price, say the exact price depends on locker size and time, and ask for the missing detail.
 
-![T28: asked for the amount and cap, Stow gives neither](../evidence/remaining50/T28-answer.png){ width=4.2in }
+![T28: asked for the amount and cap, Stow gives neither](../evidence/remaining50/T28-answer.png){ width=3.7in }
 
 ## F-8 A fixed "exactly 10%" discount (Low–Medium)
 
 T09, T14 and fresh T27 say the six-month discount is exactly 10% ("không phải là một khoảng"). The [FAQ](https://mystorage.vn/faqs/) says "normally 5–10%". Stow may be quoting a newer internal promotion (see F-4), so this is overconfidence against the public source, not a proven error. It should state the range or cite the live promotion.
 
-# 4. Small-screen layout, keyboard and screen-reader findings
+# 4. Interface findings: small screens, keyboard, screen readers, speed
 
-| ID | Finding | Severity | Evidence |
-|---|---|---|---|
-| F-9 | At **320×568** the first line of the welcome heading is cut under the header and the third shortcut sits behind the composer; scrolling does not bring them back (tried by hand in DevTools). In **landscape** (844×390, 667×375, 568×320) the three shortcuts are not visible at rest; hit-tests at their centres land on another element. Fine from 360×640 in portrait. With an image attached at 320×568 the item card, preview and composer leave about 170 px for the chat. | Low–Medium | Measured heading top y=22 under a 57 px header, third shortcut y=403–449, composer y=410–464 |
-| F-10 | The **closed menu stays in the keyboard tab order**: at 390 px Tab reaches "Đóng menu" (x=-52) and "Cuộc trò chuyện mới" (x=-300) while both are off screen. When the menu is open, focus stays on the opener and Tab reaches the shortcuts and composer before the drawer buttons; the opener has no `aria-expanded` or `aria-controls`. Escape does close it. | Low–Medium | Focus sequences recorded, 16 Tab presses |
-| F-11 | **No live region** for replies (0 `aria-live`, `role=status` or `role=log`) and the composer has no `<label>` or `aria-label` (its name is the placeholder). Screen-reader behaviour was not tested, so announcement failure is an inference. | Low–Medium | DOM measurement |
-| F-12 | A **JavaScript error, "Invalid or unexpected token", on every page load**, and a `<script>` whose source is a `.css` file. The page still renders. | Low | Every load |
-| F-13 | **Replies are slow**: 7 to 77 seconds to finish (median about 24 s in the first 20 replies), with only a static "STOW is thinking…". Later fresh chats took up to about 64 s. | Low–Medium | Harness timings; not proven to be worsening |
+All measured on the real page (headless Chromium, my saved login, no message sent) and confirmed by hand in Chrome DevTools where noted. Severity is Low–Medium for each: they do not change a purchase decision, but they degrade the first interaction and exclude some users.
 
-![Real Stow at 320×568: heading clipped, third shortcut behind the composer](../evidence/screenshots/R1-320x568.png){ width=2.2in }
-![Real Stow at 844×390: no shortcuts visible at rest](../evidence/screenshots/U07.png){ width=4.2in }
+::: {style="display:flex;gap:10px;justify-content:center"}
+![F-9: real Stow at 320×568, heading clipped, third question behind the message box](../evidence/screenshots/R1-320x568.png){ width=1.75in }
+![F-11: real Stow at 320×568 with an image attached](../evidence/screenshots/R4-attachment-320x568.png){ width=1.75in }
+![F-12: real Stow at 390×844 with the menu open; focus stays on the opener behind it](../evidence/round5/U14-open.png){ width=1.75in }
+:::
 
-**Checked and fine.** Empty and whitespace-only drafts keep Send disabled; a 12-line draft grows the field and scrolls inside it; a draft survives rotating the phone; no horizontal overflow at 320×900.
+## F-9 Small phone (320×568): heading cut and a suggested question covered (Low–Medium)
 
-# 5. What worked well
+**Steps.** Open the empty chat and set the viewport to 320×568 (a small phone). Look at the welcome heading and the three suggested questions above the message box.
+
+**Expected.** The heading and all suggested questions are readable and reachable without overlapping the header or the message box.
+
+**Actual.** The first line of the heading is under the header: its top is at y=22 in my measurement and y=34 in a second run, against a header about 57 px tall. The third suggested question ("Báo giá lưu trữ giúp em") sits at about y=391–449, where the message box starts (y≈399–410), and a click at its centre lands on another element. Scrolling does not bring the hidden parts back (tried by hand in DevTools). At 360×640 and larger portrait sizes nothing overlaps; at 320×900 nothing overlaps either, so the fault is the short height, not the narrow width.
+
+**Why it matters.** The welcome screen is the entry point; on a small phone part of it is unreadable and one suggested question is unusable.
+
+**Fix.** Give the header, the content and the message box separate rows; let the content scroll when it does not fit instead of laying the message box over it. Add a height-sensitive layout test. (Section 8 does this.)
+
+## F-10 Landscape: none of the suggested questions is visible at rest (Low–Medium)
+
+**Steps.** Same page at 568×320, 667×375 or 844×390.
+
+**Actual.** The heading is followed directly by the message box; all three suggested questions lie under it, and hit-tests at their centres land on another element (3 of 3 at 568×320, 667×375 and 844×390; 2 of 3 at a 390×400 window). At 568×320 the heading even starts above the top of the screen (y=−32). The state survives rotating from portrait with a draft typed. I did not confirm by hand whether scrolling reveals them in landscape; an earlier screenshot shows a scrollbar in that area, so it may.
+
+**Why it matters.** Customers on a rotated phone lose the suggested entry points.
+
+**Fix.** As for F-9, and use one row for the message box on short screens.
+
+![Real Stow at 844×390: heading and text, then the message box; no suggested questions](../evidence/screenshots/U07.png){ width=3.7in }
+
+## F-11 With an image attached, the chat area shrinks to about 170 px (Low–Medium)
+
+**Steps.** At 320×568 attach an image (the item card and preview appear) and send a message.
+
+**Actual.** The item card ("Cabin Suitcase (20 inch), … 3 đồ vật", truncated), the "1 image attached" card and the message box together take about 70% of the screen, leaving roughly 170 px for the conversation. The composer stays at the bottom, so scrolling the chat still works (tried by hand).
+
+**Why it matters.** The customer is squeezed into a few lines while waiting for the answer.
+
+**Fix.** Collapse the item card and the attachment preview into one compact row on small heights. (Section 8: the chat keeps 52% of the screen instead of 34% in my rebuild.)
+
+## F-12 Keyboard focus: the closed menu is tabbable, the open menu does not take focus (Low–Medium)
+
+**Steps.** At 390×844 keep the menu closed, focus the message box and press Tab 16 times; then open the menu and press Tab again.
+
+**Expected.** Focus moves only through visible controls; an open overlay menu takes focus and keeps it until closed.
+
+**Actual.**
+
+- *Closed:* after the message-box controls Tab lands on "Đóng menu" (x=−52) and "Cuộc trò chuyện mới" (x=−300), both off screen, then on the page body, then loops. The user sees focus vanish.
+- *Open:* initial focus stays on the opener; Tab then goes through the flag button, the three suggested questions, the message box and its voice controls (all behind the overlay) before reaching the menu's own buttons. The header opener ("Mở menu") has no `aria-expanded` or `aria-controls`.
+- Escape does close the menu.
+
+**Why it matters.** Keyboard and switch users lose track of focus and can reach covered controls.
+
+**Fix.** Make the closed menu `inert`; when it opens, move focus inside, contain it, expose the opener's state, and restore focus on close. (Section 8 does this.)
+
+## F-13 Screen-reader metadata is missing (Low–Medium)
+
+**Actual.** The empty chat has no `aria-live`, `role=status` or `role=log` region (0 found), so new replies may not be announced. The message box has no `<label>`, `aria-label` or `aria-labelledby`; its name comes from the placeholder, which disappears as the customer types. The header menu opener has no state attributes (F-12).
+
+**Limit.** I did not use a screen reader. A live region could be added after the first reply, and the placeholder is a valid fallback name, so **whether replies are actually announced is unproven**. The markup gap is real.
+
+**Fix.** A persistent label for the message box, a polite live region for new replies, and state on the menu opener; then test with NVDA or VoiceOver.
+
+## F-14 A JavaScript error on every page load (Low)
+
+Every load of the page, on every viewport I used, logs `Invalid or unexpected token`, and the document contains a `<script>` whose source is a `.css` file (the same CSS is also loaded normally). The page still renders and no own-origin HTTP error occurs. **Fix.** Emit CSS only as a stylesheet link and fail a smoke test on any page error.
+
+## F-15 Replies are slow and "thinking" shows no progress (Low–Medium)
+
+The first 20 replies took 7 to 77 seconds to finish (median about 24 s); later fresh chats completed in 15 to 64 seconds including a 5-second settle time of my harness. The screen shows a static "STOW is thinking…" and a stop button the whole time. I did not measure time to first text, so I cannot say whether the reply streams, and I did not find it getting worse; the later runs used different times and longer prompts. **Fix.** Stream partial text or show progress steps, and add a timeout with a retry button.
+
+**Checked and fine.** Empty and whitespace-only drafts keep Send disabled; a 12-line draft grows the field to 180 px and scrolls inside it; a draft survives rotating the phone; no horizontal overflow at any size I used; Escape closes the menu.
+
+# 5. Smaller observations
+
+- The interface mixes languages: "STOW is thinking…", "1 image attached" and "Ready" are English in an otherwise Vietnamese screen.
+- The same service is called "Valet Storage", "Kho trọn gói" and "Valet / Full Service"; `llms.txt` calls it Full Service Storage.
+- Sources are often the homepage (T19, T29, T31) instead of the page that supports the claim.
+- Backup power is called "not confirmed" or "not published" (T19, T31) although the wine page publishes it.
+- Cancelling before move-in (T22, T29): Stow defers to staff and cites no terms; the public terms page does not cover it either, which is a content gap for MyStorage. A "more than three days" rule appeared once (T22) and did not reproduce.
+- Opening a saved conversation makes one request to a `conversations` endpoint that returns HTTP 406; the conversation still loads.
+- Third-party telemetry (Sentry) returned HTTP 429 on some page loads. It does not affect customers, but it hides real errors from monitoring.
+- The four-hour minimum Stow repeats for the District 1 locker, and whether 54,000 VND per hour applies to it, are not verifiable from the public pages.
+
+# 6. What worked well
 
 - The polite prompt-injection test (T12) was declined without revealing anything.
 - Arithmetic is right when asked directly (T26), which is why F-1 is a habit to remove, not a limitation.
 - Replies matched the customer's language, including an unaccented Vietnamese question (T32); T15 gave a complete booking path when asked; an uploaded luggage size chart was read and used sensibly.
 
-# 6. Prototype 1: grounded answers with an evaluation set
+# 7. Prototype 1: grounded answers with an evaluation set
 
 **Idea.** Most findings share a cause: the model states a figure, a percentage or a plan its sources do not support, or drops a link. The prototype (a) gives the model only sourced facts, (b) does arithmetic and language choice in code, (c) checks every reply against generic rules, and (d) makes one repair call when a rule is broken.
 
@@ -192,11 +280,11 @@ Recorded Stow replies: 1 of 10 development cases passes (the injection case); th
 - The sources were written from the same public pages that produced the findings, so the proposed side is easier here than in production. The percentage cases use prices Stow itself quoted, standing in for a live pricing tool.
 - A later hardened variant (stricter number and URL checks, and a safe hand-off when a repair fails) exists on the branch `codex-hardening`. **It is not what produced these numbers**: it added rules tied to the audited topics (wine, insurance, delivery), which would leak the expected answers into the check, and it was never evaluated. I kept the evaluated version as the submission.
 
-# 7. Prototype 2: the chat screen with the small-screen and keyboard problems fixed
+# 8. Prototype 2: the chat screen with the small-screen and keyboard problems fixed
 
 A rebuild of the Stow welcome and conversation screens, made from screenshots and measurements (not Stow's code), in `prototype/ui/`. `app.html` runs in an **original** mode, which approximates the failures I measured, and a **fixed** mode. `index.html` shows either in a frame at a chosen device size.
 
-**Fixed** (F-9 to F-11): the content sits in a scroll area between header and composer, and `margin-block: auto` centres it only when it fits; the attachment card and preview become one compact row; the closed menu is `inert` and `aria-hidden`, the menu button has `aria-expanded` and `aria-controls`, and the open menu holds focus and returns it on close; the chat is a `role="log"` live region and the composer has a real label; short landscape screens get a one-row composer and slimmer header; height uses `100dvh`.
+**Fixed** (F-9 to F-13): the content sits in a scroll area between header and composer, and `margin-block: auto` centres it only when it fits; the attachment card and preview become one compact row; the closed menu is `inert` and `aria-hidden`, the menu button has `aria-expanded` and `aria-controls`, and the open menu holds focus and returns it on close; the chat is a `role="log"` live region and the composer has a real label; short landscape screens get a one-row composer and slimmer header; height uses `100dvh`.
 
 **Measured** (headless Chromium, `prototype/ui/check-layout.mjs`, nine viewport sizes; plus 24 Playwright tests that pass against the served page):
 
@@ -219,7 +307,7 @@ A rebuild of the Stow welcome and conversation screens, made from screenshots an
 
 **Limits.** "Original" is an approximation of the same kind of failure, not Stow's CSS, so its pixels differ from what I measured on Stow. The fixes were tested in this rebuild, not in Stow's code. The page does not call the answer pipeline: Send only shows the message locally. Chromium only.
 
-# 8. How to run
+# 9. How to run
 
 ```
 cd prototype
@@ -232,7 +320,7 @@ docker compose run --rm eval node src/run.ts --set=holdout --runs=3
 
 Without Docker: Node 22.18 or newer, no dependencies (`npm test`, `npm run demo`), and open the two `index.html` files. To re-measure the layout: `npm install` at the repository root, then `node prototype/ui/check-layout.mjs`. The two long model runs in this report used Node directly; Docker ran the tests, the demo build and a live case. A re-run of the model evaluation will not reproduce the tables exactly.
 
-# 9. What I rejected or rewrote from AI output, and why
+# 10. What I rejected or rewrote from AI output, and why
 
 | AI produced | What I did | Why |
 |---|---|---|
@@ -247,11 +335,11 @@ Without Docker: Node 22.18 or newer, no dependencies (`npm test`, `npm run demo`
 | A hardened validator with rules tied to the audited topics (second agent) | Kept off the submitted code; left on the branch `codex-hardening` | It would leak the expected answers into the check and it was never evaluated |
 | A shorter report that kept only four findings and moved the wine, hours, "40%" and District 7 findings to "not confirmed" (second agent) | Did not use it; kept the findings | Fresh chats (T27, T30, T31, T32) reproduced each of them |
 
-# 10. Time spent
+# 11. Time spent
 
 8 hours in total: the audit and confirmation testing, both prototypes, and this report.
 
-# 11. What I would do with two more hours
+# 12. What I would do with two more hours
 
 1. Re-run the held-out set with a second model and a human-reviewed scoring pass for the ambiguous checks; regex heuristics are the weakest part of the evaluation.
 2. Ask MyStorage which price, policy and location fields live in a database, so figures come from a pricing tool with effective dates instead of hand-written source chunks, and confirm whether F-4 is intended.
