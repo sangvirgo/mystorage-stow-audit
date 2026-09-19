@@ -31,25 +31,30 @@
 <body>
 <header>
   <h1>STOW Answer Inspector</h1>
-  <p class="muted">Recorded production replies from stow.mystorage.vn next to a local prototype. Every number on this page comes from <code>results/*.json</code>.</p>
+  <p class="muted">Stow is MyStorage's customer chat assistant. In my audit some of its answers were wrong or incomplete. This page shows, for each problem, <b>what Stow really said</b>, <b>what a correct answer needs</b>, and <b>what my fixed prototype says</b> to the same question.</p>
+  <ol class="muted">
+    <li>Pick a customer question in the list.</li>
+    <li>Left: Stow's real answer, marked ✗ if it fails. Middle: what a good answer must contain. Right: my prototype's answer, marked ✓ if it passes.</li>
+    <li>The table gives the score over all questions. Every number comes from <code>results/*.json</code>.</li>
+  </ol>
 </header>
 <main>
-  <section aria-labelledby="totals"><h2 id="totals">Totals (checks passed / answers scored)</h2><div id="totals-table"></div></section>
+  <section aria-labelledby="totals"><h2 id="totals">Score over all questions (answers that pass every check / answers scored)</h2><div id="totals-table"></div></section>
   <div class="controls">
-    <label for="case">Case</label><select id="case"></select>
-    <span id="runs" role="group" aria-label="Prototype run"></span>
+    <label for="case">Customer question</label><select id="case"></select>
+    <span id="runs" role="group" aria-label="Prototype run (each question was answered 3 times)"></span>
   </div>
   <div class="grid" aria-live="polite">
-    <section class="panel" aria-labelledby="orig-h"><h2 id="orig-h">Original answer</h2><div id="orig"></div></section>
-    <section class="panel" aria-labelledby="ev-h"><h2 id="ev-h">Evidence</h2><div id="evidence"></div></section>
-    <section class="panel" aria-labelledby="prop-h"><h2 id="prop-h">Proposed answer</h2><div id="prop"></div></section>
+    <section class="panel" aria-labelledby="orig-h"><h2 id="orig-h">1. What Stow said</h2><div id="orig"></div></section>
+    <section class="panel" aria-labelledby="ev-h"><h2 id="ev-h">2. What a good answer needs</h2><div id="evidence"></div></section>
+    <section class="panel" aria-labelledby="prop-h"><h2 id="prop-h">3. What my prototype says</h2><div id="prop"></div></section>
   </div>
 </main>
 <footer class="small muted">
   <h2>How to read this</h2>
   <ul>
     <li><b>Stow (recorded)</b> is the unedited reply Stow gave in production on the date of the audit. One sample per case. It is problem evidence, not a like-for-like comparison.</li>
-    <li><b>Naive</b> and <b>Proposed</b> use the same model and the same source registry. Proposed adds a rules prompt, language and percentages decided in code, and a runtime check with at most one repair call.</li>
+    <li><b>Plain prompt</b> and <b>Prototype</b> use the same model and the same source registry. The prototype adds a rules prompt, language and percentages decided in code, and a runtime check with at most one repair call.</li>
     <li>The source registry was written from the same public pages that produced the findings, so the proposed side is easier here than it would be in production. The holdout set was written before tuning and run once.</li>
     <li>Checks are regex heuristics. A few false results were found by reading answers; they are listed in the README and were not edited out of the holdout numbers.</li>
   </ul>
@@ -64,7 +69,7 @@ const total = (set, key) => frac(rows[set].flatMap((r) => r[key]));
 
 function renderTotals() {
   const t = el('table');
-  t.append(el('tr', {}, ...['Set','Naive (same model)','Proposed, first pass','Proposed, final','Stow recorded'].map((h) => el('th', { scope: 'col', textContent: h }))));
+  t.append(el('tr', {}, ...['Set','Plain prompt (same model)','Prototype, first pass','Prototype, final','Stow (recorded)'].map((h) => el('th', { scope: 'col', textContent: h }))));
   for (const set of ['dev', 'holdout']) {
     const stow = rows[set].filter((r) => r.stow);
     t.append(el('tr', {}, el('td', { textContent: set + ' (' + D[set].runs + ' runs per case)' }), el('td', { textContent: total(set, 'naive') }), el('td', { textContent: total(set, 'firstPass') }), el('td', { textContent: total(set, 'proposed') }), el('td', { textContent: stow.length ? stow.filter((r) => r.stow.pass).length + '/' + stow.length + ' pass' : '-' })));
@@ -72,7 +77,7 @@ function renderTotals() {
   document.getElementById('totals-table').replaceChildren(t);
 }
 
-const badge = (pass) => el('span', { className: 'badge ' + (pass ? 'pass' : 'fail'), textContent: pass ? 'all checks pass' : 'checks failed' });
+const badge = (pass) => el('span', { className: 'badge ' + (pass ? 'pass' : 'fail'), textContent: pass ? '✓ passes every check' : '✗ fails at least one check' });
 const failedHas = (ans, text) => !!ans && ans.failed.some((f) => f.startsWith(text));
 const answerBlock = (ans) => el('div', { className: 'answer', textContent: ans.text });
 
@@ -85,7 +90,7 @@ function panel(label, row, ans) {
   const box = el('div');
   box.append(el('p', { className: 'small muted', textContent: label }), badge(ans.pass), answerBlock(ans));
   const other = otherFailures(row, ans);
-  if (other.length) box.append(el('p', { className: 'small', textContent: 'Also failed: ' + other.join('; ') }));
+  if (other.length) box.append(el('p', { className: 'small', textContent: 'Failed check: ' + other.join('; ') }));
   return box;
 }
 
@@ -95,21 +100,21 @@ function render() {
   const row = rows[current.set].find((r) => r.id === current.id);
   const stowRecorded = row.stow;
   const origAns = stowRecorded || row.naive[0];
-  const origLabel = stowRecorded ? 'Stow, recorded production reply (' + row.stowTranscript + ')' : 'Naive prompt, same model (run 1). No production transcript exists for this holdout case.';
+  const origLabel = stowRecorded ? 'Stow, real production reply (' + row.stowTranscript + ')' : 'Plain prompt, same model (run 1). Stow was not asked this question in production, so the plain prompt stands in.';
   const prop = row.proposed[current.run];
 
   document.getElementById('orig').replaceChildren(origAns ? panel(origLabel, row, origAns) : el('p', { textContent: 'Not run.' }));
 
   const ev = el('div');
-  ev.append(el('h3', { textContent: 'Customer message' }), el('div', { className: 'answer', textContent: row.question }), el('p', { className: 'small muted', textContent: row.finding }));
+  ev.append(el('h3', { textContent: 'Customer asked' }), el('div', { className: 'answer', textContent: row.question }), el('p', { className: 'small muted', textContent: row.finding }));
   const list = el('ul', { className: 'checks' });
-  const mark = (ans, text) => !ans ? '-' : failedHas(ans, text) ? 'FAIL' : 'ok';
-  for (const [kind, texts] of [['Expected', row.expectedFacts], ['Must not', row.prohibited]]) {
-    for (const t of texts) list.append(el('li', {}, el('b', { textContent: kind + ': ' }), t, el('br'), el('span', { className: 'small muted', textContent: 'original ' + mark(origAns, t) + '   proposed ' + mark(prop, t) })));
+  const mark = (ans, text) => !ans ? '-' : failedHas(ans, text) ? '✗ fails' : '✓ ok';
+  for (const [kind, texts] of [['Must include', row.expectedFacts], ['Must not say', row.prohibited]]) {
+    for (const t of texts) list.append(el('li', {}, el('b', { textContent: kind + ': ' }), t, el('br'), el('span', { className: 'small muted', textContent: 'Stow: ' + mark(origAns, t) + '   Prototype: ' + mark(prop, t) })));
   }
-  ev.append(el('h3', { textContent: 'What a good answer needs' }), list);
+  ev.append(el('h3', { textContent: 'Checklist' }), list);
   if (prop && prop.violations.length) {
-    ev.append(el('h3', { textContent: 'Runtime check' }), el('p', { className: 'badge note', textContent: 'caught and repaired' }), el('p', { className: 'small', textContent: prop.violations.join(' | ') + (prop.remaining.length ? ' Still broken: ' + prop.remaining.join(' | ') : ' Fixed after one repair call.') }));
+    ev.append(el('h3', { textContent: 'Safety check inside the prototype' }), el('p', { className: 'badge note', textContent: 'a problem was caught and repaired before answering' }), el('p', { className: 'small', textContent: prop.violations.join(' | ') + (prop.remaining.length ? ' Still broken: ' + prop.remaining.join(' | ') : ' Fixed after one repair call.') }));
   }
   const d = el('details');
   d.append(el('summary', { textContent: 'Source registry (' + D.sources.length + ' chunks, whole registry is in the prompt)' }));
@@ -117,7 +122,7 @@ function render() {
   ev.append(d);
   document.getElementById('evidence').replaceChildren(ev);
 
-  document.getElementById('prop').replaceChildren(prop ? panel('Proposed pipeline, local prototype, run ' + (current.run + 1) + ' of ' + row.proposed.length + ' (' + D[current.set].model + ')', row, prop) : el('p', { textContent: 'Not run.' }));
+  document.getElementById('prop').replaceChildren(prop ? panel('Prototype, run ' + (current.run + 1) + ' of ' + row.proposed.length + ' (' + D[current.set].model + ')', row, prop) : el('p', { textContent: 'Not run.' }));
 
   const runs = document.getElementById('runs');
   runs.replaceChildren(...row.proposed.map((_, i) => { const b = el('button', { type: 'button', textContent: 'Run ' + (i + 1) }); b.setAttribute('aria-pressed', String(i === current.run)); b.onclick = () => { current.run = i; render(); }; return b; }));

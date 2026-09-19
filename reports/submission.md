@@ -55,6 +55,15 @@ Smaller observations are listed in section 5.
 - T02 to T12 shared one chat, so later replies saw earlier ones; every finding below was re-tested in fresh chats.
 - Facts come from `llms.txt` (read in full) and public pages. Several pages were read through a web-fetch summary, so quotes should be re-read on the live page before anyone relies on them.
 
+**The 50 tracked cases.** Every case has an ID, a recorded result and evidence in `evidence/`; only the ones that matter appear as findings.
+
+| Group | Cases | What it covered | Findings it supports |
+|---|---|---|---|
+| Chat messages | 32 (T01 to T32) | prices, valet vs self-storage, wine, delivery, insurance, District 7, booking, language, one prompt injection | F-1 to F-8 |
+| Small-screen layout | 12 (R5-U01 to U12) | 10 viewports from 320×568 to 1280×720, a short 390×400 window, 320 px reflow | F-9, F-10, F-11 |
+| Keyboard, labels, drafts | 6 (R5-U13 to U18) | closed and open menu focus order, empty and long drafts, accessible names, rotating with a draft | F-12, F-13 (F-14, F-15 from the same runs) |
+| **Total** | **50 unique cases** | 52 executions, because R429-T23 and R429-T24 are retries | |
+
 **Limits.** Chromium only, no real screen reader, no physical phone or on-screen keyboard. Model answers vary between runs.
 
 # 3. Findings that change a customer's decision
