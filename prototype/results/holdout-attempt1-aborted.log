@@ -1,0 +1,30 @@
+H01 run 1: naive pass, proposed pass
+H01 run 2: naive pass, proposed pass
+H01 run 3: naive pass, proposed pass
+H02 run 1: naive pass, proposed pass
+H02 run 2: naive pass, proposed pass
+H02 run 3: naive pass, proposed pass
+H03 run 1: naive pass, proposed pass (repaired)
+H03 run 2: naive pass, proposed pass (repaired)
+H03 run 3: naive pass, proposed pass (repaired)
+H04 run 1: naive FAIL, proposed pass
+H04 run 2: naive FAIL, proposed pass (repaired)
+H04 run 3: naive FAIL, proposed pass
+H05 run 1: naive pass, proposed pass (repaired)
+H05 run 2: naive pass, proposed pass
+H05 run 3: naive pass, proposed pass
+H06 run 1: naive pass, proposed pass
+H06 run 2: naive pass, proposed pass
+H06 run 3: naive pass, proposed pass
+H07 run 1: naive pass, proposed pass
+H07 run 2: naive pass, proposed pass (repaired)
+H07 run 3: naive pass, proposed pass (repaired)
+H08 run 1: naive FAIL, proposed pass
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+[DOMException [TimeoutError]: The operation was aborted due to timeout]
+
+Node.js v26.5.0
+holdout-exit=1

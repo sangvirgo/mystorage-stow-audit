@@ -1,0 +1,1941 @@
+[
+  {
+    "id": "U01",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:33.658Z",
+    "measurements": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "document": {
+        "width": 320,
+        "height": 568
+      },
+      "heading": {
+        "x": 24,
+        "y": 33.75,
+        "width": 272,
+        "height": 108,
+        "bottom": 141.75,
+        "right": 296
+      },
+      "composer": {
+        "x": 12,
+        "y": 399,
+        "width": 296,
+        "height": 157,
+        "bottom": 556,
+        "right": 308
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 283.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 329.25,
+            "right": 296
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 337.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 383.25,
+            "right": 296
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 391.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 437.25,
+            "right": 296
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U01.png"
+  },
+  {
+    "id": "U02",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:34.055Z",
+    "measurements": {
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "document": {
+        "width": 360,
+        "height": 640
+      },
+      "heading": {
+        "x": 24,
+        "y": 88.5,
+        "width": 312,
+        "height": 108,
+        "bottom": 196.5,
+        "right": 336
+      },
+      "composer": {
+        "x": 12,
+        "y": 508.5,
+        "width": 336,
+        "height": 119.5,
+        "bottom": 628,
+        "right": 348
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 338,
+            "width": 312,
+            "height": 46,
+            "bottom": 384,
+            "right": 336
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 392,
+            "width": 312,
+            "height": 46,
+            "bottom": 438,
+            "right": 336
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 446,
+            "width": 312,
+            "height": 46,
+            "bottom": 492,
+            "right": 336
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U02.png"
+  },
+  {
+    "id": "U03",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:34.472Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 217.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 289.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 712.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 431,
+            "width": 342,
+            "height": 46,
+            "bottom": 477,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 485,
+            "width": 342,
+            "height": 46,
+            "bottom": 531,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 539,
+            "width": 342,
+            "height": 46,
+            "bottom": 585,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U03.png"
+  },
+  {
+    "id": "U04",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:34.886Z",
+    "measurements": {
+      "viewport": {
+        "width": 412,
+        "height": 915
+      },
+      "document": {
+        "width": 412,
+        "height": 915
+      },
+      "heading": {
+        "x": 24,
+        "y": 265.1875,
+        "width": 364,
+        "height": 72,
+        "bottom": 337.1875,
+        "right": 388
+      },
+      "composer": {
+        "x": 12,
+        "y": 783.5,
+        "width": 388,
+        "height": 119.5,
+        "bottom": 903,
+        "right": 400
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 454.3125,
+            "width": 364,
+            "height": 46,
+            "bottom": 500.3125,
+            "right": 388
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 508.3125,
+            "width": 364,
+            "height": 46,
+            "bottom": 554.3125,
+            "right": 388
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 562.3125,
+            "width": 364,
+            "height": 46,
+            "bottom": 608.3125,
+            "right": 388
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U04.png"
+  },
+  {
+    "id": "U05",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:35.290Z",
+    "measurements": {
+      "viewport": {
+        "width": 568,
+        "height": 320
+      },
+      "document": {
+        "width": 568,
+        "height": 320
+      },
+      "heading": {
+        "x": 24,
+        "y": -32.3125,
+        "width": 520,
+        "height": 72,
+        "bottom": 39.6875,
+        "right": 544
+      },
+      "composer": {
+        "x": 12,
+        "y": 188.5,
+        "width": 544,
+        "height": 119.5,
+        "bottom": 308,
+        "right": 556
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 156.8125,
+            "width": 520,
+            "height": 46,
+            "bottom": 202.8125,
+            "right": 544
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 210.8125,
+            "width": 520,
+            "height": 46,
+            "bottom": 256.8125,
+            "right": 544
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 264.8125,
+            "width": 520,
+            "height": 46,
+            "bottom": 310.8125,
+            "right": 544
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U05.png"
+  },
+  {
+    "id": "U06",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:35.688Z",
+    "measurements": {
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "document": {
+        "width": 667,
+        "height": 375
+      },
+      "heading": {
+        "x": 37.5,
+        "y": 39.1875,
+        "width": 592,
+        "height": 72,
+        "bottom": 111.1875,
+        "right": 629.5
+      },
+      "composer": {
+        "x": 12,
+        "y": 243.5,
+        "width": 643,
+        "height": 119.5,
+        "bottom": 363,
+        "right": 655
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 37.5,
+            "y": 228.3125,
+            "width": 192,
+            "height": 66,
+            "bottom": 294.3125,
+            "right": 229.5
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 237.5,
+            "y": 228.3125,
+            "width": 192,
+            "height": 66,
+            "bottom": 294.3125,
+            "right": 429.5
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 437.5,
+            "y": 228.3125,
+            "width": 192,
+            "height": 66,
+            "bottom": 294.3125,
+            "right": 629.5
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U06.png"
+  },
+  {
+    "id": "U07",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:36.076Z",
+    "measurements": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "document": {
+        "width": 844,
+        "height": 390
+      },
+      "heading": {
+        "x": 126,
+        "y": 70.6875,
+        "width": 592,
+        "height": 80,
+        "bottom": 150.6875,
+        "right": 718
+      },
+      "composer": {
+        "x": 62,
+        "y": 258.5,
+        "width": 720,
+        "height": 119.5,
+        "bottom": 378,
+        "right": 782
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 126,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 318
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 326,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 518
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 526,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 718
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U07.png"
+  },
+  {
+    "id": "U08",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:36.477Z",
+    "measurements": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "document": {
+        "width": 768,
+        "height": 1024
+      },
+      "heading": {
+        "x": 88,
+        "y": 387.6875,
+        "width": 592,
+        "height": 80,
+        "bottom": 467.6875,
+        "right": 680
+      },
+      "composer": {
+        "x": 24,
+        "y": 892.5,
+        "width": 720,
+        "height": 119.5,
+        "bottom": 1012,
+        "right": 744
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 88,
+            "y": 584.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 650.8125,
+            "right": 280
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 288,
+            "y": 584.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 650.8125,
+            "right": 480
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 488,
+            "y": 584.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 650.8125,
+            "right": 680
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U08.png"
+  },
+  {
+    "id": "U09",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:36.883Z",
+    "measurements": {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 768
+      },
+      "heading": {
+        "x": 216,
+        "y": 259.6875,
+        "width": 592,
+        "height": 80,
+        "bottom": 339.6875,
+        "right": 808
+      },
+      "composer": {
+        "x": 152,
+        "y": 636.5,
+        "width": 720,
+        "height": 119.5,
+        "bottom": 756,
+        "right": 872
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 216,
+            "y": 456.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 522.8125,
+            "right": 408
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 416,
+            "y": 456.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 522.8125,
+            "right": 608
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 616,
+            "y": 456.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 522.8125,
+            "right": 808
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U09.png"
+  },
+  {
+    "id": "U10",
+    "kind": "layout",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:37.303Z",
+    "measurements": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "document": {
+        "width": 1280,
+        "height": 720
+      },
+      "heading": {
+        "x": 344,
+        "y": 235.6875,
+        "width": 592,
+        "height": 80,
+        "bottom": 315.6875,
+        "right": 936
+      },
+      "composer": {
+        "x": 280,
+        "y": 588.5,
+        "width": 720,
+        "height": 119.5,
+        "bottom": 708,
+        "right": 1000
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 344,
+            "y": 432.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 498.8125,
+            "right": 536
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 544,
+            "y": 432.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 498.8125,
+            "right": 736
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 744,
+            "y": 432.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 498.8125,
+            "right": 936
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U10.png"
+  },
+  {
+    "id": "U11",
+    "kind": "short-viewport",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:37.705Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 400
+      },
+      "document": {
+        "width": 390,
+        "height": 400
+      },
+      "heading": {
+        "x": 24,
+        "y": -4.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 67.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 268.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 388,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 209,
+            "width": 342,
+            "height": 46,
+            "bottom": 255,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 263,
+            "width": 342,
+            "height": 46,
+            "bottom": 309,
+            "right": 366
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 317,
+            "width": 342,
+            "height": 46,
+            "bottom": 363,
+            "right": 366
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U11.png"
+  },
+  {
+    "id": "U12",
+    "kind": "reflow",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:38.089Z",
+    "measurements": {
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "document": {
+        "width": 320,
+        "height": 900
+      },
+      "heading": {
+        "x": 24,
+        "y": 199.75,
+        "width": 272,
+        "height": 108,
+        "bottom": 307.75,
+        "right": 296
+      },
+      "composer": {
+        "x": 12,
+        "y": 731,
+        "width": 296,
+        "height": 157,
+        "bottom": 888,
+        "right": 308
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 449.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 495.25,
+            "right": 296
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 503.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 549.25,
+            "right": 296
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 557.25,
+            "width": 272,
+            "height": 46,
+            "bottom": 603.25,
+            "right": 296
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {},
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U12.png"
+  },
+  {
+    "id": "U13",
+    "kind": "closed-menu-tab",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:38.526Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 217.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 289.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 712.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 431,
+            "width": 342,
+            "height": 46,
+            "bottom": 477,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 485,
+            "width": 342,
+            "height": 46,
+            "bottom": 531,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 539,
+            "width": 342,
+            "height": 46,
+            "bottom": 585,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "sequence": [
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu STOW",
+          "x": 168,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đọc để nhập",
+          "x": 210,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bắt đầu trò chuyện thoại",
+          "x": 246,
+          "y": 765.5,
+          "width": 119,
+          "height": 30,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đóng menu",
+          "x": -52,
+          "y": 16,
+          "width": 32,
+          "height": 32,
+          "offscreen": true
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cuộc trò chuyện mới",
+          "x": -300,
+          "y": 85,
+          "width": 280,
+          "height": 40,
+          "offscreen": true
+        },
+        {
+          "tag": "BODY",
+          "label": "((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=[\"light\",\"dark\"];function ",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "x": 12,
+          "y": 8,
+          "width": 40,
+          "height": 40,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "",
+          "x": 338,
+          "y": 10,
+          "width": 40,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Giới thiệu về MyStorage",
+          "x": 24,
+          "y": 431,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "STOW có những dịch vụ gì?",
+          "x": 24,
+          "y": 485,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Báo giá lưu trữ giúp em",
+          "x": 24,
+          "y": 539,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "",
+          "x": 25,
+          "y": 723.5,
+          "width": 340,
+          "height": 33,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu STOW",
+          "x": 168,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đọc để nhập",
+          "x": 210,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bắt đầu trò chuyện thoại",
+          "x": 246,
+          "y": 765.5,
+          "width": 119,
+          "height": 30,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đóng menu",
+          "x": -52,
+          "y": 16,
+          "width": 32,
+          "height": 32,
+          "offscreen": true
+        }
+      ]
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U13.png"
+  },
+  {
+    "id": "U14",
+    "kind": "open-menu-focus",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:40.007Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 217.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 289.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 712.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 431,
+            "width": 342,
+            "height": 46,
+            "bottom": 477,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 485,
+            "width": 342,
+            "height": 46,
+            "bottom": 531,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 539,
+            "width": 342,
+            "height": 46,
+            "bottom": 585,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "initialFocus": {
+        "tag": "BUTTON",
+        "label": "Mở menu",
+        "x": 12,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "offscreen": false
+      },
+      "expanded": null,
+      "controls": null,
+      "sequence": [
+        {
+          "tag": "BUTTON",
+          "label": "",
+          "x": 338,
+          "y": 10,
+          "width": 40,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Giới thiệu về MyStorage",
+          "x": 24,
+          "y": 431,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "STOW có những dịch vụ gì?",
+          "x": 24,
+          "y": 485,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Báo giá lưu trữ giúp em",
+          "x": 24,
+          "y": 539,
+          "width": 342,
+          "height": 46,
+          "offscreen": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "label": "",
+          "x": 25,
+          "y": 723.5,
+          "width": 340,
+          "height": 33,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu STOW",
+          "x": 168,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đọc để nhập",
+          "x": 210,
+          "y": 762.5,
+          "width": 36,
+          "height": 36,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Bắt đầu trò chuyện thoại",
+          "x": 246,
+          "y": 765.5,
+          "width": 119,
+          "height": 30,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đóng menu",
+          "x": 268,
+          "y": 16,
+          "width": 32,
+          "height": 32,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Cuộc trò chuyện mới",
+          "x": 20,
+          "y": 85,
+          "width": 280,
+          "height": 40,
+          "offscreen": false
+        },
+        {
+          "tag": "BODY",
+          "label": "((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=[\"light\",\"dark\"];function ",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "offscreen": false
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "x": 12,
+          "y": 8,
+          "width": 40,
+          "height": 40,
+          "offscreen": false
+        }
+      ],
+      "afterEscape": [
+        {
+          "x": -320,
+          "ariaHidden": null
+        }
+      ]
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U14.png"
+  },
+  {
+    "id": "U15",
+    "kind": "empty-whitespace",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:40.483Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 217.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 289.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 712.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 431,
+            "width": 342,
+            "height": 46,
+            "bottom": 477,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 485,
+            "width": 342,
+            "height": 46,
+            "bottom": 531,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 539,
+            "width": 342,
+            "height": 46,
+            "bottom": 585,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "emptyDisabled": true,
+      "whitespaceDisabled": true
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U15.png"
+  },
+  {
+    "id": "U16",
+    "kind": "multiline-draft",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:40.921Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 144,
+        "width": 342,
+        "height": 72,
+        "bottom": 216,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 565.5,
+        "width": 366,
+        "height": 266.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 357.5,
+            "width": 342,
+            "height": 46,
+            "bottom": 403.5,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 411.5,
+            "width": 342,
+            "height": 46,
+            "bottom": 457.5,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 465.5,
+            "width": 342,
+            "height": 46,
+            "bottom": 511.5,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "draft": {
+        "clientHeight": 180,
+        "scrollHeight": 327,
+        "overflowY": "auto"
+      }
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U16.png"
+  },
+  {
+    "id": "U17",
+    "kind": "accessible-labels",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:41.339Z",
+    "measurements": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": {
+        "x": 24,
+        "y": 217.5,
+        "width": 342,
+        "height": 72,
+        "bottom": 289.5,
+        "right": 366
+      },
+      "composer": {
+        "x": 12,
+        "y": 712.5,
+        "width": 366,
+        "height": 119.5,
+        "bottom": 832,
+        "right": 378
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 24,
+            "y": 431,
+            "width": 342,
+            "height": 46,
+            "bottom": 477,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 24,
+            "y": 485,
+            "width": 342,
+            "height": 46,
+            "bottom": 531,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 24,
+            "y": 539,
+            "width": 342,
+            "height": 46,
+            "bottom": 585,
+            "right": 366
+          },
+          "centerHitsSelf": true,
+          "overlapsComposer": false
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "buttons": [
+        {
+          "text": "",
+          "ariaLabel": "Mở menu",
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "text": "",
+          "ariaLabel": null,
+          "expanded": "false",
+          "controls": null,
+          "rect": {
+            "width": 40,
+            "height": 36
+          }
+        },
+        {
+          "text": "Giới thiệu về MyStorage",
+          "ariaLabel": null,
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 342,
+            "height": 46
+          }
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "ariaLabel": null,
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 342,
+            "height": 46
+          }
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "ariaLabel": null,
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 342,
+            "height": 46
+          }
+        },
+        {
+          "text": "",
+          "ariaLabel": "Mở menu STOW",
+          "expanded": "false",
+          "controls": null,
+          "rect": {
+            "width": 36,
+            "height": 36
+          }
+        },
+        {
+          "text": "",
+          "ariaLabel": "Đọc để nhập",
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 36,
+            "height": 36
+          }
+        },
+        {
+          "text": "Nói trực tiếp",
+          "ariaLabel": "Bắt đầu trò chuyện thoại",
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 119,
+            "height": 30
+          }
+        },
+        {
+          "text": "",
+          "ariaLabel": "Gửi",
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 0,
+            "height": 27
+          }
+        },
+        {
+          "text": "",
+          "ariaLabel": "Đóng menu",
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "text": "Cuộc trò chuyện mới",
+          "ariaLabel": null,
+          "expanded": null,
+          "controls": null,
+          "rect": {
+            "width": 280,
+            "height": 40
+          }
+        }
+      ]
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U17.png"
+  },
+  {
+    "id": "U18",
+    "kind": "rotate-draft",
+    "status": "executed",
+    "timestamp": "2026-09-19T11:15:42.112Z",
+    "measurements": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "document": {
+        "width": 844,
+        "height": 390
+      },
+      "heading": {
+        "x": 126,
+        "y": 70.6875,
+        "width": 592,
+        "height": 80,
+        "bottom": 150.6875,
+        "right": 718
+      },
+      "composer": {
+        "x": 62,
+        "y": 258.5,
+        "width": 720,
+        "height": 119.5,
+        "bottom": 378,
+        "right": 782
+      },
+      "shortcuts": [
+        {
+          "text": "Giới thiệu về MyStorage",
+          "rect": {
+            "x": 126,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 318
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "STOW có những dịch vụ gì?",
+          "rect": {
+            "x": 326,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 518
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        },
+        {
+          "text": "Báo giá lưu trữ giúp em",
+          "rect": {
+            "x": 526,
+            "y": 267.8125,
+            "width": 192,
+            "height": 66,
+            "bottom": 333.8125,
+            "right": 718
+          },
+          "centerHitsSelf": false,
+          "overlapsComposer": true
+        }
+      ],
+      "liveRegions": 0,
+      "textarea": {
+        "label": null,
+        "labelledby": null,
+        "labels": 0,
+        "placeholder": "Hỏi về kho, kích thước, hoặc giá thuê…"
+      }
+    },
+    "detail": {
+      "preserved": true
+    },
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "screenshot": "evidence/round5/U18.png"
+  },
+  {
+    "id": "T24",
+    "status": "stopped",
+    "submittedAt": "2026-09-19T11:15:44.916Z",
+    "error": "Error: HTTP 429 from o4510216515289088.ingest.us.sentry.io/api/4510221149208576/envelope/",
+    "elapsedMs": 82406,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ]
+  }
+]

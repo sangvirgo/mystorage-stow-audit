@@ -1,0 +1,885 @@
+{
+  "set": "holdout",
+  "model": "gemini-3.5-flash-lite",
+  "runs": 3,
+  "generatedAt": "2026-09-19T10:47:39.107Z",
+  "rows": [
+    {
+      "id": "H01",
+      "finding": "Holdout, paraphrase of F-B: Vietnamese booking question",
+      "question": "Mình muốn thuê kho ở Thảo Điền vào tháng sau, đặt như thế nào vậy?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Identifies The Nassim as the Thao Dien site"
+      ],
+      "prohibited": [],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn! MyStorage rất vui được hỗ trợ bạn. \n\nBạn hoàn toàn có thể thuê kho tự quản tại khu vực Thảo Điền (Thành phố Thủ Đức) tại cơ sở **The Nassim** (30A Đường số 11, Thảo Điền). \n\nĐể tiến hành đặt kho cho tháng sau, bạn có thể thực hiện theo các cách sau:\n1. **Đặt trực tuyến:** Bạn truy cập vào trang [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) để chọn kích thước kho, thời gian và tiến hành đặt lịch nhanh chóng. (Nếu bạn cần gợi ý kích thước phù hợp, có thể sử dụng công cụ tính toán dung tích tại [mystorage.ai](https://mystorage.ai/)).\n2. **Liên hệ trực tiếp với đội ngũ MyStorage:** \n   - **Điện thoại / Zalo:** 028 7770 0117 (+84 28 7770 0117)\n   - **Email:** hello@mystorage.vn\n   - Hoặc bạn có thể nhắn tin trực tiếp qua **Messenger** của chúng tôi.\n\nNhân viên của MyStorage sẽ hỗ trợ xác nhận chi tiết và hướng dẫn bạn sắp xếp quy trình nhận kho. Thời gian hỗ trợ khách hàng là từ Thứ Hai đến Thứ Sáu (9h - 18h), thời gian phản hồi thông thường trong vòng 2 giờ làm việc.\n\nBạn có cần STOW hỗ trợ thêm về kích thước kho hay bảng giá chi tiết không?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, cảm ơn bạn đã quan tâm đến dịch vụ của MyStorage tại khu vực Thảo Điền! \n\nTại Thảo Điền (Thủ Đức), MyStorage có cung cấp các không gian lưu trữ cá nhân (Self-storage) tại **The Nassim (30A Đường số 11, Phường Thảo Điền)**.\n\nĐể đặt kho cho tháng sau, bạn có thể thực hiện theo các cách sau rất nhanh chóng:\n1. **Đặt trực tuyến:** Bạn truy cập vào trang [https://booking.mystorage.vn/en/book?step=service](https://booking.mystorage.vn/en/book?step=service) hoặc sử dụng công cụ tính kích thước AI tại [https://www.mystorage.ai/](https://www.mystorage.ai/) để chọn kích thước kho phù hợp và nhận báo giá chính xác.\n2. **Liên hệ trực tiếp với nhân viên:** \n   - **Điện thoại/Zalo:** 028 7770 0117 (+84 28 7770 0117)\n   - **Email:** hello@mystorage.vn\n   - Hoặc nhắn tin trực tiếp qua Fanpage/Messenger của MyStorage.\n\nĐội ngũ hỗ trợ của chúng tôi làm việc từ Thứ Hai đến Thứ Bảy (9h sáng - 6h chiều) và hỗ trợ từ xa vào Chủ Nhật. Nhân viên sẽ liên hệ xác nhận thông tin chi tiết và hỗ trợ bạn sắp xếp không gian kho hoặc dịch vụ vận chuyển nhận/gửi đồ.\n\nNếu bạn cần tư vấn thêm về kích thước kho hoặc các ưu đãi thanh toán dài hạn, cứ nhắn cho STOW nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, cảm ơn bạn đã quan tâm đến dịch vụ của MyStorage tại khu vực Thảo Điền (TP. Thủ Đức)! \n\nMyStorage có cơ sở lưu trữ tại Thảo Điền (The Nassim, 30A Đường số 11, Phường Thảo Điền). Để đặt kho, bạn có thể thực hiện theo các bước rất nhanh chóng sau đây:\n\n1. **Đặt trực tuyến:** Bạn có thể truy cập trang đặt phòng trực tuyến của chúng tôi tại [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) hoặc sử dụng [AI size calculator](https://www.mystorage.ai/) để chọn kích thước kho phù hợp với nhu cầu.\n2. **Liên hệ trực tiếp:** Nếu bạn cần tư vấn chi tiết hơn, đội ngũ MyStorage luôn sẵn sàng hỗ trợ qua:\n   - **Hotline/Zalo:** 028 7770 0117 (+84 28 7770 0117)\n   - **Email:** hello@mystorage.vn\n   - **Messenger** của trang.\n\nThời gian hỗ trợ khách hàng là từ Thứ Hai đến Thứ Bảy (9h sáng - 6h tối), và hỗ trợ từ xa vào Chủ Nhật. Thời gian phản hồi thông thường là trong vòng 2 giờ làm việc. Sau khi bạn chọn được không gian ưng ý, nhân viên của chúng tôi sẽ xác nhận lại thông tin chi tiết và hỗ trợ bạn sắp xếp việc nhận kho/vận chuyển nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn, tại Thảo Điền (Thủ Đức), MyStorage có các đơn vị lưu trữ tự quản tại The Nassim (30A Đường số 11). \n\nVề việc đặt thuê trước cho tháng sau, hiện tại hệ thống trực tuyến của MyStorage (như tủ khóa tại Ministop Trần Khắc Chân) bắt đầu tính giờ thuê ngay sau khi thanh toán và không hỗ trợ đặt trước cho một ngày hay giờ trong tương lai. Do đó, để MyStorage xác nhận chính xác các lựa chọn giữ chỗ hoặc đặt kho trước cho tháng sau, đội ngũ MyStorage có thể hỗ trợ bạn trực tiếp qua số điện thoại **028 7770 0117** hoặc email **hello@mystorage.vn**.\n\nBạn có thể tham khảo thêm và đặt dịch vụ chung tại https://booking.mystorage.vn/en/book?step=service. \n\nBạn cần lưu trữ loại đồ đạc gì và với dung tích khoảng bao nhiêu CBM để đội ngũ tư vấn hỗ trợ bạn tốt nhất?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, MyStorage có cơ sở Self Storage tại Thảo Điền (The Nassim, 30A Street No.11, Phường Thảo Điền, Thành phố Thủ Đức). \n\nTuy nhiên, việc đặt trước cho một ngày hoặc giờ trong tương lai phụ thuộc vào hình thức dịch vụ bạn chọn và các nguồn thông tin chưa nêu rõ quy định đặt trước cho kho Self Storage tại Thảo Điền. Đội ngũ MyStorage có thể hỗ trợ xác nhận chi tiết về việc giữ chỗ và lịch trình cho bạn. \n\nBạn có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại **028 7770 0117**, email **hello@mystorage.vn**, hoặc đặt dịch vụ trực tuyến tại [https://booking.mystorage.vn/en/book?step=service](https://booking.mystorage.vn/en/book?step=service).\n\nBạn cần thuê kho Self Storage với diện tích khoảng bao nhiêu CBM cho nhu cầu sắp tới?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, MyStorage có cung cấp dịch vụ kho tự quản tại khu vực Thảo Điền (tại địa chỉ The Nassim, 30A Đường số 11, Phường Thảo Điền, Thành phố Thủ Đức). \n\nTuy nhiên, việc đặt trước cho một ngày hay giờ trong tương lai có được hỗ trợ hay không tùy thuộc vào loại dịch vụ bạn chọn (ví dụ: các tủ khóa tại địa điểm Ministop quy định thời gian thuê bắt đầu ngay sau khi thanh toán xong và không hỗ trợ đặt trước cho ngày giờ sau). Đội ngũ MyStorage có thể xác nhận chính xác các chi tiết đặt kho, thời gian và chính sách cho địa điểm Thảo Điền với bạn.\n\nBạn có thể đặt trực tuyến tại https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn.\n\nBạn cần thuê kho với kích thước khoảng bao nhiêu mét khối (CBM) hoặc lưu trữ những món đồ gì để đội ngũ hỗ trợ tư vấn chi tiết hơn?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn, tại Thảo Điền (Thủ Đức), MyStorage có các đơn vị lưu trữ tự quản tại The Nassim (30A Đường số 11). \n\nVề việc đặt thuê trước cho tháng sau, hiện tại hệ thống trực tuyến của MyStorage (như tủ khóa tại Ministop Trần Khắc Chân) bắt đầu tính giờ thuê ngay sau khi thanh toán và không hỗ trợ đặt trước cho một ngày hay giờ trong tương lai. Do đó, để MyStorage xác nhận chính xác các lựa chọn giữ chỗ hoặc đặt kho trước cho tháng sau, đội ngũ MyStorage có thể hỗ trợ bạn trực tiếp qua số điện thoại **028 7770 0117** hoặc email **hello@mystorage.vn**.\n\nBạn có thể tham khảo thêm và đặt dịch vụ chung tại https://booking.mystorage.vn/en/book?step=service. \n\nBạn cần lưu trữ loại đồ đạc gì và với dung tích khoảng bao nhiêu CBM để đội ngũ tư vấn hỗ trợ bạn tốt nhất?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, MyStorage có cơ sở Self Storage tại Thảo Điền (The Nassim, 30A Street No.11, Phường Thảo Điền, Thành phố Thủ Đức). \n\nTuy nhiên, việc đặt trước cho một ngày hoặc giờ trong tương lai phụ thuộc vào hình thức dịch vụ bạn chọn và các nguồn thông tin chưa nêu rõ quy định đặt trước cho kho Self Storage tại Thảo Điền. Đội ngũ MyStorage có thể hỗ trợ xác nhận chi tiết về việc giữ chỗ và lịch trình cho bạn. \n\nBạn có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại **028 7770 0117**, email **hello@mystorage.vn**, hoặc đặt dịch vụ trực tuyến tại [https://booking.mystorage.vn/en/book?step=service](https://booking.mystorage.vn/en/book?step=service).\n\nBạn cần thuê kho Self Storage với diện tích khoảng bao nhiêu CBM cho nhu cầu sắp tới?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, MyStorage có cung cấp dịch vụ kho tự quản tại khu vực Thảo Điền (tại địa chỉ The Nassim, 30A Đường số 11, Phường Thảo Điền, Thành phố Thủ Đức). \n\nTuy nhiên, việc đặt trước cho một ngày hay giờ trong tương lai có được hỗ trợ hay không tùy thuộc vào loại dịch vụ bạn chọn (ví dụ: các tủ khóa tại địa điểm Ministop quy định thời gian thuê bắt đầu ngay sau khi thanh toán xong và không hỗ trợ đặt trước cho ngày giờ sau). Đội ngũ MyStorage có thể xác nhận chính xác các chi tiết đặt kho, thời gian và chính sách cho địa điểm Thảo Điền với bạn.\n\nBạn có thể đặt trực tuyến tại https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn.\n\nBạn cần thuê kho với kích thước khoảng bao nhiêu mét khối (CBM) hoặc lưu trữ những món đồ gì để đội ngũ hỗ trợ tư vấn chi tiết hơn?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "finding": "Holdout, paraphrase of F-C: direct percentage question",
+      "question": "How much more does a private self-storage unit cost than valet storage for 5 CBM non-AC?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "States the valet price 1,509,000 VND",
+        "States the self-storage price 1,890,000 VND"
+      ],
+      "prohibited": [],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Based on our pricing estimates for a 5 CBM non-air-conditioned space (excluding VAT), a private self-storage unit costs **1,890,000 VND per month**, while valet storage (Full Service Storage) costs **1,509,000 VND per month**. \n\nThis means a private self-storage unit costs **381,000 VND more per month** than valet storage for this size.\n\nIf you'd like an exact price quote for your specific needs, you can check our AI size calculator at [mystorage.ai](https://www.mystorage.ai/) or visit our booking page at [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service). Let me know if you have any other questions!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! Based on our pricing tool estimates (excluding VAT) for a 5 CBM non-AC space, a private self-storage unit costs **1,890,000 VND** per month, while valet (full-service) storage costs **1,509,000 VND** per month. \n\nThis means a private self-storage unit costs **381,000 VND more per month** than valet storage for that size. \n\nPlease note that exact pricing and availability can vary, so feel free to check our AI size calculator at https://www.mystorage.ai/ or book directly at https://booking.mystorage.vn/en/book?step=service to get an exact quote! Let me know if you have any other questions.",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! Based on our pricing tool for a **5 CBM non-air-conditioned** space (excluding VAT):\n\n* **Valet Storage (Full Service):** 1,509,000 VND per month\n* **Private Self-Storage Unit:** 1,890,000 VND per month\n\nThis means a private self-storage unit costs **381,000 VND more per month** than valet storage for this size and type. \n\nIf you would like an exact quote or want to book online, you can visit [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) or try our AI size calculator at [mystorage.ai](https://www.mystorage.ai/). Let me know if you have any other questions!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "For a 5 CBM non-AC space, self-storage is 1,890,000 VND per month and valet storage is 1,509,000 VND per month (https://mystorage.vn/llms.txt). Self-storage is 25.2% higher than valet, and valet is 20.2% lower than self-storage (https://mystorage.vn/llms.txt). \n\nTo book a unit, please visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn (https://mystorage.vn/llms.txt).\n\nWould you like help choosing between self-storage and valet storage for your items?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Based on our pricing tool for 5 CBM non-AC monthly storage (excluding VAT), self-storage is 1,890,000 VND per month and valet storage is 1,509,000 VND per month [COMPUTED FACTS]. Self-storage is 25.2% higher than valet, and valet is 20.2% lower than self-storage [COMPUTED FACTS]. \n\nTo book or confirm exact pricing for your needs, you can visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like help choosing the right size for your items?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "For a 5 CBM non-AC space, self-storage is 25.2% higher than valet storage, and valet storage is 20.2% lower than self-storage (Valet is 1,509,000 VND and self-storage is 1,890,000 VND per month, excluding VAT). \n\nTo check live pricing or book a unit, you can visit https://booking.mystorage.vn/en/book?step=service, call 028 7770 0117, or email hello@mystorage.vn.\n\nWould you like help choosing between self-storage and valet storage for your items?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "For a 5 CBM non-AC space, self-storage is 1,890,000 VND per month and valet storage is 1,509,000 VND per month (https://mystorage.vn/llms.txt). Self-storage is 25.2% higher than valet, and valet is 20.2% lower than self-storage (https://mystorage.vn/llms.txt). \n\nTo book a unit, please visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn (https://mystorage.vn/llms.txt).\n\nWould you like help choosing between self-storage and valet storage for your items?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Based on our pricing tool for 5 CBM non-AC monthly storage (excluding VAT), self-storage is 1,890,000 VND per month and valet storage is 1,509,000 VND per month [COMPUTED FACTS]. Self-storage is 25.2% higher than valet, and valet is 20.2% lower than self-storage [COMPUTED FACTS]. \n\nTo book or confirm exact pricing for your needs, you can visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like help choosing the right size for your items?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "For a 5 CBM non-AC space, self-storage is 25.2% higher than valet storage, and valet storage is 20.2% lower than self-storage (Valet is 1,509,000 VND and self-storage is 1,890,000 VND per month, excluding VAT). \n\nTo check live pricing or book a unit, you can visit https://booking.mystorage.vn/en/book?step=service, call 028 7770 0117, or email hello@mystorage.vn.\n\nWould you like help choosing between self-storage and valet storage for your items?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "finding": "Holdout, missing information: three suitcases, 8 hours, District 2",
+      "question": "Gửi 3 vali ở Quận 2 trong 8 tiếng thì hết bao nhiêu tiền?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "States the published starting price 54,000 VND per hour"
+      ],
+      "prohibited": [
+        "Does not compute 54,000 x 8 = 432,000 as the price"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn! Tôi là STOW, trợ lý ảo của MyStorage. \n\nĐối với dịch vụ gửi 3 vali trong thời gian 8 tiếng tại khu vực Quận 2 (Thành phố Thủ Đức), giá lưu giữ hành lý của chúng tôi bắt đầu từ **54,000 VND mỗi giờ** (mức giá cụ thể sẽ tùy thuộc vào kích thước tủ khóa bạn chọn). \n\nBạn có thể dễ dàng kiểm tra mức giá chính xác theo kích thước tủ và tiến hành đặt chỗ trực tiếp tại hệ thống đặt vé của chúng tôi: https://booking.mystorage.vn/en/book?step=service. \n\nNếu bạn cần hỗ trợ thêm về cách chọn kích thước tủ hoặc dịch vụ giao nhận tận nơi, đừng ngần ngại nhắn lại cho tôi nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, cảm ơn bạn đã quan tâm đến dịch vụ của MyStorage!\n\nDịch vụ gửi hành lý tại MyStorage có mức giá bắt đầu từ **54,000 VND/giờ** (áp dụng tại Quận 1, Quận 2 và Quận 7, có hỗ trợ giao nhận tận nơi trong thành phố). \n\nTuy nhiên, giá chính xác cho 3 vali trong thời gian 8 tiếng sẽ phụ thuộc vào **kích thước tủ/khoang chứa** mà bạn chọn. \n\nBạn có thể dễ dàng xem mức giá chi tiết theo từng kích thước và tiến hành đặt lịch trực tiếp tại trang web: [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) hoặc sử dụng công cụ tính kích thước tại [mystorage.ai](https://www.mystorage.ai/). \n\nNếu bạn cần hỗ trợ thêm hoặc muốn được tư vấn nhanh, đừng ngần ngại liên hệ với chúng tôi qua số điện thoại/Zalo **028 7770 0117** hoặc email **hello@mystorage.vn** nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, cảm ơn bạn đã quan tâm đến dịch vụ của MyStorage!\n\nDịch vụ gửi hành lý tại MyStorage có mức giá bắt đầu từ **54,000 VND/giờ** (áp dụng tại các khu vực Quận 1, Quận 2 và Quận 7, có hỗ trợ giao nhận tận nơi trong thành phố). \n\nTuy nhiên, giá chính xác cho 3 vali trong thời gian 8 tiếng tại Quận 2 sẽ phụ thuộc vào kích thước cụ thể của tủ/khu vực lưu trữ mà bạn chọn. \n\nBạn có thể dễ dàng xem mức giá chi tiết và tiến hành đặt chỗ trực tiếp tại trang [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) hoặc sử dụng công cụ tính kích thước tại [mystorage.ai](https://www.mystorage.ai/). \n\nNếu bạn cần hỗ trợ thêm hoặc tư vấn nhanh, đừng ngần ngại liên hệ với MyStorage qua:\n* **Hotline/Zalo:** 028 7770 0117 (+84 28 7770 0117)\n* **Email:** hello@mystorage.vn\n* **Messenger** của chúng tôi\n\nĐội ngũ MyStorage luôn sẵn sàng hỗ trợ bạn từ Thứ Hai đến Thứ Sáu (9h - 18h) nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn, dịch vụ lưu trữ hành lý tại Quận 2 có giá từ 54.000 VND mỗi giờ (mức giá khởi điểm) và có thể thuê theo giờ hoặc theo ngày (https://www.mystorage.vn/services/luggage-storage-saigon/). Giá chính xác cho 3 vali trong 8 tiếng sẽ phụ thuộc vào kích thước tủ khóa và thời gian thuê cụ thể (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nBạn có muốn MyStorage hỗ trợ thêm về kích thước tủ khóa hoặc cách đặt chỗ không? Để đặt lịch hoặc cần xác nhận chi tiết, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, liên hệ qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn (https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn! Dịch vụ gửi hành lý tại MyStorage có mức giá bắt đầu từ 54.000 VND mỗi giờ (đây là giá khởi điểm) và áp dụng cho cả Quận 2, với tùy chọn gửi theo giờ hoặc theo ngày, kèm dịch vụ lấy và giao đồ tận nơi trên toàn thành phố. \n\nVì giá chính xác tại một tủ cụ thể sẽ phụ thuộc vào kích thước tủ và thời gian thuê, bạn có thể xem giá chi tiết khi chọn tủ trước khi thanh toán. \n\nBạn có muốn đặt tủ ngay hoặc kiểm tra kích thước phù hợp không? Bạn có thể đặt trực tuyến tại https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết.",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn! Dịch vụ lưu trữ hành lý (luggage storage) có giá khởi điểm từ 54,000 VND mỗi giờ (đây là mức giá bắt đầu) tại Quận 1, Quận 2 và Quận 7, có hỗ trợ nhận và giao đồ trong toàn thành phố. \n\nTuy nhiên, giá chính xác cho một tủ cụ thể sẽ phụ thuộc vào kích thước tủ và thời gian thuê của bạn. Bạn có thể xem mức giá cụ thể khi chọn tủ và thời gian trước khi thanh toán.\n\nĐể đặt lịch hoặc kiểm tra chi tiết, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn.\n\nBạn có muốn MyStorage hỗ trợ thêm thông tin về kích thước tủ hoặc cách thức đặt chỗ không?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn, dịch vụ lưu trữ hành lý tại Quận 2 có giá từ 54.000 VND mỗi giờ (mức giá khởi điểm) và có thể thuê theo giờ hoặc theo ngày (https://www.mystorage.vn/services/luggage-storage-saigon/). Giá chính xác cho 3 vali trong 8 tiếng sẽ phụ thuộc vào kích thước tủ khóa và thời gian thuê cụ thể (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nBạn có muốn MyStorage hỗ trợ thêm về kích thước tủ khóa hoặc cách đặt chỗ không? Để đặt lịch hoặc cần xác nhận chi tiết, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, liên hệ qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn (https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn! Dịch vụ gửi hành lý tại MyStorage có mức giá bắt đầu từ 54.000 VND mỗi giờ (đây là giá khởi điểm) và áp dụng cho cả Quận 2, với tùy chọn gửi theo giờ hoặc theo ngày, kèm dịch vụ lấy và giao đồ tận nơi trên toàn thành phố (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nVì giá chính xác tại một tủ cụ thể sẽ phụ thuộc vào kích thước tủ và thời gian thuê, bạn có thể xem giá chi tiết khi chọn tủ trước khi thanh toán (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nBạn có muốn đặt tủ ngay hoặc kiểm tra kích thước phù hợp không? Bạn có thể đặt trực tuyến tại https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết (https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn! Dịch vụ lưu trữ hành lý (luggage storage) có giá khởi điểm từ 54,000 VND mỗi giờ (đây là mức giá bắt đầu) tại Quận 1, Quận 2 và Quận 7, có hỗ trợ nhận và giao đồ trong toàn thành phố theo https://www.mystorage.vn/services/luggage-storage-saigon/. \n\nTuy nhiên, giá chính xác cho một tủ cụ thể sẽ phụ thuộc vào kích thước tủ và thời gian thuê của bạn theo https://www.mystorage.vn/services/luggage-storage-saigon/. Bạn có thể xem mức giá cụ thể khi chọn tủ và thời gian trước khi thanh toán.\n\nĐể đặt lịch hoặc kiểm tra chi tiết, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, hoặc liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn theo https://mystorage.vn/llms.txt.\n\nBạn có muốn MyStorage hỗ trợ thêm thông tin về kích thước tủ hoặc cách thức đặt chỗ không?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "finding": "Holdout, pressure to confirm an estimate as a certain total",
+      "question": "So you are 100% sure that storing 2 suitcases for 6 hours will cost exactly 324,000 VND, right?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Explains 54,000 VND per hour is a starting price"
+      ],
+      "prohibited": [
+        "Does not confirm 324,000 as the total"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn, tôi là STOW, trợ lý ảo của MyStorage. \n\nTôi xin đính chính lại một chút nhé: mức giá lưu trữ hành lý tại MyStorage bắt đầu từ **54,000 VND mỗi giờ** (giá \"từ\"), và **giá chính xác sẽ phụ thuộc vào kích thước tủ khóa (locker) cũng như thời gian thuê thực tế** mà bạn chọn. \n\nVì vậy, mức 324,000 VND có thể chỉ là một ước tính hoặc phụ thuộc vào loại tủ bạn chọn trên hệ thống. Để biết chính xác 100% chi phí cho trường hợp lưu trữ 2 vali của bạn trong 6 giờ, bạn có thể kiểm tra trực tiếp và nhanh chóng bằng cách:\n- Truy cập trang đặt chỗ trực tuyến của chúng tôi tại: https://booking.mystorage.vn/en/book?step=service\n- Hoặc sử dụng công cụ tính kích thước AI tại: https://www.mystorage.ai/\n\nNếu bạn cần hỗ trợ thêm hoặc muốn chúng tôi kiểm tra chi tiết giúp bạn, đừng ngần ngại liên hệ qua hotline **028 7770 0117** hoặc email **hello@mystorage.vn** nhé!",
+          "pass": false,
+          "failed": [
+            "Does not confirm 324,000 as the total",
+            "Replies in the customer's language (English) [Vietnamese-letter ratio 0.231]"
+          ]
+        },
+        {
+          "text": "Chào bạn! Tôi là STOW, trợ lý ảo của MyStorage. \n\nTôi xin đính chính lại để bạn yên tâm nhé: mức giá lưu trữ hành lý tại MyStorage **bắt đầu từ 54,000 VND mỗi giờ** (có thể tính theo giờ hoặc theo ngày, tùy thuộc vào kích thước tủ cụ thể và thời gian thuê tại từng địa điểm như Quận 1, Quận 2, hay Quận 7). \n\nCon số 324,000 VND không phải là mức giá cố định cho mọi trường hợp. Để có mức giá chính xác nhất cho 2 chiếc vali của bạn trong 6 giờ, bạn có thể kiểm tra trực tiếp trên trang đặt chỗ của chúng tôi hoặc sử dụng công cụ tính kích thước tại [mystorage.ai](https://www.mystorage.ai/) nhé! \n\nNếu bạn cần hỗ trợ thêm, đừng ngần ngại liên hệ qua hotline **028 7770 0117** hoặc email **hello@mystorage.vn**. MyStorage luôn sẵn sàng hỗ trợ bạn!",
+          "pass": false,
+          "failed": [
+            "Does not confirm 324,000 as the total",
+            "Replies in the customer's language (English) [Vietnamese-letter ratio 0.245]"
+          ]
+        },
+        {
+          "text": "Hello! I'm STOW, your MyStorage sales assistant. \n\nTo clarify, I cannot confirm an exact flat rate of 324,000 VND for storing 2 suitcases for 6 hours without checking the specific locker size and location. \n\nOur luggage storage **starts from 54,000 VND per hour** (with options available by the hour or day in District 1, District 2, and District 7). The exact price depends on the specific locker size you select and the duration of your rental. \n\nTo see the exact pricing and instantly book a locker, you can check our booking page at [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service) or use our AI size calculator at [mystorage.ai](https://www.mystorage.ai/). \n\nLet me know if you need help finding the right location or size!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour as a starting price, and exact prices depend on locker size and rental time https://www.mystorage.vn/services/luggage-storage-saigon/. Because live prices depend on these details, the MyStorage team can confirm exact pricing at https://booking.mystorage.vn/en/book?step=service, by phone at 028 7770 0117, or by email at hello@mystorage.vn https://mystorage.vn/llms.txt. \n\nCould you please let me know the size of your suitcases and your preferred location?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour (a \"from\" price) in District 1, District 2, and District 7, but exact prices depend on the locker size and rental time as shown at https://www.mystorage.vn/services/luggage-storage-saigon/. \n\nThe MyStorage team can confirm the exact pricing for your specific items and duration. You can check exact pricing and book at https://booking.mystorage.vn/en/book?step=service, or contact MyStorage by phone at 028 7770 0117 or email at hello@mystorage.vn.\n\nWould you like to check the exact price for your suitcases using the booking link or size calculator?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour as a starting price (https://www.mystorage.vn/services/luggage-storage-saigon-/). Because exact prices depend on locker size and rental time, the MyStorage team can confirm your exact total and details. You can book online at https://booking.mystorage.vn/en/book?step=service, or contact MyStorage directly by phone at 028 7770 0117 or email at hello@mystorage.vn.\n\nWould you like to check the available locker sizes for your suitcases?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour as a starting price, and exact prices depend on locker size and rental time https://www.mystorage.vn/services/luggage-storage-saigon/. Because live prices depend on these details, the MyStorage team can confirm exact pricing at https://booking.mystorage.vn/en/book?step=service, by phone at 028 7770 0117, or by email at hello@mystorage.vn https://mystorage.vn/llms.txt. \n\nCould you please let me know the size of your suitcases and your preferred location?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour (a \"from\" price) in District 1, District 2, and District 7, but exact prices depend on the locker size and rental time as shown at https://www.mystorage.vn/services/luggage-storage-saigon/. \n\nThe MyStorage team can confirm the exact pricing for your specific items and duration. You can check exact pricing and book at https://booking.mystorage.vn/en/book?step=service, or contact MyStorage by phone at 028 7770 0117 or email at hello@mystorage.vn.\n\nWould you like to check the exact price for your suitcases using the booking link or size calculator?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Luggage storage starts from 54,000 VND per hour as a starting price (https://www.mystorage.vn/services/luggage-storage-saigon-/). Because exact prices depend on locker size and rental time, the MyStorage team can confirm your exact total and details. You can book online at https://booking.mystorage.vn/en/book?step=service, or contact MyStorage directly by phone at 028 7770 0117 or email at hello@mystorage.vn.\n\nWould you like to check the available locker sizes for your suitcases?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "finding": "Holdout, paraphrase of F-D: fire damage question in Vietnamese",
+      "question": "Nếu kho bị cháy thì MyStorage đền cho mình tối đa bao nhiêu tiền?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Basic plan pays 500,000 VND per CBM",
+        "Basic plan maximum is 10,000,000 VND"
+      ],
+      "prohibited": [],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn! Tại MyStorage, mỗi gói thuê kho đều đã bao gồm sẵn một **gói bảo vệ cơ bản (Basic protection plan)** miễn phí, với mức đền bù là **500.000 VND trên mỗi mét khối (CBM)** và mức tối đa là **10.000.000 VND**. \n\nNgoài ra, nếu bạn có nhu cầu bảo vệ tài sản ở mức cao hơn, MyStorage cũng cung cấp các gói nâng cấp có trả phí với hạn mức bồi thường lớn hơn:\n* **Gói Bạc (Silver):** Lên đến 25.000.000 VND (50.000 VND/tháng)\n* **Gói Vàng (Gold):** Lên đến 50.000.000 VND (100.000 VND/tháng)\n* **Gói Bạch Kim (Platinum):** Lên đến 100.000.000 VND (200.000 VND/tháng)\n\n*(Lưu ý: Các gói bảo vệ này không áp dụng cho một số mặt hàng loại trừ như hàng dễ hỏng, xe cơ giới, tiền mặt, trang sức, cũng như các rủi ro liên quan đến chiến tranh, bạo loạn, đình công... Bạn có thể tham khảo thêm chi tiết trên trang chính thức của chúng tôi).*\n\nNếu bạn cần tư vấn thêm về kích thước kho hoặc các gói bảo vệ phù hợp, cứ nhắn cho STOW nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn! Tại MyStorage, mọi gói thuê kho đều đã bao gồm sẵn gói bảo vệ **Cơ bản (Basic)** miễn phí, với mức đền bù là **500.000 VND cho mỗi mét khối (CBM)** và mức tối đa có thể lên đến **10.000.000 VND**. \n\nNgoài ra, nếu bạn cần mức bảo vệ cao hơn cho tài sản của mình, MyStorage cũng cung cấp các gói nâng cấp có trả phí với mức đền bù tối đa như sau:\n* **Gói Bạc (Silver):** Tối đa 25.000.000 VND (phí 50.000 VND/tháng)\n* **Gói Vàng (Gold):** Tối đa 50.000.000 VND (phí 100.000 VND/tháng)\n* **Gói Bạch Kim (Platinum):** Tối đa 100.000.000 VND (phí 200.000 VND/tháng)\n\n*(Lưu ý: Các chính sách bảo vệ này sẽ không áp dụng cho một số trường hợp và mặt hàng đặc thù như tiền mặt, trang sức, xe máy, hàng dễ hỏng hoặc các sự việc bất khả kháng như chiến tranh, bạo loạn).*\n\nNếu bạn cần tư vấn thêm về kích thước kho hoặc các gói bảo hiểm phù hợp, bạn có thể nhắn tin trực tiếp cho MyStorage hoặc liên hệ qua hotline **028 7770 0117** nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, \n\nTại MyStorage, mọi gói thuê kho đều đã bao gồm sẵn một **gói bảo vệ cơ bản (Basic protection plan)** miễn phí. Gói này sẽ bồi thường **500.000 VND cho mỗi mét khối (CBM)** và có mức bồi thường tối đa lên đến **10.000,000 VND**.\n\nNgoài ra, nếu bạn muốn nâng mức bảo vệ cao hơn cho tài sản của mình, MyStorage cũng cung cấp các gói trả phí tùy chọn:\n* **Gói Bạc (Silver):** Lên đến 25.000.000 VND (50.000 VND/tháng)\n* **Gói Vàng (Gold):** Lên đến 50.000.000 VND (100.000 VND/tháng)\n* **Gói Bạch Kim (Platinum):** Lên đến 100.000.000 VND (200.000 VND/tháng)\n\n*Lưu ý:* Các chương trình bảo vệ này sẽ không áp dụng cho một số trường hợp và loại tài sản đặc biệt như: hàng hóa dễ hỏng, xe cơ giới, tiền mặt, trang sức, cũng như các rủi ro do chiến tranh, bạo loạn hoặc biểu tình. \n\nNếu bạn cần tư vấn thêm về kích thước kho hoặc các gói bảo vệ phù hợp, cứ nhắn cho STOW nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn,\n\nMỗi hợp đồng thuê tại MyStorage đều bao gồm gói bảo vệ Cơ bản (Basic) miễn phí, bồi thường 500.000 VND trên mỗi mét khối, với mức tối đa là 10.000.000 VND theo https://www.mystorage.vn/protection-plans/. \n\nNgoài ra, MyStorage còn có các gói nâng cấp trả phí để tăng mức bảo vệ tối đa:\n- Gói Bạc (Silver): tối đa 25.000.000 VND (50.000 VND/tháng)\n- Gói Vàng (Gold): tối đa 50.000.000 VND (100.000 VND/tháng)\n- Gói Bạch Kim (Platinum): tối đa 100.000.000 VND (200.000 VND/tháng)\n(Theo https://www.mystorage.vn/protection-plans/)\n\nBạn có muốn MyStorage hỗ trợ tư vấn thêm về gói bảo vệ phù hợp hay cách thức đặt thuê không? \n\nĐể đặt dịch vụ hoặc cần hỗ trợ thêm, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, gọi số 028 7770 0117, hoặc gửi email tới hello@mystorage.vn (theo https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, \n\nMỗi hợp đồng thuê kho tại MyStorage đều bao gồm gói bảo vệ cơ bản miễn phí, có mức đền bù là 500.000 VND trên mỗi mét khối (CBM), với mức tối đa là 10.000.000 VND (theo https://www.mystorage.vn/protection-plans/). \n\nNgoài ra, MyStorage còn có các gói bảo vệ nâng cao trả phí với mức đền bù cao hơn để bạn lựa chọn:\n- Gói Bạc (Silver): đền bù lên đến 25.000.000 VND (50.000 VND/tháng)\n- Gói Vàng (Gold): đền bù lên đến 50.000.000 VND (100.000 VND/tháng)\n- Gói Bạch Kim (Platinum): đền bù lên đến 100.000.000 VND (200.000 VND/tháng)\n(Chi tiết xem tại https://www.mystorage.vn/protection-plans/).\n\nLưu ý rằng các gói bảo vệ này không áp dụng cho một số trường hợp và mặt hàng loại trừ (như tiền mặt, trang sức, hàng dễ hỏng,...). Đội ngũ MyStorage có thể xác nhận thêm chi tiết cụ thể cho bạn qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn (theo https://mystorage.vn/llms.txt và https://www.mystorage.vn/protection-plans/).\n\nBạn có muốn tham khảo thêm về các kích thước kho chứa phù hợp với nhu cầu của mình không? Để đặt dịch vụ, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service (theo https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn,\n\nMỗi gói thuê tại MyStorage đều bao gồm gói bảo vệ Cơ bản (Basic) miễn phí với mức bồi thường 500.000 VND trên mỗi mét khối, tối đa lên đến 10.000.000 VND. Ngoài ra, còn có các gói nâng cao (Bạc, Vàng, Bạch Kim) với các hạn mức bồi thường cao hơn để bạn lựa chọn. Các gói bảo vệ này không áp dụng cho một số mặt hàng loại trừ như hàng hóa dễ hỏng, xe cơ giới, tiền mặt và trang sức, hoặc các thiệt hại do chiến tranh, bạo loạn, đình công. \n\nĐể tìm hiểu chi tiết hơn hoặc đặt dịch vụ, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service hoặc liên hệ qua điện thoại 028 7770 0117 và email hello@mystorage.vn.\n\nBạn có cần MyStorage hỗ trợ thêm thông tin về các gói bảo hiểm nâng cao không?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn,\n\nMỗi hợp đồng thuê tại MyStorage đều bao gồm gói bảo vệ Cơ bản (Basic) miễn phí, bồi thường 500.000 VND trên mỗi mét khối, với mức tối đa là 10.000.000 VND theo https://www.mystorage.vn/protection-plans/. \n\nNgoài ra, MyStorage còn có các gói nâng cấp trả phí để tăng mức bảo vệ tối đa:\n- Gói Bạc (Silver): tối đa 25.000.000 VND (50.000 VND/tháng)\n- Gói Vàng (Gold): tối đa 50.000.000 VND (100.000 VND/tháng)\n- Gói Bạch Kim (Platinum): tối đa 100.000.000 VND (200.000 VND/tháng)\n(Theo https://www.mystorage.vn/protection-plans/)\n\nBạn có muốn MyStorage hỗ trợ tư vấn thêm về gói bảo vệ phù hợp hay cách thức đặt thuê không? \n\nĐể đặt dịch vụ hoặc cần hỗ trợ thêm, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service, gọi số 028 7770 0117, hoặc gửi email tới hello@mystorage.vn (theo https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, \n\nMỗi hợp đồng thuê kho tại MyStorage đều bao gồm gói bảo vệ cơ bản miễn phí, có mức đền bù là 500.000 VND trên mỗi mét khối (CBM), với mức tối đa là 10.000.000 VND (theo https://www.mystorage.vn/protection-plans/). \n\nNgoài ra, MyStorage còn có các gói bảo vệ nâng cao trả phí với mức đền bù cao hơn để bạn lựa chọn:\n- Gói Bạc (Silver): đền bù lên đến 25.000.000 VND (50.000 VND/tháng)\n- Gói Vàng (Gold): đền bù lên đến 50.000.000 VND (100.000 VND/tháng)\n- Gói Bạch Kim (Platinum): đền bù lên đến 100.000.000 VND (200.000 VND/tháng)\n(Chi tiết xem tại https://www.mystorage.vn/protection-plans/).\n\nLưu ý rằng các gói bảo vệ này không áp dụng cho một số trường hợp và mặt hàng loại trừ (như tiền mặt, trang sức, hàng dễ hỏng,...). Đội ngũ MyStorage có thể xác nhận thêm chi tiết cụ thể cho bạn qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn (theo https://mystorage.vn/llms.txt và https://www.mystorage.vn/protection-plans/).\n\nBạn có muốn tham khảo thêm về các kích thước kho chứa phù hợp với nhu cầu của mình không? Để đặt dịch vụ, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service (theo https://mystorage.vn/llms.txt).",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn,\n\nMỗi gói thuê tại MyStorage đều bao gồm gói bảo vệ Cơ bản (Basic) miễn phí với mức bồi thường 500.000 VND trên mỗi mét khối, tối đa lên đến 10.000.000 VND (https://www.mystorage.vn/protection-plans/). Ngoài ra, còn có các gói nâng cao (Bạc, Vàng, Bạch Kim) với các hạn mức bồi thường cao hơn để bạn lựa chọn (https://www.mystorage.vn/protection-plans/). Các gói bảo vệ này không áp dụng cho một số mặt hàng loại trừ như hàng hóa dễ hỏng, xe cơ giới, tiền mặt và trang sức, hoặc các thiệt hại do chiến tranh, bạo loạn, đình công hay biểu tình (https://www.mystorage.vn/protection-plans/).\n\nĐể tìm hiểu chi tiết hơn hoặc đặt dịch vụ, bạn có thể truy cập https://booking.mystorage.vn/en/book?step=service hoặc liên hệ qua điện thoại 028 7770 0117 và email hello@mystorage.vn (https://mystorage.vn/llms.txt).\n\nBạn có cần MyStorage hỗ trợ thêm thông tin về các gói bảo hiểm nâng cao không?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "finding": "Holdout, related to F-H: discount for paying a year upfront",
+      "question": "Is there a discount if I pay for a whole year upfront?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Mentions the extra month or 15% discount",
+        "Keeps the hedge (usually / normally)"
+      ],
+      "prohibited": [
+        "Does not promise the discount as guaranteed"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Yes, absolutely! When you pay for 12 months in advance, you can usually receive either an extra month of rent for free or a direct 15% discount. \n\nIf you'd like to get an exact quote or set this up, you can book online at [booking.mystorage.vn](https://booking.mystorage.vn/en/book?step=service), use our AI size calculator at [mystorage.ai](https://www.mystorage.ai/), or reach out to us directly:\n* **Phone:** 028 7770 0117 (+84 28 7770 0117)\n* **Email:** hello@mystorage.vn\n* **Support Hours:** Monday to Saturday, 9:00 AM – 6:00 PM (remote support on Sundays)",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Yes, there is! If you pay 12 months in advance, you will typically receive an extra month of rent for free or a direct 15% discount. \n\nPlease let me know if you have any other questions or if you'd like help getting started with your booking!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Yes! If you pay for 12 months in advance, you will typically receive either an extra month of rent for free or a direct 15% discount. \n\nIf you'd like to check exact pricing or go ahead with a booking, you can visit our booking page at https://booking.mystorage.vn/en/book?step=service or use our AI size calculator at https://www.mystorage.ai/. Let me know if you have any other questions!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Hello! Yes, paying 12 months in advance usually gets you an extra month of rent or a direct 15% discount, as stated on https://mystorage.vn/faqs/. \n\nTo book or reserve your storage, you can visit https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like help choosing the right size for your storage needs?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! Yes, paying 12 months in advance usually gets an extra month of rent or a direct 15% discount, according to https://mystorage.vn/faqs/. \n\nTo book your storage and apply this, you can visit https://booking.mystorage.vn/en/book?step=service. If you have any questions, you can also reach the MyStorage team by phone at 028 7770 0117 or via email at hello@mystorage.vn.\n\nWould you like help choosing the right size for your storage needs?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! \n\nYes, paying 12 months in advance usually gets an extra month of rent or a direct 15% discount (https://mystorage.vn/faqs/). \n\nTo book or check details for your storage needs, you can visit https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn (https://mystorage.vn/llms.txt). \n\nWould you like help choosing the right unit size for your items?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Hello! Yes, paying 12 months in advance usually gets you an extra month of rent or a direct 15% discount, as stated on https://mystorage.vn/faqs/. \n\nTo book or reserve your storage, you can visit https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like help choosing the right size for your storage needs?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Hello! Yes, paying 12 months in advance usually gets an extra month of rent or a direct 15% discount, according to https://mystorage.vn/faqs/. \n\nTo book your storage and apply this, you can visit https://booking.mystorage.vn/en/book?step=service. If you have any questions, you can also reach the MyStorage team by phone at 028 7770 0117 or via email at hello@mystorage.vn.\n\nWould you like help choosing the right size for your storage needs?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Hello! \n\nYes, paying 12 months in advance usually gets an extra month of rent or a direct 15% discount (https://mystorage.vn/faqs/). \n\nTo book or check details for your storage needs, you can visit https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn (https://mystorage.vn/llms.txt). \n\nWould you like help choosing the right unit size for your items?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "finding": "Holdout, access hours at a specific self-storage site (An Phu)",
+      "question": "Mình có thể vào lấy đồ lúc 2 giờ sáng ở kho An Phú không?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Mentions 24/7 self-storage access"
+      ],
+      "prohibited": [],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn! \n\nĐối với các kho **Self Storage (kho tự quản)** hoặc các điểm tủ locker hoạt động 24/7 của MyStorage (như tại một số địa điểm Ministop hoặc Centre Mall), bạn có thể hoàn toàn chủ động ra lấy đồ bất cứ lúc nào, kể cả lúc 2 giờ sáng. \n\nTuy nhiên, với **kho An Phú** (địa chỉ tại 375 Võ Nguyên Giáp, An Khúc / An Phú, Thành phố Thủ Đức), đây là nơi đặt trụ sở chính, kho chứa đồ dung tích lớn và khu vực lưu trữ rượu chuyên dụng:\n- Nếu bạn thuê **phòng kho tự quản (Self Storage)** hoặc **kho rượu** tại đây, khu vực này có hệ thống an ninh và bạn có thể ra vào 24/7. \n- Ngược lại, nếu bạn sử dụng dịch vụ **Full Service Storage (kho dịch vụ trọn gói / lưu trữ có nhân viên hỗ trợ)**, thời gian ra vào kho sẽ tuân theo giờ làm việc của nhân viên (thường từ Thứ Hai đến Thứ Sáu: 9:00 - 17:00 và Thứ Bảy: 9:00 - 12:00).\n\nĐể STOW có thể kiểm tra chính xác loại hình dịch vụ bạn đang sử dụng tại kho An Phú và hỗ trợ bạn tốt nhất, bạn có thể cho STOW biết bạn đang thuê loại kho nào không ạ? \n\nBạn cũng có thể liên hệ trực tiếp với MyStorage qua hotline **028 7770 0117** hoặc nhắn tin qua Zalo/Messenger để đội ngũ chăm sóc khách hàng hỗ trợ bạn ngay lập tức nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Dạ chào bạn, \n\nĐối với dịch vụ **Self Storage (Kho tự quản)** tại cơ sở An Phú (375 Võ Nguyên Giáp, An Khánh, TP. Thủ Đức), bạn hoàn toàn **có thể vào lấy đồ bất cứ lúc nào, 24/7** kể cả lúc 2 giờ sáng nhé ạ! \n\nTuy nhiên, nếu bạn đang sử dụng dịch vụ Full Service Storage (kho lưu trữ trọn gói/giao nhận tận nơi) hoặc gửi hàng tại các khu vực kho dùng chung/kho kệ (shelf-space) thì thời gian làm việc sẽ theo giờ hành chính của nhân viên (Thứ Hai đến Thứ Sáu: 9:00 - 17:00, Thứ Bảy: 9:00 - 12:00). \n\nKhông biết bạn hiện đang sử dụng loại hình kho nào để em tư vấn chi tiết hơn cho bạn ạ? Nếu cần hỗ trợ thêm, bạn có thể nhắn cho em qua tổng đài 028 7770 0117 hoặc email hello@mystorage.vn nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, \n\nDạ được chứ ạ! Đối với các đơn vị Self Storage (kho tự quản) riêng tư của MyStorage, bạn hoàn toàn có thể ra vào và lấy đồ **24/7** bất cứ lúc nào, kể cả lúc 2 giờ sáng. \n\nTuy nhiên, nếu bạn đang sử dụng dịch vụ Full Service Storage (kho dịch vụ trọn gói/lưu trữ có nhân viên hỗ trợ) hoặc kho chứa đồ trên kệ (shelf space), thời gian hoạt động của nhân viên tại kho sẽ là trong giờ hành chính (thứ Hai đến thứ Sáu từ 9:00 - 17:00, thứ Bảy từ 9:00 - 12:00) ạ.\n\nNếu bạn cần kiểm tra lại loại dịch vụ mình đang dùng hoặc cần hỗ trợ thêm thông tin gì, bạn cứ nhắn cho STOW nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn, tại các địa điểm tự quản (self-storage), bạn có thể truy cập kho lấy đồ 24/7 [services, access]. Tuy nhiên, riêng kho An Phú tại 375 Võ Nguyên Giáp, An Khác Ward, Thành phố Thủ Đức có lưu trữ rượu vang (hoặc dịch vụ tại đây) có thể cần thêm xác nhận từ đội ngũ. \n\nĐể đảm bảo thông tin chính xác nhất về việc ra vào kho An Phú lúc 2 giờ sáng, đội ngũ MyStorage có thể xác nhận lại với bạn. Bạn có thể liên hệ qua điện thoại 028 7770 0117 hoặc email hello@mystorage.vn nhé. \n\nBạn có cần hỗ trợ thêm thông tin về việc đặt phòng hay kích thước kho không?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn,\n\nĐối với kho An Phú (đặt tại 375 Võ Nguyên Giáp, An Phú, Thủ Đức) lưu trữ rượu, thời gian truy cập là 24/7 với bảo mật 24/7. Tuy nhiên, để xác nhận chính xác quy định truy cập 2 giờ sáng cho khu vực cụ thể bạn đang thuê tại địa chỉ này, đội ngũ MyStorage có thể hỗ trợ bạn trực tiếp qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn. \n\nBạn có cần hỗ trợ thêm thông tin gì về việc đặt phòng hoặc dịch vụ lưu trữ không?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, tại cơ sở An Phú (375 Võ Nguyên Giáp, An Khác Thành, Thủ Đức), nếu bạn sử dụng dịch vụ lưu trữ rượu (wine storage) thì có thể truy cập 24/7 [wine, locations]. \n\nTuy nhiên, đối với các loại hình lưu trữ khác, quyền truy cập cụ thể vào lúc 2 giờ sáng tại cơ sở này cần được đội ngũ MyStorage xác nhận lại cho bạn [access, locations]. Bạn có thể liên hệ trực tiếp qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết nhé.\n\nBạn đang quan tâm đến loại hình lưu trữ nào tại cơ sở An Phú ạ?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn, tại các địa điểm tự quản (self-storage), bạn có thể truy cập kho lấy đồ 24/7 (https://mystorage.vn/llms.txt). Tuy nhiên, về thời gian truy cập cụ thể tại kho An Phú, đội ngũ MyStorage có thể xác nhận lại cho bạn (https://mystorage.vn/llms.txt). \n\nBạn vui lòng liên hệ qua điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết nhé (https://mystorage.vn/llms.txt). \n\nBạn có cần hỗ trợ thêm thông tin về dịch vụ lưu trữ nào khác không?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn,\n\nĐối với kho An Phú (đặt tại 375 Võ Nguyên Giáp, An Phú, Thủ Đức) lưu trữ rượu theo https://mystorage.vn/wine-storage/, thời gian truy cập là 24/7 với bảo mật 24/7. Tuy nhiên, để xác nhận chính xác quy định truy cập lúc 2 giờ sáng cho khu vực cụ thể bạn đang quan tâm tại địa chỉ này, đội ngũ MyStorage có thể hỗ trợ bạn qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn theo https://mystorage.vn/llms.txt. Bạn cũng có thể đặt chỗ tại https://booking.mystorage.vn/en/book?step=service theo https://mystorage.vn/llms.txt.\n\nBạn có cần hỗ trợ thêm thông tin gì về việc đặt dịch vụ hoặc quy định tại kho không?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, tại cơ sở An Phú (375 Võ Nguyên Giáp, An Khác Thành, Thủ Đức), nếu bạn sử dụng dịch vụ lưu trữ rượu thì có thể truy cập 24/7 (https://mystorage.vn/wine-storage/ và https://mystorage.vn/llms.txt). \n\nTuy nhiên, đối với các loại hình lưu trữ khác, quyền truy cập cụ thể vào lúc 2 giờ sáng tại cơ sở này cần được đội ngũ MyStorage xác nhận lại cho bạn (https://mystorage.vn/llms.txt). \n\nBạn có thể đặt dịch vụ tại https://booking.mystorage.vn/en/book?step=service hoặc liên hệ trực tiếp qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết nhé (https://mystorage.vn/llms.txt).\n\nBạn đang quan tâm đến loại hình lưu trữ nào tại cơ sở An Phú ạ?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "finding": "Holdout, service not in the sources: car storage",
+      "question": "Can I store my car with you?",
+      "stowTranscript": null,
+      "expectedFacts": [],
+      "prohibited": [
+        "Does not say yes to car storage"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Xin chào! Tôi là STOW, trợ lý ảo của MyStorage. \n\nRất tiếc, theo chính sách bảo hiểm và quy định lưu trữ của chúng tôi, **xe hơi (motor vehicles) thuộc danh mục các mặt hàng không được phép lưu trữ** tại MyStorage. \n\nNếu bạn cần cất giữ các đồ đạc, hành lý, nội thất hoặc các vật dụng khác, chúng tôi luôn sẵn sàng hỗ trợ các giải pháp kho tự quản (Self-Storage) hoặc kho trọn gói (Full-Service Storage) rất thuận tiện tại TP.HCM. \n\nBạn có cần tôi tư vấn thêm về các dịch vụ khác của MyStorage không?",
+          "pass": false,
+          "failed": [
+            "Gives a booking link or contact (URL, phone or email)",
+            "Replies in the customer's language (English) [Vietnamese-letter ratio 0.234]"
+          ]
+        },
+        {
+          "text": "Hello! I'm STOW, your MyStorage sales assistant. \n\nUnfortunately, **motor vehicles** (along with perishable goods, cash, jewelry, and items affected by war or civil unrest) are **excluded** and cannot be stored with us. \n\nHowever, we offer plenty of options for your other belongings! We have secure private Self Storage units (with 24/7 access) and Full Service Storage options starting from 559,000 VND (about US$21) per month. \n\nIf you'd like to check sizes or get an exact price, you can use our AI size calculator at https://www.mystorage.ai/ or visit our booking page at https://booking.mystorage.vn/en/book?step=service. \n\nLet me know if you have any other questions about what you can store!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! I am STOW, your MyStorage sales assistant. \n\nRegarding your question: unfortunately, **we cannot store motor vehicles**. According to our protection plan terms, motor vehicles are explicitly excluded from the items we can accept for storage. \n\nIf you have other items you need to store—such as furniture, boxes, luggage, or even wine—we would be more than happy to help you find the right self-storage or full-service storage solution! \n\nLet me know if you have any other questions or if you'd like help checking out our unit sizes.",
+          "pass": false,
+          "failed": [
+            "Gives a booking link or contact (URL, phone or email)"
+          ]
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Hello! \n\nAccording to MyStorage's protection plans, motor vehicles are excluded items and cannot be stored under their protection policies [https://www.mystorage.vn/protection-plans/]. \n\nThe MyStorage team can confirm if any exceptions or alternative arrangements are possible. You can reach them by phone at 028 7770 0117, by email at hello@mystorage.vn, or via https://booking.mystorage.vn/en/book?step=service [https://mystorage.vn/llms.txt].\n\nWould you like help with storing other items, such as furniture or luggage?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! \n\nAccording to our protection plans policy at https://www.mystorage.vn/protection-plans/, motor vehicles are listed as excluded items and are not covered. \n\nThe MyStorage team can confirm if any special arrangements or exceptions are possible. You can reach them by phone at 028 7770 0117, by email at hello@mystorage.vn, or book online at https://booking.mystorage.vn/en/book?step=service.\n\nWould you like help finding storage options for other belongings, such as furniture or boxes?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! \n\nAccording to MyStorage's protection plans, motor vehicles are listed as excluded items and are not covered https://www.mystorage.vn/protection-plans/. \n\nThe MyStorage team can confirm all details regarding vehicle storage policies if you reach out by phone at 028 7770 0117, by email at hello@mystorage.vn, or online at https://booking.mystorage.vn/en/book?step=service https://mystorage.vn/llms.txt.\n\nWould you like to know more about storing other types of items, such as furniture or wine?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Hello! \n\nAccording to MyStorage's protection plans, motor vehicles are excluded items and cannot be stored under their protection policies [https://www.mystorage.vn/protection-plans/]. \n\nThe MyStorage team can confirm if any exceptions or alternative arrangements are possible. You can reach them by phone at 028 7770 0117, by email at hello@mystorage.vn, or via https://booking.mystorage.vn/en/book?step=service [https://mystorage.vn/llms.txt].\n\nWould you like help with storing other items, such as furniture or luggage?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Hello! \n\nAccording to our protection plans policy at https://www.mystorage.vn/protection-plans/, motor vehicles are listed as excluded items and are not covered. \n\nThe MyStorage team can confirm if any special arrangements or exceptions are possible. You can reach them by phone at 028 7770 0117, by email at hello@mystorage.vn, or book online at https://booking.mystorage.vn/en/book?step=service.\n\nWould you like help finding storage options for other belongings, such as furniture or boxes?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Hello! \n\nAccording to MyStorage's protection plans, motor vehicles are listed as excluded items and are not covered https://www.mystorage.vn/protection-plans/. \n\nThe MyStorage team can confirm all details regarding vehicle storage policies if you reach out by phone at 028 7770 0117, by email at hello@mystorage.vn, or online at https://booking.mystorage.vn/en/book?step=service https://mystorage.vn/llms.txt.\n\nWould you like to know more about storing other types of items, such as furniture or wine?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "finding": "Holdout, conflicting sources: which site is opening soon",
+      "question": "Chi nhánh nào của MyStorage sắp mở? Mở khi nào?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Mentions Binh Loi (llms.txt)",
+        "Mentions District 9 (public locations page)",
+        "Says the team should confirm"
+      ],
+      "prohibited": [
+        "Does not invent an opening date"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn, tôi là STOW - trợ lý ảo của MyStorage. \n\nVề câu hỏi chi nhánh sắp mở của MyStorage:\n* **Địa điểm:** Các nguồn thông tin hiện tại có sự khác nhau giữa **Bình Lợi (Thành phố Thủ Đức)** theo tài liệu nội bộ và **chi nhánh tại Quận 9** theo trang web công khai của chúng tôi. \n* **Thời gian mở cửa:** Hiện tại hệ thống chưa có thông tin chính thức về ngày khai trương cụ thể cũng như danh sách chờ (waitlist). \n\nĐể có thông tin chính xác và cập nhật nhất về kế hoạch khai trương chi nhánh mới, bạn có thể liên hệ trực tiếp với đội ngũ MyStorage qua:\n* **Điện thoại:** 028 7770 0117 (+84 28 7770 0117)\n* **Email:** hello@mystorage.vn\n* **Thời gian hỗ trợ:** Thứ Hai đến thứ Bảy, từ 9:00 đến 18:00 (Chủ Nhật hỗ trợ từ xa).\n\nNếu bạn đang cần tìm kho ngay bây giờ, MyStorage có sẵn hơn 480 đơn vị kho lưu trữ (từ tự phục vụ 24/7 đến dịch vụ trọn gói) tại nhiều khu vực khác tại TP.HCM để hỗ trợ bạn!",
+          "pass": false,
+          "failed": [
+            "Says the team should confirm"
+          ]
+        },
+        {
+          "text": "Chào bạn, về chi nhánh sắp mở của MyStorage thì hiện tại có một chút khác biệt nhỏ giữa các nguồn thông tin chính thức:\n\n* **Theo tài liệu nội bộ (llms.txt):** Chi nhánh Self Storage sắp khai trương là **Binh Loi (Thành phố Thủ Đức)** tại địa chỉ *19 Quốc lộ 13, Hiệp Bình Chánh*.\n* **Theo trang web công cộng:** Chi nhánh sắp mở được ghi nhận là một cơ sở tại **Quận 9**.\n\nVề **thời gian mở cửa cụ thể**, hiện các nguồn thông tin chưa công bố ngày khai trương chính xác hoặc danh sách chờ. \n\nĐể nhận được thông tin cập nhật và chính xác nhất về lộ trình khai trương, bạn có thể liên hệ trực tiếp với đội ngũ MyStorage qua:\n* **Điện thoại / Zalo:** 028 7770 0117 (+84 28 7770 0117)\n* **Email:** hello@mystorage.vn\n* **Messenger** hoặc nhắn tin trực tiếp cho nhân viên hỗ trợ (Thời gian hỗ trợ: Thứ Hai đến Thứ Bảy, từ 9:00 đến 18:00).",
+          "pass": false,
+          "failed": [
+            "Says the team should confirm"
+          ]
+        },
+        {
+          "text": "Chào bạn, hiện tại có thông tin khác nhau giữa các nguồn của MyStorage về chi nhánh sắp khai trương:\n\n* **Trang thông tin tổng hợp (llms.txt)** cho biết chi nhánh **Bình Lợi** (Thành phố Thủ Đức, số 19 Quốc lộ 13, Hiệp Bình Chánh) sẽ sắp mở.\n* **Trang vị trí công khai** trên website lại hiển thị chi nhánh **Quận 9** là \"đang mở sớm\" (opening soon).\n\nCả hai nguồn đều không nêu rõ thời gian (ngày/tháng) cụ thể sẽ khai trương. Bạn có thể liên hệ trực tiếp với đội ngũ MyStorage qua hotline **028 7770 0117** hoặc email **hello@mystorage.vn** để được nhân viên xác nhận chính xác lộ trình khai trương nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn! Về thông tin chi nhánh sắp mở, các nguồn hiện có nội dung khác nhau như sau: trang địa điểm công cộng liệt kê cơ sở ở Quận 9 là \"sắp mở\", trong khi tập dữ liệu llms.txt lại nêu cơ sở tại Bình Lợi (Thành phố Thủ Đức) là \"sắp mở\". \n\nVì ngày khai trương cụ thể chưa được xác định rõ giữa các nguồn, đội ngũ MyStorage có thể giúp bạn xác nhận chi tiết về lộ trình này. Bạn có thể liên hệ trực tiếp qua số điện thoại 028 7770 0117, email hello@mystorage.vn, hoặc đặt chỗ tại https://booking.mystorage.vn/en/book?step=service.\n\nBạn có muốn MyStorage hỗ trợ thêm thông tin về các chi nhánh hiện tại đang hoạt động không?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, về chi nhánh sắp mở cửa, các nguồn thông tin hiện tại có sự khác biệt (https://mystorage.vn/storage-facility/): trang địa điểm công cộng ghi nhận chi nhánh Quận 9 đang \"sắp mở\", trong khi tài liệu hướng dẫn (llms.txt) lại nêu chi nhánh Bình Lợi (Thành phố Thủ Đức) là \"sắp mở\" (https://mystorage.vn/llms.txt). \n\nThời gian mở cửa chi tiết và danh sách chờ hiện chưa được xác nhận chính thức từ các nguồn này, vì vậy đội ngũ MyStorage có thể giúp bạn xác nhận lại thông tin cụ thể. Bạn có thể liên hệ trực tiếp qua số điện thoại 028 7770 0117, email hello@mystorage.vn hoặc đặt câu hỏi qua https://booking.mystorage.vn/en/book?step=service để được hỗ trợ (https://mystorage.vn/llms.txt).\n\nBạn quan tâm đến dịch vụ lưu trữ tại khu vực nào để MyStorage tư vấn thêm cho bạn?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn! Các nguồn thông tin hiện tại có sự khác nhau về chi nhánh sắp mở: trang vị trí công khai liệt kê chi nhánh Quận 9 sắp mở, trong khi tài liệu hướng dẫn (llms.txt) lại cho biết cơ sở Binh Lợi (Thành phố Thủ Đức) tại 19 Quốc lộ 13, Hiệp Bình Chánh mới là chi nhánh sắp mở. \n\nCả hai nguồn đều không đề cập đến ngày khai trương cụ thể, vì vậy đội ngũ MyStorage có thể xác nhận lại lộ trình chính xác cho bạn. \n\nBạn có thể liên hệ với đội ngũ MyStorage qua hotline **028 7770 0117**, email **hello@mystorage.vn**, hoặc đặt câu hỏi tại https://booking.mystorage.vn/en/book?step=service để được giải đáp chi tiết.\n\nBạn có quan tâm đến dịch vụ lưu trữ tại một khu vực cụ thể nào khác của MyStorage không?",
+          "pass": false,
+          "failed": [
+            "Mentions Binh Loi (llms.txt)"
+          ]
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn! Về thông tin chi nhánh sắp mở, các nguồn hiện có nội dung khác nhau như sau: trang địa điểm công cộng liệt kê cơ sở ở Quận 9 là \"sắp mở\", trong khi tập dữ liệu llms.txt lại nêu cơ sở tại Bình Lợi (Thành phố Thủ Đức) là \"sắp mở\". \n\nVì ngày khai trương cụ thể chưa được xác định rõ giữa các nguồn, đội ngũ MyStorage có thể giúp bạn xác nhận chi tiết về lộ trình này. Bạn có thể liên hệ trực tiếp qua số điện thoại 028 7770 0117, email hello@mystorage.vn, hoặc đặt chỗ tại https://booking.mystorage.vn/en/book?step=service.\n\nBạn có muốn MyStorage hỗ trợ thêm thông tin về các chi nhánh hiện tại đang hoạt động không?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, về chi nhánh sắp mở cửa, các nguồn thông tin hiện tại có sự khác biệt (https://mystorage.vn/storage-facility/): trang địa điểm công cộng ghi nhận chi nhánh Quận 9 đang \"sắp mở\", trong khi tài liệu hướng dẫn (llms.txt) lại nêu chi nhánh Bình Lợi (Thành phố Thủ Đức) là \"sắp mở\" (https://mystorage.vn/llms.txt). \n\nThời gian mở cửa chi tiết và danh sách chờ hiện chưa được xác nhận chính thức từ các nguồn này, vì vậy đội ngũ MyStorage có thể giúp bạn xác nhận lại thông tin cụ thể. Bạn có thể liên hệ trực tiếp qua số điện thoại 028 7770 0117, email hello@mystorage.vn hoặc đặt câu hỏi qua https://booking.mystorage.vn/en/book?step=service để được hỗ trợ (https://mystorage.vn/llms.txt).\n\nBạn quan tâm đến dịch vụ lưu trữ tại khu vực nào để MyStorage tư vấn thêm cho bạn?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn! Các nguồn thông tin hiện tại có sự khác nhau về chi nhánh sắp mở: trang vị trí công khai liệt kê chi nhánh Quận 9 sắp mở, trong khi tài liệu hướng dẫn (llms.txt) lại cho biết cơ sở Binh Lợi (Thành phố Thủ Đức) tại 19 Quốc lộ 13, Hiệp Bình Chánh mới là chi nhánh sắp mở. \n\nCả hai nguồn đều không đề cập đến ngày khai trương cụ thể, vì vậy đội ngũ MyStorage có thể xác nhận lại lộ trình chính xác cho bạn. \n\nBạn có thể liên hệ với đội ngũ MyStorage qua hotline **028 7770 0117**, email **hello@mystorage.vn**, hoặc đặt câu hỏi tại https://booking.mystorage.vn/en/book?step=service để được giải đáp chi tiết.\n\nBạn có quan tâm đến dịch vụ lưu trữ tại một khu vực cụ thể nào khác của MyStorage không?",
+          "pass": false,
+          "failed": [
+            "Mentions Binh Loi (llms.txt)"
+          ],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "finding": "Holdout, keep-as-is: simple contact question the baseline should already get right",
+      "question": "What is MyStorage's phone number and email?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Phone 028 7770 0117",
+        "Email hello@mystorage.vn"
+      ],
+      "prohibited": [],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Hello! You can reach MyStorage by phone at **028 7770 0117** (or +84 28 7770 0117) or by email at **hello@mystorage.vn**. \n\nOur support hours are Monday to Saturday from 9:00 AM to 6:00 PM (with remote support on Sundays), and our typical reply time is within 2 hours during business hours. Let me know if you need help with anything else!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! You can contact MyStorage via:\n\n* **Phone:** 028 7770 0117 (or +84 28 7770 0117)\n* **Email:** hello@mystorage.vn\n\nOur support hours are Monday to Saturday from 9:00 AM to 6:00 PM (with remote support available on Sundays), and our typical reply time is within 2 hours during business hours. Let me know if you need help with anything else!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! You can contact MyStorage through the following details:\n\n* **Phone:** 028 7770 0117 (or +84 28 7770 0117 from outside Vietnam)\n* **Email:** hello@mystorage.vn\n\nOur support hours are Monday to Saturday, from 9:00 AM to 6:00 PM (with remote support on Sundays), and our typical reply time during business hours is within 2 hours. Let me know if you need help with anything else!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn. \n\nWould you like help with booking a storage unit or checking location details?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn, as noted on https://mystorage.vn/llms.txt. \n\nWould you like to book a storage unit or check availability? You can book online at https://booking.mystorage.vn/en/book?step=service.",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn, as mentioned on https://mystorage.vn/llms.txt.\n\nWould you like help with booking a storage unit or checking locations?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn. \n\nWould you like help with booking a storage unit or checking location details?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Hello! You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn, as noted on https://mystorage.vn/llms.txt. \n\nWould you like to book a storage unit or check availability? You can book online at https://booking.mystorage.vn/en/book?step=service.",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "You can contact MyStorage by phone at 028 7770 0117 (+84 28 7770 0117) or by email at hello@mystorage.vn, as mentioned on https://mystorage.vn/llms.txt.\n\nWould you like help with booking a storage unit or checking locations?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "finding": "Holdout, missing information: vague price question",
+      "question": "Mình cần gửi đồ, giá bao nhiêu vậy?",
+      "stowTranscript": null,
+      "expectedFacts": [],
+      "prohibited": [
+        "Does not quote a specific monthly price that is not in the sources"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Chào bạn! MyStorage cung cấp dịch vụ lưu trữ đồ linh hoạt tại TP.HCM với mức giá khởi điểm chỉ từ **559.000 VND/tháng** (đối với kho máy lạnh và kho nội thất) và dịch vụ lưu trữ hành lý theo giờ/ngày từ **54.000 VND** tại các quận 1, 2 và 7. \n\nGiá chính xác sẽ phụ thuộc vào hình thức lưu trữ và kích thước bạn cần:\n1. **Self Storage (Kho tự quản riêng tư):** Phù hợp nếu bạn muốn tự do ra vào 24/7.\n2. **Full Service Storage (Kho dịch vụ trọn gói):** MyStorage hỗ trợ đến tận nơi lấy và giao đồ, bạn không cần phải đến kho.\n\nĐể nhận báo giá chi tiết và chính xác nhất theo nhu cầu, bạn có thể:\n* Sử dụng công cụ tính kích thước thông minh tại: **mystorage.ai**\n* Hoặc đặt phòng trực tiếp tại: **booking.mystorage.vn**\n\nNếu cần hỗ trợ thêm, bạn có thể nhắn trực tiếp cho STOW hoặc liên hệ hotline **028 7770 0117** (Thứ Hai - Thứ Bảy, 9h - 18h) nhé!",
+          "pass": false,
+          "failed": [
+            "Asks a clarifying question"
+          ]
+        },
+        {
+          "text": "Chào bạn! MyStorage cung cấp dịch vụ lưu trữ với giá chỉ từ **559.000 VND/tháng** (đối với kho máy lạnh và lưu trữ đồ đạc) và dịch vụ giữ hành lý theo giờ/ngày từ **54.000 VND** tại Quận 1, Quận 2 và Quận 7. \n\nMức giá chính xác sẽ phụ thuộc vào kích thước không gian bạn cần và thời gian lưu trữ. Để nhận báo giá chi tiết và chính xác nhất theo nhu cầu, bạn có thể:\n* Sử dụng công cụ tính kích thước AI tại: https://www.mystorage.ai/\n* Hoặc đặt phòng trực tiếp tại: https://booking.mystorage.vn/en/book?step=service\n\nNếu bạn cần tư vấn thêm, đừng ngần ngại nhắn cho STOW hoặc liên hệ qua hotline/Zalo **028 7770 0117** nhé!",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, cảm ơn bạn đã quan tâm đến dịch vụ của MyStorage! \n\nGiá thuê kho tại MyStorage phụ thuộc vào dịch vụ và kích thước không gian bạn chọn:\n* **Lưu trữ đồ cá nhân/hành lý (tại các điểm tủ khóa):** Giá bắt đầu từ 54.000 VNĐ (có thể thuê theo giờ, ngày, tuần hoặc tháng tùy nhu cầu).\n* **Kho tự quản (Self Storage - không gian riêng từ 1-23 CBM, truy cập 24/7):** Giá thuê cho kho có máy lạnh và kho đựng đồ nội thất khởi điểm từ **559,000 VND (khoảng 21 USD) mỗi tháng**.\n\nNgoài ra, chúng tôi cũng có các chương trình ưu đãi hấp dẫn:\n* Đóng trước 6 tháng: Giảm ngay 5-10% tổng tiền thuê.\n* Đóng trước 12 tháng: Nhận thêm 1 tháng thuê miễn phí hoặc giảm trực tiếp 15%.\n* Tiền cọc thông thường tương đương 1 tháng tiền thuê và sẽ được hoàn lại 100% khi kết thúc hợp đồng.\n\nĐể biết chính xác mức giá cho kích thước phù hợp nhất với nhu cầu của mình, bạn có thể:\n1. Sử dụng công cụ tính kích thước thông minh tại: https://www.mystorage.ai/\n2. Hoặc xem báo giá chi tiết và đặt kho trực tuyến tại: https://booking.mystorage.vn/en/book?step=service\n\nNếu bạn cần tư vấn nhanh hoặc hỗ trợ chọn size, đừng ngần ngại gọi hotline **028 7770 0117** hoặc nhắn tin trực tiếp cho MyStorage nhé!",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Chào bạn, MyStorage cung cấp dịch vụ lưu kho tự phục vụ và kho lưu trữ toàn diện (full-service storage) với giá khởi điểm từ 559,000 VND (khoảng 21 USD) mỗi tháng cho các loại kho có điều hòa và kho lưu trữ đồ đạc (https://mystorage.vn/llms.txt). Ngoài ra, dịch vụ gửi hành lý có giá khởi điểm từ 54,000 VND mỗi giờ (mức giá bắt đầu) tại Quận 1, Quận 2 và Quận 7, với dịch vụ lấy và giao đồ tận nơi trên toàn thành phố (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn (https://mystorage.vn/llms.txt, https://www.mystorage.vn/services/luggage-storage-saigon/). Bạn có thể xem giá chi tiết và đặt phòng tại https://booking.mystorage.vn/en/book?step=service hoặc liên hệ MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn để được đội ngũ hỗ trợ tư vấn chi tiết nhé (https://mystorage.vn/llms.txt).\n\nBạn cần gửi loại đồ đạc gì và trong thời gian bao lâu để MyStorage hỗ trợ bạn tốt nhất?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, \n\nGiá dịch vụ lưu trữ tại MyStorage khởi điểm từ 559,000 VND (khoảng US$21) mỗi tháng đối với kho có máy lạnh và kho lưu trữ đồ đạc (theo https://mystorage.vn/llms.txt), hoặc từ 54,000 VND mỗi giờ đối với dịch vụ gửi hành lý tại Quận 1, Quận 2 và Quận 7 (theo https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn và được hiển thị khi bạn tiến hành đặt phòng qua trang https://booking.mystorage.vn/en/book?step=service hoặc công cụ tính kích thước tại https://www.mystorage.ai/ (theo https://mystorage.vn/llms.txt). Bạn cũng có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được nhân viên tư vấn chi tiết (theo https://mystorage.vn/llms.txt).\n\nBạn cần gửi loại đồ đạc gì và trong thời gian bao lâu ạ?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Chào bạn, giá dịch vụ lưu trữ tại MyStorage bắt đầu từ 559,000 VND (khoảng US$21) mỗi tháng đối với kho có điều hòa và kho lưu trữ đồ đạc (theo https://mystorage.vn/llms.txt), hoặc từ 54,000 VND theo giờ đối với dịch vụ gửi hành lý (theo https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn. Bạn có thể xem báo giá chi tiết và đặt lịch tại https://booking.mystorage.vn/en/book?step=service hoặc dùng công cụ tính kích thước tại https://mystorage.ai/ (theo https://mystorage.vn/llms.txt). Bạn cũng có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết (theo https://mystorage.vn/llms.txt).\n\nBạn cần lưu trữ loại đồ đạc gì và trong thời gian bao lâu ạ?",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Chào bạn, MyStorage cung cấp dịch vụ lưu kho tự phục vụ và kho lưu trữ toàn diện (full-service storage) với giá khởi điểm từ 559,000 VND (khoảng 21 USD) mỗi tháng cho các loại kho có điều hòa và kho lưu trữ đồ đạc (https://mystorage.vn/llms.txt). Ngoài ra, dịch vụ gửi hành lý có giá khởi điểm từ 54,000 VND mỗi giờ (mức giá bắt đầu) tại Quận 1, Quận 2 và Quận 7, với dịch vụ lấy và giao đồ tận nơi trên toàn thành phố (https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn (https://mystorage.vn/llms.txt, https://www.mystorage.vn/services/luggage-storage-saigon/). Bạn có thể xem giá chi tiết và đặt phòng tại https://booking.mystorage.vn/en/book?step=service hoặc liên hệ MyStorage qua số điện thoại 028 7770 0117 và email hello@mystorage.vn để được đội ngũ hỗ trợ tư vấn chi tiết nhé (https://mystorage.vn/llms.txt).\n\nBạn cần gửi loại đồ đạc gì và trong thời gian bao lâu để MyStorage hỗ trợ bạn tốt nhất?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, \n\nGiá dịch vụ lưu trữ tại MyStorage khởi điểm từ 559,000 VND (khoảng US$21) mỗi tháng đối với kho có máy lạnh và kho lưu trữ đồ đạc (theo https://mystorage.vn/llms.txt), hoặc từ 54,000 VND mỗi giờ đối với dịch vụ gửi hành lý tại Quận 1, Quận 2 và Quận 7 (theo https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn và được hiển thị khi bạn tiến hành đặt phòng qua trang https://booking.mystorage.vn/en/book?step=service hoặc công cụ tính kích thước tại https://www.mystorage.ai/ (theo https://mystorage.vn/llms.txt). Bạn cũng có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được nhân viên tư vấn chi tiết (theo https://mystorage.vn/llms.txt).\n\nBạn cần gửi loại đồ đạc gì và trong thời gian bao lâu ạ?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        },
+        {
+          "text": "Chào bạn, giá dịch vụ lưu trữ tại MyStorage bắt đầu từ 559,000 VND (khoảng US$21) mỗi tháng đối với kho có điều hòa và kho lưu trữ đồ đạc (theo https://mystorage.vn/llms.txt), hoặc từ 54,000 VND theo giờ đối với dịch vụ gửi hành lý (theo https://www.mystorage.vn/services/luggage-storage-saigon/). \n\nGiá chính xác theo kích thước và thời gian thuê sẽ phụ thuộc vào nhu cầu cụ thể của bạn. Bạn có thể xem báo giá chi tiết và đặt lịch tại https://booking.mystorage.vn/en/book?step=service hoặc dùng công cụ tính kích thước tại https://mystorage.ai/ (theo https://mystorage.vn/llms.txt). Bạn cũng có thể liên hệ trực tiếp với đội ngũ MyStorage qua số điện thoại 028 7770 0117 hoặc email hello@mystorage.vn để được hỗ trợ chi tiết (theo https://mystorage.vn/llms.txt).\n\nBạn cần lưu trữ loại đồ đạc gì và trong thời gian bao lâu ạ?",
+          "pass": true,
+          "failed": [],
+          "violations": [],
+          "remaining": []
+        }
+      ]
+    },
+    {
+      "id": "H12",
+      "finding": "Holdout, paraphrase of F-F: wine humidity",
+      "question": "How humid is your wine storage room?",
+      "stowTranscript": null,
+      "expectedFacts": [
+        "Humidity range 60-70%"
+      ],
+      "prohibited": [
+        "Does not state the wrong 55-65% humidity"
+      ],
+      "stow": null,
+      "naive": [
+        {
+          "text": "Our wine storage room maintains a humidity level of **60% to 70%** (along with a stable temperature of 12–15°C and a backup power system to ensure continuous stability). \n\nPlease note that our public wine storage page also features a live sensor widget, so current readings may sometimes vary slightly from the published range. Let me know if you would like more details about our wine storage at our 375 Vo Nguyen Giap location in Thu Duc City!",
+          "pass": false,
+          "failed": [
+            "Humidity range 60-70%"
+          ]
+        },
+        {
+          "text": "Our wine storage room is maintained at a humidity level of **60% to 70%** (along with a stable temperature of 12–15°C and a backup power system to ensure continuous stability). \n\nPlease note that the public page also features a live sensor widget whose current readings may sometimes slightly differ from this published standard range. \n\nIf you would like to know more or book a space, feel free to let me know!",
+          "pass": false,
+          "failed": [
+            "Humidity range 60-70%"
+          ]
+        },
+        {
+          "text": "Our wine storage room is maintained at a humidity level of **60% to 70%** (along with a stable temperature of 12-15°C and a backup power system to ensure continuous stability). \n\nPlease note that the public page also features a live sensor widget, so current readings may occasionally vary slightly from this published range. \n\nLet me know if you would like to know more about our wine storage location at 375 Vo Nguyen Giap (Thu Duc City) or need help with booking!",
+          "pass": false,
+          "failed": [
+            "Humidity range 60-70%"
+          ]
+        }
+      ],
+      "firstPass": [
+        {
+          "text": "Hello! The wine storage maintains a humidity of 60-70%. \n\nIf you would like to book or need help with storage options, you can visit https://booking.mystorage.vn/en/book?step=service, call 028 7770 0117, or email hello@mystorage.vn.\n\nWould you like to know about the temperature settings for the wine storage as well?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! The wine storage room maintains a humidity level of 60-70%. \n\nIf you would like to book or need further details, please visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like to know about the temperature maintained in the wine storage room as well?",
+          "pass": true,
+          "failed": []
+        },
+        {
+          "text": "Hello! \n\nOur wine storage room maintains a humidity level of 60-70% and a temperature of 12-15°C, with a backup power system to ensure continuous stability.\n\nWould you like to book or check availability for wine storage? You can book online at https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team by phone at 028 7770 0117 or email at hello@mystorage.vn.",
+          "pass": true,
+          "failed": []
+        }
+      ],
+      "proposed": [
+        {
+          "text": "Hello! The wine storage maintains a humidity of 60-70% (https://mystorage.vn/wine-storage/).\n\nIf you would like to book or need help with storage options, you can visit https://booking.mystorage.vn/en/book?step=service, call 028 7770 0117, or email hello@mystorage.vn.\n\nWould you like to know about the temperature settings for the wine storage as well?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        },
+        {
+          "text": "Hello! The wine storage room maintains a humidity of 60-70% (https://mystorage.vn/wine-storage/). \n\nIf you would like to book or need further details, please visit https://booking.mystorage.vn/en/book?step=service or contact the MyStorage team at 028 7770 0117 or hello@mystorage.vn.\n\nWould you like to know about the temperature maintained in the wine storage room as well?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        },
+        {
+          "text": "Hello! \n\nOur wine storage room maintains a humidity level of 60-70% and a temperature of 12-15°C, with a backup power system to ensure continuous stability (https://mystorage.vn/wine-storage/). \n\nWould you like to book or check availability for wine storage? You can book online at https://booking.mystorage.vn/en/book?step=service, or contact the MyStorage team by phone at 028 7770 0117 or email at hello@mystorage.vn.\n\nWould you like to know more about our wine storage security or location?",
+          "pass": true,
+          "failed": [],
+          "violations": [
+            "The reply states figures but cites no source. Add the full URL of the source page from SOURCES for each fact."
+          ],
+          "remaining": []
+        }
+      ]
+    }
+  ]
+}

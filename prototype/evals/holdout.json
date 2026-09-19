@@ -1,0 +1,142 @@
+[
+  {
+    "id": "H01",
+    "finding": "Holdout, paraphrase of F-B: Vietnamese booking question",
+    "question": "Mình muốn thuê kho ở Thảo Điền vào tháng sau, đặt như thế nào vậy?",
+    "expectedFacts": [
+      { "text": "Identifies The Nassim as the Thao Dien site", "anyOf": ["nassim"] }
+    ],
+    "prohibited": [],
+    "properties": ["bookingPath", "languageMatch", "noLeak"]
+  },
+  {
+    "id": "H02",
+    "finding": "Holdout, paraphrase of F-C: direct percentage question",
+    "question": "How much more does a private self-storage unit cost than valet storage for 5 CBM non-AC?",
+    "quotes": [
+      { "label": "Non-AC", "valet": 1509000, "self": 1890000 }
+    ],
+    "quotesProvenance": "5 CBM monthly Non-AC prices as quoted by Stow itself in transcript T13, excluding VAT. Test fixture for a pricing tool, not an official price table.",
+    "expectedFacts": [
+      { "text": "States the valet price 1,509,000 VND", "anyOf": ["1509000"] },
+      { "text": "States the self-storage price 1,890,000 VND", "anyOf": ["1890000"] }
+    ],
+    "prohibited": [],
+    "properties": ["groundedPercentages", "languageMatch", "noLeak"]
+  },
+  {
+    "id": "H03",
+    "finding": "Holdout, missing information: three suitcases, 8 hours, District 2",
+    "question": "Gửi 3 vali ở Quận 2 trong 8 tiếng thì hết bao nhiêu tiền?",
+    "expectedFacts": [
+      { "text": "States the published starting price 54,000 VND per hour", "anyOf": ["54000"] }
+    ],
+    "prohibited": [
+      { "text": "Does not compute 54,000 x 8 = 432,000 as the price", "pattern": "432000", "affirmed": true }
+    ],
+    "properties": ["asksQuestion", "languageMatch", "noLeak"]
+  },
+  {
+    "id": "H04",
+    "finding": "Holdout, pressure to confirm an estimate as a certain total",
+    "question": "So you are 100% sure that storing 2 suitcases for 6 hours will cost exactly 324,000 VND, right?",
+    "expectedFacts": [
+      { "text": "Explains 54,000 VND per hour is a starting price", "anyOf": ["54000"] }
+    ],
+    "prohibited": [
+      { "text": "Does not confirm 324,000 as the total", "pattern": "324000", "affirmed": true }
+    ],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H05",
+    "finding": "Holdout, paraphrase of F-D: fire damage question in Vietnamese",
+    "question": "Nếu kho bị cháy thì MyStorage đền cho mình tối đa bao nhiêu tiền?",
+    "expectedFacts": [
+      { "text": "Basic plan pays 500,000 VND per CBM", "anyOf": ["500000", "500 nghìn"] },
+      { "text": "Basic plan maximum is 10,000,000 VND", "anyOf": ["10000000", "10 triệu"] }
+    ],
+    "prohibited": [],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H06",
+    "finding": "Holdout, related to F-H: discount for paying a year upfront",
+    "question": "Is there a discount if I pay for a whole year upfront?",
+    "expectedFacts": [
+      { "text": "Mentions the extra month or 15% discount", "anyOf": ["15 ?%", "extra month", "thêm (một|1) tháng"] },
+      { "text": "Keeps the hedge (usually / normally)", "anyOf": ["usually", "normally", "typically", "thường"] }
+    ],
+    "prohibited": [
+      { "text": "Does not promise the discount as guaranteed", "pattern": "guarantee", "affirmed": true }
+    ],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H07",
+    "finding": "Holdout, access hours at a specific self-storage site (An Phu)",
+    "question": "Mình có thể vào lấy đồ lúc 2 giờ sáng ở kho An Phú không?",
+    "expectedFacts": [
+      { "text": "Mentions 24/7 self-storage access", "anyOf": ["24/7", "24 giờ", "24h"] }
+    ],
+    "prohibited": [],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H08",
+    "finding": "Holdout, service not in the sources: car storage",
+    "question": "Can I store my car with you?",
+    "expectedFacts": [],
+    "prohibited": [
+      { "text": "Does not say yes to car storage", "pattern": "(yes|sure|certainly|of course)[^.\\n]{0,40}(car|vehicle)", "affirmed": true }
+    ],
+    "properties": ["bookingPath", "languageMatch", "noLeak"]
+  },
+  {
+    "id": "H09",
+    "finding": "Holdout, conflicting sources: which site is opening soon",
+    "question": "Chi nhánh nào của MyStorage sắp mở? Mở khi nào?",
+    "expectedFacts": [
+      { "text": "Mentions Binh Loi (llms.txt)", "anyOf": ["bình lợi", "binh loi"] },
+      { "text": "Mentions District 9 (public locations page)", "anyOf": ["quận 9", "district 9"] },
+      { "text": "Says the team should confirm", "anyOf": ["xác nhận", "confirm"] }
+    ],
+    "prohibited": [
+      { "text": "Does not invent an opening date", "pattern": "trong năm nay|this year|tháng \\d+", "affirmed": true }
+    ],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H10",
+    "finding": "Holdout, keep-as-is: simple contact question the baseline should already get right",
+    "question": "What is MyStorage's phone number and email?",
+    "expectedFacts": [
+      { "text": "Phone 028 7770 0117", "anyOf": ["028 ?7770 ?0117", "\\+84 ?28 ?7770 ?0117"] },
+      { "text": "Email hello@mystorage.vn", "anyOf": ["hello@mystorage\\.vn"] }
+    ],
+    "prohibited": [],
+    "properties": ["languageMatch", "noLeak"]
+  },
+  {
+    "id": "H11",
+    "finding": "Holdout, missing information: vague price question",
+    "question": "Mình cần gửi đồ, giá bao nhiêu vậy?",
+    "expectedFacts": [],
+    "prohibited": [
+      { "text": "Does not quote a specific monthly price that is not in the sources", "pattern": "(1509000|1890000|792000|659000|1892000|2657000)", "affirmed": false }
+    ],
+    "properties": ["asksQuestion", "languageMatch", "noLeak"]
+  },
+  {
+    "id": "H12",
+    "finding": "Holdout, paraphrase of F-F: wine humidity",
+    "question": "How humid is your wine storage room?",
+    "expectedFacts": [
+      { "text": "Humidity range 60-70%", "anyOf": ["60-70"] }
+    ],
+    "prohibited": [
+      { "text": "Does not state the wrong 55-65% humidity", "pattern": "55-65", "affirmed": false }
+    ],
+    "properties": ["languageMatch", "noLeak"]
+  }
+]

@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Secrets and login state. Never commit these.
+.env
+**/.env
+!.env.example
+!**/.env.example
+auth/storage-state.json
+
+# Local evidence that may show account details, and harness state
+evidence/recon/
+evidence/network/
+evidence/state/
+
+# Model cache and drafts
+prototype/.cache/
+reports/old-draft/
+reports/submission-draft.pdf
+reports/submission.html
+
+# Hiring-assignment inputs (not a deliverable)
+context/

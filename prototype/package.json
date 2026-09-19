@@ -1,0 +1,16 @@
+{
+  "name": "stow-grounding-eval",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Grounded-answer prototype and evaluation set for the Stow audit findings",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test src/*.test.ts",
+    "baseline": "node src/run.ts --baseline",
+    "eval": "node src/run.ts",
+    "demo": "node src/build-demo.ts"
+  }
+}

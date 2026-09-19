@@ -1,0 +1,98 @@
+[
+  {
+    "id": "contact",
+    "title": "Booking and contact",
+    "source_url": "https://mystorage.vn/llms.txt",
+    "retrieved": "2026-09-19",
+    "provenance": "llms.txt, read in full",
+    "text": "Book online at https://booking.mystorage.vn/en/book?step=service, or contact MyStorage by phone 028 7770 0117 (+84 28 7770 0117), email hello@mystorage.vn, or messenger; staff confirm details and arrange pickup or unit access. Support hours: Monday to Saturday 9am-6pm (remote support on Sundays); typical reply time is 2 hours during business hours. AI size calculator: https://www.mystorage.ai/. Exact pricing by size is quoted via booking.mystorage.vn or the mystorage.ai size calculator."
+  },
+  {
+    "id": "services",
+    "title": "Self Storage vs Full Service Storage",
+    "source_url": "https://mystorage.vn/llms.txt",
+    "retrieved": "2026-09-19",
+    "provenance": "llms.txt, read in full",
+    "text": "Self Storage: a private unit (1-23 CBM) that the customer can access directly and independently, with 24/7 access; 480+ units across HCMC. Full Service Storage (also called valet storage): pickup and delivery. MyStorage staff retrieve, store and return items, so the customer never has to visit a facility; free storage tubs are included. Air-conditioned and furniture storage start from 559,000 VND (about US$21) per month."
+  },
+  {
+    "id": "access",
+    "title": "24/7 access by site type",
+    "source_url": "https://mystorage.vn/llms.txt",
+    "retrieved": "2026-09-19",
+    "provenance": "llms.txt, read in full",
+    "text": "Self-storage locker locations (including Ministop Tran Khac Chan and Centre Mall) offer 24/7 self-service access. Full-service and shelf-space storage (for example the Dong Nai warehouse at Nhon Trach 3 Industrial Zone) uses staff-accompanied access during business hours instead."
+  },
+  {
+    "id": "locations",
+    "title": "Locations list",
+    "source_url": "https://mystorage.vn/llms.txt",
+    "retrieved": "2026-09-19",
+    "provenance": "llms.txt, read in full",
+    "text": "Headquarters and Self Storage: 375 Vo Nguyen Giap St, An Khanh Ward, Thu Duc City. An Phu Sport Park: 90 Song Hanh St, An Phu Ward, Thu Duc City. Ministop Tran Trong Cung (District 7): 69 Tran Trong Cung St, Tan Thuan Dong. Ministop Tran Khac Chan (District 1): 79 Tran Khac Chan St, Tan Dinh Ward, 24/7 self-service access. Centre Mall (District 6): 1466 Vo Van Kiet St, 24/7 self-service access. The Nassim (Thao Dien Ward, Thu Duc City): 30A Street No.11, self-storage units. Ministop MT Eastmark City (District 9): 39A Street 149C, 24/7 self-service locker access. Shelf Space Warehouse, Dong Nai: Nhon Trach 3 Industrial Zone, 2,000+ sqm full-service storage. Self Storage at Binh Loi (opening soon): 19 National Highway 13, Hiep Binh Chanh, Thu Duc City."
+  },
+  {
+    "id": "locations-conflict",
+    "title": "Which site is 'opening soon' (sources disagree)",
+    "source_url": "https://mystorage.vn/storage-facility/",
+    "retrieved": "2026-09-19",
+    "provenance": "public locations page via a web-fetch summary (re-verify by eye) and llms.txt",
+    "text": "The public locations page lists the existing District 7 site (Ministop Tran Trong Cung) as open and shows a District 9 site as 'opening soon'. llms.txt names Binh Loi (Thu Duc City) as opening soon instead. Neither source mentions a large self-storage facility opening in District 7. Any District 7 opening, date or waitlist is therefore not confirmed; the MyStorage team should confirm the roadmap."
+  },
+  {
+    "id": "insurance",
+    "title": "Protection plans",
+    "source_url": "https://www.mystorage.vn/protection-plans/",
+    "retrieved": "2026-09-19",
+    "provenance": "protection plans page via a web-fetch summary (re-verify by eye) and llms.txt",
+    "text": "Every rental includes a free Basic protection plan that compensates 500,000 VND per cubic metre, up to a maximum of 10,000,000 VND. Paid tiers: Silver up to 25,000,000 VND (50,000 VND per month), Gold up to 50,000,000 VND (100,000 VND per month), Platinum up to 100,000,000 VND (200,000 VND per month). The plans do not cover wear and tear, breakage, chipping, scratching, staining, denting, twisting and bending, mold, rust or natural degradation. Excluded items include perishable goods, motor vehicles, cash and jewelry, and war, riots, strikes or civil unrest."
+  },
+  {
+    "id": "wine",
+    "title": "Wine storage",
+    "source_url": "https://mystorage.vn/wine-storage/",
+    "retrieved": "2026-09-19",
+    "provenance": "wine storage page via a web-fetch summary (re-verify by eye) and llms.txt",
+    "text": "Wine storage maintains humidity of 60-70% and temperature of 12-15°C. A backup power system ensures continuous stability. Access is 24/7 with 24/7 security. Wine storage is hosted at 375 Vo Nguyen Giap, An Phu, Thu Duc, Ho Chi Minh City. The public page also shows a live sensor widget whose readings may differ from the published range."
+  },
+  {
+    "id": "luggage",
+    "title": "Luggage storage",
+    "source_url": "https://www.mystorage.vn/services/luggage-storage-saigon/",
+    "retrieved": "2026-09-19",
+    "provenance": "luggage page via a web-fetch summary (re-verify by eye) and llms.txt",
+    "text": "Luggage storage starts from 54,000 VND per hour (a 'from' price) in District 1, District 2 and District 7, by the hour or by the day, with citywide pickup and delivery. Exact prices at a specific locker depend on locker size and rental time."
+  },
+  {
+    "id": "d1-locker",
+    "title": "District 1 Ministop locker booking page",
+    "source_url": "https://booking.mystorage.vn/ministop/tran-khac-chan",
+    "retrieved": "2026-09-19",
+    "provenance": "public booking page text read directly (no login, no clicks)",
+    "text": "Ministop Tran Khac Chan locker: no deposit and no hidden fees. Rental can be by the hour, day, week or month; the price for each locker size and duration is shown when a locker is selected, before payment. Rental time starts as soon as payment is complete; booking ahead for a future day or hour is not supported. After the rental expires, a holding fee of 108,000 VND for 2 accesses applies so the customer has time to collect items before the locker is released for sale again. Any minimum rental time is shown at booking, not on the static page."
+  },
+  {
+    "id": "terms-hours",
+    "title": "Service warehouse hours and delivery notice (terms)",
+    "source_url": "https://www.mystorage.vn/vi/dieu-khoan-dich-vu/",
+    "retrieved": "2026-09-19",
+    "provenance": "terms page (Vietnamese) via a web-fetch summary (re-verify by eye)",
+    "text": "Service warehouse hours: Monday to Friday 9:00-17:00; Saturday 9:00-12:00. Delivery requests must be booked at least 48 hours in advance, not counting Saturday and Sunday. Urgent delivery requests (under 48 working hours) carry a 30% surcharge on the transport fee. Self-storage access is 24/7."
+  },
+  {
+    "id": "terms-termination",
+    "title": "Early termination (terms)",
+    "source_url": "https://www.mystorage.vn/vi/dieu-khoan-dich-vu/",
+    "retrieved": "2026-09-19",
+    "provenance": "terms page (Vietnamese) via a web-fetch summary (re-verify by eye)",
+    "text": "Early termination requires at least 15 days' written notice to the lessor; unused prepaid storage fees are refundable minus any promotional discount applied. The terms page does not describe cancellation before move-in."
+  },
+  {
+    "id": "faq-discount-deposit",
+    "title": "Discounts and deposit (FAQ)",
+    "source_url": "https://mystorage.vn/faqs/",
+    "retrieved": "2026-09-19",
+    "provenance": "FAQ page via a web-fetch summary (re-verify by eye)",
+    "text": "Normally, 6-month packages receive a direct discount of 5-10% of the total rent. Paying 12 months in advance usually gets an extra month of rent or a direct 15% discount. Normally the deposit is equivalent to 1 month's rent and is 100% refunded when the contract ends. Air-conditioned storage costs about 20-30% more than regular storage."
+  }
+]

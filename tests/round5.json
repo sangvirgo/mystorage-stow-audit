@@ -1,0 +1,35 @@
+{
+  "targetTotal": 50,
+  "priorSubmitted": 23,
+  "chat": [
+    {"id":"T24","category":"Conflicting source resolution","message":"Which location is actually listed as opening soon in the latest public MyStorage information: District 9 or Binh Loi? Please explain the conflict and provide the relevant official URLs."},
+    {"id":"T25","category":"Luggage unit and quote certainty","message":"I have two large suitcases to store in District 1 for six hours. Is the advertised hourly price per suitcase or per locker? Can you give a total, including any minimum duration, and say what you need to know before confirming it? Please include the booking link."},
+    {"id":"T26","category":"Percentage denominator","message":"For two otherwise equivalent monthly storage options, I was quoted VND 1,509,000 for valet and VND 1,890,000 for self-storage. Using these quoted numbers only, what percentage more expensive is self-storage, and what percentage cheaper is valet? Please show both calculations; do not treat these as verified current prices."},
+    {"id":"T27","category":"Discount certainty and total","message":"Mình thuê private self-storage 6 tháng, giá trước giảm giả sử là 2.000.000 đồng/tháng. Mức giảm công khai là một khoảng hay chắc chắn 10%? Tổng 6 tháng là bao nhiêu theo chính sách đó, chưa tính cọc và VAT? Cho mình nguồn chính sách và ghi rõ đây là ví dụ tính toán."},
+    {"id":"T28","category":"Basic protection limits","message":"For 2 cubic metres of belongings worth 20 million VND, how much would the Basic protection plan cover at most? Please state the published per-cubic-metre amount, overall cap and key exclusions, with the official protection-plan link. Do not assume full replacement value."},
+    {"id":"T29","category":"Pre-move cancellation vs termination","message":"I have not booked yet. Before I reserve private self-storage, where can I read the rules for cancelling before move-in versus ending storage after move-in? Are the deposit and unused rent refundable in each situation? Please distinguish published terms from anything staff must confirm and link the actual terms."},
+    {"id":"T30","category":"Delivery weekend cutoff","message":"Nếu gửi yêu cầu lấy đồ valet vào chiều thứ Sáu thì sáng Chủ nhật có chắc nhận được không? Quy tắc báo trước có tính cuối tuần không, phí yêu cầu gấp là bao nhiêu nếu có? Xin dẫn đúng điều khoản, đừng đặt lịch giúp mình."},
+    {"id":"T31","category":"Wine specification provenance","message":"Your wine page appears to show a humidity range as well as a live humidity reading. Which is the promised storage specification and which is a measurement? Please provide the published temperature and humidity ranges, backup-power information and a direct source link. Flag any inconsistency instead of combining the values."},
+    {"id":"T32","category":"Vietnamese unaccented ambiguous booking","message":"minh muon gui do o q7 tuan sau, chua biet kich thuoc. minh nen chon locker hay kho rieng? hoi minh thong tin can thiet va gui link dat cho, dung tao booking nhe"}
+  ],
+  "ui": [
+    {"id":"U01","kind":"layout","width":320,"height":568},
+    {"id":"U02","kind":"layout","width":360,"height":640},
+    {"id":"U03","kind":"layout","width":390,"height":844},
+    {"id":"U04","kind":"layout","width":412,"height":915},
+    {"id":"U05","kind":"layout","width":568,"height":320},
+    {"id":"U06","kind":"layout","width":667,"height":375},
+    {"id":"U07","kind":"layout","width":844,"height":390},
+    {"id":"U08","kind":"layout","width":768,"height":1024},
+    {"id":"U09","kind":"layout","width":1024,"height":768},
+    {"id":"U10","kind":"layout","width":1280,"height":720},
+    {"id":"U11","kind":"short-viewport","width":390,"height":400},
+    {"id":"U12","kind":"reflow","width":320,"height":900},
+    {"id":"U13","kind":"closed-menu-tab","width":390,"height":844},
+    {"id":"U14","kind":"open-menu-focus","width":390,"height":844},
+    {"id":"U15","kind":"empty-whitespace","width":390,"height":844},
+    {"id":"U16","kind":"multiline-draft","width":390,"height":844},
+    {"id":"U17","kind":"accessible-labels","width":390,"height":844},
+    {"id":"U18","kind":"rotate-draft","width":390,"height":844}
+  ]
+}
