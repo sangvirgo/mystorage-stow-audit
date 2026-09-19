@@ -2,6 +2,8 @@
 
 Black-box audit of https://stow.mystorage.vn (own account, real UI, one message at a time) plus two prototypes.
 
+Latest revised submission: [Word report](reports/final-report.docx), [PDF report](reports/final-report.pdf), [editable source](reports/final-report.md). These supersede the earlier submission draft and include seven captioned evidence/prototype images. Historical reports remain unchanged for traceability.
+
 | Path | What it is |
 |---|---|
 | `reports/submission.pdf` (source `reports/submission.md`) | The audit report: scope, method, findings, prototypes, what I rejected from AI output, time spent |

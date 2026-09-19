@@ -58,6 +58,7 @@
   .bubble { align-self:flex-end; max-width:85%; background:var(--bubble); color:#fff; padding:9px 14px; border-radius:16px 16px 4px 16px; }
   .thinking { display:flex; align-items:center; gap:8px; color:var(--muted); }
   .thinking svg { width:18px; height:18px; }
+  .demo-note { align-self:flex-start; max-width:85%; background:#fff3d6; color:#6b4a00; border:1px solid #f0d9a0; border-radius:12px; padding:8px 12px; font-size:14px; }
   .item-card { display:flex; align-items:center; gap:10px; padding:8px 12px; background:var(--panel); border:1px solid var(--line); border-radius:12px; font-size:14px; }
   .item-card b { flex:1; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .pill { background:#e5f0fb; color:var(--brand-dark); border-radius:999px; padding:1px 10px; font-size:12px; font-weight:600; white-space:nowrap; }
@@ -82,9 +83,9 @@
   html[data-mode="original"] .top { position:absolute; inset:0 0 auto 0; z-index:2; }
   html[data-mode="original"] .stage { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; }
   html[data-mode="original"] .dock { position:absolute; inset:auto 0 0 0; z-index:2; }
-  html[data-mode="original"][data-state="chat"] .stage { justify-content:flex-start; padding-top:var(--header-h); }
-  html[data-mode="original"][data-state="chat"] .chat { flex:1; overflow-y:auto; }
-  html[data-mode="original"][data-state="chat"] .stage { bottom:0; padding-bottom:var(--dock-h, 300px); }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .stage { justify-content:flex-start; padding-top:var(--header-h); }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .chat { flex:1; overflow-y:auto; }
+  html[data-mode="original"]:is([data-state="chat"],[data-state="typed"]) .stage { bottom:0; padding-bottom:var(--dock-h, 300px); }
 
   /* ---------- FIXED ---------- */
   html[data-mode="fixed"] .app { height:100vh; height:100dvh; display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
@@ -92,6 +93,9 @@
   /* margin-block:auto centres the content only when it fits; when it does not, it starts at the top and scrolls */
   html[data-mode="fixed"] .hero { margin-block:auto; }
   html[data-mode="fixed"] .chat { margin-block:0 auto; }
+  html[data-mode="fixed"] .chat, html[data-mode="fixed"] .bubble { min-width:0; overflow-wrap:anywhere; }
+  html[data-mode="fixed"] .composer textarea { min-width:0; }
+  html[data-mode="fixed"] .attach-block[hidden] { display:none; }
   html[data-mode="fixed"] .item-card, html[data-mode="fixed"] .attach { display:none; }
   html[data-mode="fixed"] .compact-attach { display:flex; align-items:center; gap:8px; overflow-x:auto; padding:0 0 8px; }
   html[data-mode="fixed"] .compact-attach .thumb { width:36px; height:36px; flex:none; }
@@ -113,10 +117,11 @@
     html[data-mode="fixed"] .composer { display:flex; align-items:flex-end; gap:6px; padding:4px 10px; border-radius:24px; }
     html[data-mode="fixed"] .composer textarea { flex:1; min-height:44px; align-self:center; }
     html[data-mode="fixed"] .tools { flex-wrap:nowrap; }
+    html[data-mode="fixed"] .tool.live { display:none; }
   }
 
-  html[data-state="welcome"] .chat, html[data-state="welcome"] .compact-attach, html[data-state="welcome"] .attach-block { display:none; }
-  html[data-state="chat"] .hero { display:none; }
+  html[data-state="welcome"] .chat, html[data-state="welcome"] .compact-attach, html[data-state="welcome"] .attach-block, html[data-state="typed"] .attach-block { display:none; }
+  html[data-state="chat"] .hero, html[data-state="typed"] .hero { display:none; }
   /* While a reply is being generated Stow shows only "+" and the stop button. */
   html[data-state="chat"] .tool:not(:first-child) { display:none; }
 </style>
@@ -188,6 +193,19 @@
   const $ = (id) => document.getElementById(id);
   const drawer = $('drawer'), scrim = $('scrim'), menuBtn = $('menu-btn');
   const fixed = root.dataset.mode === 'fixed';
+  if (fixed) {
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', 'true');
+    const remove = document.createElement('button');
+    remove.type = 'button'; remove.className = 'icon-btn'; remove.textContent = '✕';
+    remove.setAttribute('aria-label', 'Gỡ ảnh đính kèm');
+    remove.onclick = () => { document.querySelector('.attach-block').hidden = true; $('msg').focus(); };
+    document.querySelector('.compact-attach').append(remove);
+    document.querySelectorAll('.tool, .flag').forEach(button => {
+      button.disabled = true;
+      button.title = 'Không có trong bản demo bố cục';
+    });
+  }
 
   // Original behaviour leaves the closed drawer focusable (measured on stow.mystorage.vn).
   // The fix marks it inert and aria-hidden while closed.
@@ -195,7 +213,11 @@
     drawer.classList.toggle('open', open);
     scrim.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
-    if (fixed) { drawer.inert = !open; drawer.setAttribute('aria-hidden', String(!open)); }
+    if (fixed) {
+      document.querySelectorAll('.top, .stage, .dock').forEach(el => { el.inert = open; });
+      if (!open) menuBtn.focus();
+      drawer.inert = !open; drawer.setAttribute('aria-hidden', String(!open));
+    }
     if (open && fixed) $('close-btn').focus();
     if (!open && fixed) menuBtn.focus();
   }
@@ -205,9 +227,38 @@
   $('close-btn').onclick = () => setDrawer(false);
   scrim.onclick = () => setDrawer(false);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false); });
+  drawer.addEventListener('keydown', e => {
+    if (!fixed || e.key !== 'Tab') return;
+    const buttons = [...drawer.querySelectorAll('button:not(:disabled)')];
+    const first = buttons[0], last = buttons.at(-1);
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
 
   const msg = document.querySelector('textarea'), send = $('send');
-  msg.addEventListener('input', () => { send.disabled = msg.value.trim() === ''; });
+  const sendIcon = send.innerHTML;
+  function resetSend() { send.classList.remove('stop'); send.setAttribute('aria-label', 'Gửi'); send.innerHTML = sendIcon; send.disabled = !msg.value.trim(); }
+  msg.addEventListener('input', () => { send.disabled = root.dataset.state !== 'chat' && msg.value.trim() === ''; });
+  if (fixed) document.querySelector('.new-chat').onclick = () => {
+    root.dataset.state = 'welcome'; msg.value = ''; $('log').replaceChildren();
+    document.querySelector('.attach-block').hidden = true; resetSend(); setDrawer(false); msg.focus();
+  };
+  // This page is a layout demo: "Gửi" only shows the message locally. Nothing is sent anywhere.
+  $('composer').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (fixed && root.dataset.state === 'chat') {
+      root.dataset.state = 'typed'; document.querySelector('.thinking')?.remove(); resetSend(); msg.focus(); return;
+    }
+    const text = msg.value.trim();
+    if (!text || root.dataset.state === 'chat') return;
+    const log = $('log');
+    if (root.dataset.state === 'welcome') { root.dataset.state = 'typed'; log.replaceChildren(); }
+    const bubble = document.createElement('div'); bubble.className = 'bubble'; bubble.textContent = text;
+    const note = document.createElement('div'); note.className = 'demo-note'; note.textContent = 'Bản demo bố cục: tin nhắn không được gửi tới Stow.';
+    log.append(bubble, note);
+    msg.value = ''; send.disabled = true;
+    $('stage').scrollTop = $('stage').scrollHeight;
+  });
   document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => { msg.value = c.textContent; send.disabled = false; msg.focus(); }));
 
   if (root.dataset.state === 'chat') { send.classList.add('stop'); send.disabled = false; send.setAttribute('aria-label', 'Dừng'); send.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="2" fill="#fff"/></svg>'; }

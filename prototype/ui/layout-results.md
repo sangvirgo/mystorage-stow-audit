@@ -1,6 +1,6 @@
 # Layout check: original behaviour vs fixed
 
-Generated 2026-09-19T11:16:22.248Z with headless Chromium.
+Generated 2026-09-19T14:04:13.931Z with headless Chromium.
 
 "Original" is an approximation of the behaviour measured on stow.mystorage.vn: the same kind of failure (content centred in a fixed-height area that cannot scroll, with the composer laid over it), but not Stow's own CSS, so the exact pixels differ. Measured on Stow itself at 320×568: heading top y=22 under a 57 px header, third shortcut y=403–449, composer textbox y=410–464; no overlap from 360×640 up. "Fixed" is the same look with the fixes applied.
 

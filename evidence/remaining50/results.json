@@ -1,0 +1,114 @@
+[
+  {
+    "id": "T25",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:34:54.608Z",
+    "totalMs": 58240,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T25.png",
+    "answerScreenshot": "evidence/remaining50/T25-answer.png"
+  },
+  {
+    "id": "T26",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:35:59.643Z",
+    "totalMs": 14716,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T26.png",
+    "answerScreenshot": "evidence/remaining50/T26-answer.png"
+  },
+  {
+    "id": "T27",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:37:04.677Z",
+    "totalMs": 16254,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T27.png",
+    "answerScreenshot": "evidence/remaining50/T27-answer.png"
+  },
+  {
+    "id": "T28",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:38:09.719Z",
+    "totalMs": 63287,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T28.png",
+    "answerScreenshot": "evidence/remaining50/T28-answer.png"
+  },
+  {
+    "id": "T29",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:39:15.890Z",
+    "totalMs": 30513,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [
+      {
+        "time": "2026-09-19T11:39:24.518Z",
+        "method": "POST",
+        "host": "o4510216515289088.ingest.us.sentry.io",
+        "path": "/api/4510221149208576/envelope/",
+        "status": 429
+      }
+    ],
+    "screenshot": "evidence/remaining50/T29.png",
+    "answerScreenshot": "evidence/remaining50/T29-answer.png"
+  },
+  {
+    "id": "T30",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:40:21.035Z",
+    "totalMs": 28397,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T30.png",
+    "answerScreenshot": "evidence/remaining50/T30-answer.png"
+  },
+  {
+    "id": "T31",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:41:26.120Z",
+    "totalMs": 63887,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T31.png",
+    "answerScreenshot": "evidence/remaining50/T31-answer.png"
+  },
+  {
+    "id": "T32",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:42:33.069Z",
+    "totalMs": 20381,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/remaining50/T32.png",
+    "answerScreenshot": "evidence/remaining50/T32-answer.png"
+  }
+]

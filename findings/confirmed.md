@@ -2,11 +2,13 @@
 
 ## Round 5 addendum (18:17 Vietnam time)
 
-New measurements and screenshots are recorded in [Round 5 evidence](round5-evidence.md). The harness now records 24 chat attempts (T01–T24), plus 18 specifically logged Round 5 UI cases: 42 tracked attempts, not 50. T24 stopped on an external Sentry HTTP 429 without an assistant answer; T25–T32 remain unsent. Manual tests are additional and not included in that total.
+New measurements and screenshots are recorded in [Round 5 evidence](round5-evidence.md). The first run recorded 24 chat attempts (T01–T24), plus 18 specifically logged Round 5 UI cases. Two affected chat cases were retried once as R429-T23 and R429-T24, and T25–T32 were then completed, so the ledger now contains 50 unique cases and 52 total executions: 34 chat submissions including retries and 18 UI cases. Manual tests are additional and not included in that total.
 
 This pass reproduces welcome-screen shortcut occlusion at 320×568, 568×320, 667×375, 844×390 and 390×400 using screenshots plus centre-point hit-tests. It therefore supplies new evidence for the previously unreported landscape finding below. It does not prove that scrolling cannot reveal the controls. Closed-drawer off-screen focus is reproduced; open-drawer focus reaches background controls. Escape closes the drawer successfully. Empty-send, multiline-draft scrolling and draft retention on rotation passed their specific checks.
 
-The prior findings and manual confirmations below are preserved as historical context. Full measurements: `evidence/round5/results.json`. Ready-to-share addendum: `reports/round5-evidence.docx`.
+The prior findings and manual confirmations below are preserved as historical context. Full measurements: `evidence/round5/results.json`, `evidence/retry429/results.json` and `evidence/remaining50/results.json`. Ready-to-share addendum: `reports/round5-evidence.docx`.
+
+The two retries completed without HTTP errors. R429-T23 provides fresh evidence for the unsupported fixed discount, missing pricing source, live-availability claim and the repeated “40% lower” comparison; its displayed 1,509,000 VND versus 1,890,000 VND is about 20.2% lower. R429-T24 provides a completed location answer, but the public locations page still conflicts with the answer's “latest official” framing; keep the Bình Lợi waitlist and September 6 date as internal-confirmation candidates.
 
 Confirmation basis: the user re-ran the questions by hand in fresh chats, and Claude cross-checked replies against public mystorage.vn pages. Items marked **PENDING** still need one manual check by the user before they go in the report.
 

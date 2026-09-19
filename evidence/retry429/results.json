@@ -1,0 +1,30 @@
+[
+  {
+    "id": "R429-T23",
+    "originalId": "T23",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:25:15.785Z",
+    "totalMs": 29483,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/retry429/R429-T23.png",
+    "answerScreenshot": "evidence/retry429/R429-T23-answer.png"
+  },
+  {
+    "id": "R429-T24",
+    "originalId": "T24",
+    "status": "completed",
+    "submittedAt": "2026-09-19T11:26:20.832Z",
+    "totalMs": 37608,
+    "stopReason": null,
+    "pageErrors": [
+      "Invalid or unexpected token"
+    ],
+    "errors": [],
+    "screenshot": "evidence/retry429/R429-T24.png",
+    "answerScreenshot": "evidence/retry429/R429-T24-answer.png"
+  }
+]

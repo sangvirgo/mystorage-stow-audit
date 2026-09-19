@@ -238,3 +238,19 @@ The audit now has several independent, consequential candidates rather than just
 7. L1: internal prompt/tool/RAG instructions shipped in a public client bundle.
 
 C1, C3, and C5 remain useful secondary examples, but their behavior is not uniformly reproducible in fresh chats.
+
+## Verification round 5 — authorized retries after external telemetry 429 (2026-09-19)
+
+The two messages that were previously stopped by the guard were retried exactly once with new evidence IDs, using fresh browser contexts and the same 65-second production gap. The retry guard ignored third-party Sentry 429s but still stopped on an own-origin STOW 429/5xx, auth issue or CAPTCHA. Both retries completed with no HTTP errors; both page loads still emitted the recurring `Invalid or unexpected token` page error.
+
+### R429-T23 — pricing/VAT answer
+
+Stow returned 1,890,000 VND before VAT, 2,041,000 VND after 8% VAT, a 10% `PROMO-2026-DUR6`, 7 units available, and a 1,509,000 VND valet alternative “about 40% lower”. The user explicitly asked for a source, but the answer supplied no link. The VAT arithmetic is internally consistent after rounding. The 1,509,000 versus 1,890,000 pair is about 20.2% lower, so the 40% comparison remains a reproducible contradiction. The fixed promotion, live availability and claim that the pricing database verified them need internal confirmation.
+
+Evidence: `evidence/transcripts/R429-T23.md`, `evidence/retry429/R429-T23.png`, `evidence/retry429/R429-T23-answer.png`.
+
+### R429-T24 — location conflict answer
+
+Stow completed in 37.6 seconds and stated Bình Lợi is opening soon while District 9 is already open, with a District 9 booking link and AutoLocker portal link. This resolves the answer's own internal story better than the first stopped run. The public locations page still says “District 9 opening soon” in its summary while the MT Eastmark section says the site is operating. It does not visibly establish the Bình Lợi waitlist/date in the source snapshot used here. Keep this as a source-of-truth/provenance candidate until the latest internal roadmap is confirmed; do not call it a chatbot timeout.
+
+Evidence: `evidence/transcripts/R429-T24.md`, `evidence/retry429/R429-T24.png`, `evidence/retry429/R429-T24-answer.png`.

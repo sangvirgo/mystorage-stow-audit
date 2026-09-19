@@ -5,11 +5,11 @@ date: "19 September 2026"
 
 # Outcome and counting method
 
-The requested target was 50 tracked cases, combining message tests and responsive/accessibility tests. The run stopped early when the existing HTTP 429 guard fired. **42 cases were attempted: 24 chat submissions and 18 UI cases.** Of these, 21 historical chat replies and 18 new UI cases have completed evidence; three chat attempts ended without a completed captured answer (T18, T23, T24). **T25–T32 were not sent.** No retry was performed.
+The requested target was 50 tracked cases, combining message tests and responsive/accessibility tests. The first run recorded **42 original attempts: 24 chat submissions and 18 UI cases.** The two affected chat cases were then retried once, and T25–T32 were completed under the same message-gap and safety rules. The final ledger contains **50 unique cases: 32 chat cases (T01–T32) and 18 UI cases**, with **52 total executions** because R429-T23 and R429-T24 are authorized retries. No further message tests are planned.
 
-This is a harness ledger, not the lifetime total of all account activity. Previously reported manual conversations, uploads and older UI observations are additional and are not included in the 42. UI case identifiers in this report are scoped to **Round 5** (R5-U01, etc.); they are not the U01–U03 originally proposed in `findings/test-plan.md`.
+This is a harness ledger, not the lifetime total of all account activity. Previously reported manual conversations and uploads are additional and are not included in the 50. UI case identifiers in this report are scoped to **Round 5** (R5-U01, etc.); they are not the U01–U03 originally proposed in `findings/test-plan.md`.
 
-Files: `tests/round5.json` defines the 27 planned new cases; `src/round5.ts` executes them; `evidence/round5/results.json` contains measurements; `evidence/state/sent.json` contains chat submission timestamps. The latest submission draft and prototype were preserved.
+Files: `tests/round5.json` defines the new cases; `src/round5.ts` executes the original UI round; `src/retry-429.ts` executes the two authorized retries; `src/run-remaining.ts` executes T25–T32; `evidence/round5/results.json`, `evidence/retry429/results.json` and `evidence/remaining50/results.json` contain measurements; `evidence/state/sent.json` contains chat submission timestamps. The latest submission draft and prototype were preserved.
 
 # Method and limitations
 
@@ -17,7 +17,7 @@ Files: `tests/round5.json` defines the 27 planned new cases; `src/round5.ts` exe
 - The 18 UI cases reused one initial page load and changed viewport or local UI state. No message was sent during those cases. They are not 18 independent reloads.
 - No transaction, booking, upload or additional injection test was performed.
 - Planned chat messages use fresh browser contexts and at least 65 seconds between submissions. The harness rejects existing assistant history, duplicate IDs and rerunning this round over its saved results.
-- The existing guard stops on any 429, authentication problems, CAPTCHA or repeated own-origin server errors. T24 hit that guard.
+- The original guard stopped on any 429. The retry/remaining guard stopped on authentication problems, CAPTCHA and own-origin STOW 429/5xx responses, while recording third-party telemetry errors. T29 saw one external Sentry 429 but completed; no new case saw an own-origin 429.
 - Screenshots, bounding rectangles and `elementFromPoint` hit-tests support layout findings. Hit-tests check the centre of each shortcut, not every pixel or every possible scroll position.
 - Short-height viewport testing is not a real mobile keyboard test. 320-CSS-pixel reflow is not a browser-zoom test. No Safari, Firefox, physical phone or screen reader was used.
 - Proposed fixes are recommendations; no STOW source code was changed.
@@ -101,17 +101,41 @@ Both actual page loads in this round (the shared UI page and the fresh T24 page)
 
 **Fix:** inspect the error stack and deployed asset references internally; fail a page-load smoke test on unexpected `pageerror` events.
 
-# Chat attempt T24: no completed response captured before guard stop
+# Original T24 attempt and completed retry
 
 Submitted at **2026-09-19 11:15:44.916 UTC / 18:15:44.916 Vietnam time**. The question asked which location was opening soon and requested official sources.
 
-At **11:17:03.901 UTC**, the browser received HTTP 429 from the external Sentry ingestion endpoint. The harness stopped, saved a screenshot, and captured no assistant text. The screenshot shows the submitted message but no response. This is a delivery/reliability observation, not evidence of a false factual answer. It is also not proof that STOW's own chat endpoint was rate-limited or that Sentry caused the missing response. Stopping the client prevents observing any later completion.
+At **11:17:03.901 UTC**, the browser received HTTP 429 from the external Sentry ingestion endpoint. The original harness stopped, saved a screenshot, and captured no assistant text. This was a harness stop, not proof that STOW's own chat endpoint was rate-limited. A single retry later completed in 37.6 seconds with no HTTP errors, confirming that T24 should not be reported as a chatbot timeout.
 
-**Evidence:** `evidence/transcripts/T24.md`, `evidence/round5/T24-stopped.png`, `evidence/network/errors.jsonl`, `evidence/round5/results.json`.
+**Original evidence:** `evidence/transcripts/T24.md`, `evidence/round5/T24-stopped.png`, `evidence/network/errors.jsonl`, `evidence/round5/results.json`.
 
-**Recommended investigation:** correlate the submitted time with server logs, request completion and conversation persistence. Separate telemetry failures from chat failures in the product's monitoring. Keep the stopped test marked incomplete.
+**Completed retry:** `evidence/transcripts/R429-T24.md`, `evidence/retry429/R429-T24.png`, `evidence/retry429/R429-T24-answer.png`, `evidence/retry429/results.json`.
+
+**Conclusion:** keep the original stop as a harness/observability event. Use the completed retry as the content evidence below. Separate telemetry failures from chat failures in the product's monitoring.
 
 ![T24 at guard stop: user question visible, no assistant answer captured](../evidence/round5/T24-stopped.png){width=6.2in}
+
+![R429-T24 completed answer: District 9 active, Bình Lợi opening soon](../evidence/retry429/R429-T24-answer.png){width=6.2in}
+
+# Retry evidence: T23 pricing and VAT grounding
+
+`R429-T23` retried the original T23 question in a fresh browser context and completed in 29.5 seconds. No HTTP errors were recorded. The answer is useful evidence even though its numbers should be checked against a live quote: it gives no source URL despite being asked for one, presents a fixed `PROMO-2026-DUR6` and 10% discount as verified, claims 7 units are available, and repeats “about 40% lower” for valet while comparing 1,509,000 to 1,890,000 VND. That pair is approximately 20.2% lower, not 40% lower.
+
+The VAT arithmetic is internally consistent after rounding: 1,890,000 × 1.08 ≈ 2,041,000 and 1,890,000 × 0.90 × 1.08 ≈ 1,837,000. The problem is provenance and the unsupported commercial claims, not those two arithmetic operations.
+
+**Candidate finding:** the assistant makes a source-requested pricing answer look live and verified without a clickable source, exposes an apparently internal promotion identifier, asserts live availability, and repeats a contradictory percentage. Keep the availability and promotion truth as candidates until MyStorage's current pricing database or booking flow confirms them. The percentage contradiction is supported by Stow's own displayed numbers.
+
+**Fix:** return a source or live quote identifier, label estimates, calculate comparison percentages in code from the displayed pair, and never expose internal promotion IDs unless they are customer-facing policy identifiers.
+
+**Evidence:** `evidence/transcripts/R429-T23.md`, `evidence/retry429/R429-T23.png`, `evidence/retry429/R429-T23-answer.png`.
+
+![R429-T23 completed answer: unsourced live pricing, fixed discount and 40% claim](../evidence/retry429/R429-T23-answer.png){width=6.2in}
+
+# Retry evidence: T24 resolves the public location conflict only partially
+
+The completed answer states that Bình Lợi is opening soon and District 9 is already operating, gives a District 9 booking URL and an AutoLocker portal URL, and offers a Bình Lợi waitlist. This is a stronger answer than the earlier incomplete attempt and is internally coherent with the new response.
+
+The public locations page still contains conflicting information: its summary says “District 9 opening soon”, while the MT Eastmark section says the District 9 lockers are operating. The public page does not visibly establish the Bình Lợi waitlist in the evidence used here, so the answer's “official” date, waitlist and opening plan need internal confirmation. Report this as a source-of-truth/provenance candidate, not as proven fabrication.
 
 # Positive controls
 
@@ -121,20 +145,38 @@ At **11:17:03.901 UTC**, the browser received HTTP 429 from the external Sentry 
 - R5-U12: at 320×900, no document horizontal overflow or shortcut overlap was measured. The short-height failures are not universal small-width failures.
 - Escape closes the open drawer.
 
-# Planned message cases not executed
+# Final chat cases T25–T32
 
-| Case | Purpose | Status |
+All eight planned remaining cases were submitted once in fresh browser contexts. Each has a full-page screenshot, an answer crop and a transcript in `evidence/remaining50/` / `evidence/transcripts/`.
+
+| Case | Result | Evidence-backed observation |
 |---|---|---|
-| T25 | Luggage per-locker/per-suitcase unit, quote certainty and booking link | Not sent |
-| T26 | Both percentage denominators from user-supplied prices | Not sent |
-| T27 | Published discount range and illustrative six-month total | Not sent |
-| T28 | Basic protection per-CBM amount, cap and exclusions | Not sent |
-| T29 | Pre-move cancellation versus post-move termination | Not sent |
-| T30 | Friday-to-Sunday delivery notice and urgent surcharge | Not sent |
-| T31 | Wine specification versus live reading | Not sent |
-| T32 | Unaccented Vietnamese, ambiguous product choice and booking path | Not sent |
+| T25 | Completed, 58.2 s | Correctly says AutoLocker price is per locker and gives a 4-hour minimum, but does not state the requested current price or six-hour estimate. It provides the D1 booking link. |
+| T26 | Completed, 14.7 s | Correctly computes both denominators: 25.25% more expensive and 20.16% cheaper. Positive control for the intermittent “40%” issue. |
+| T27 | Completed, 16.3 s | Again presents the published 5–10% style discount as exactly 10% and adds an unsourced “40% cheaper” Valet claim; no clickable policy source. |
+| T28 | Completed, 63.3 s | Again omits Basic’s 500,000 VND/CBM and 10,000,000 VND cap, referring the customer to a formal agreement instead. |
+| T29 | Completed, 30.5 s | Distinguishes pre-move cancellation from early move-out, but gives only the homepage and says refund eligibility must be confirmed case by case. One external Sentry 429 was recorded; the answer still completed. |
+| T30 | Completed, 28.4 s | Repeats Mon–Sat 09:00–18:00 and an unpriced Sunday/out-of-hours rule without an official terms link; this strengthens the hours/terms mixing finding. |
+| T31 | Completed, 63.9 s | Repeats 55–65% humidity and approximately 15°C, calls them the promised specification and links only to the homepage; this strengthens the wine grounding finding. |
+| T32 | Completed, 20.4 s | Handles unaccented Vietnamese and provides a Q7 AutoLocker link, but again says a Q7 private facility is preparing to launch and repeats “about 40%” without a source. |
 
-The prompts are ready in `tests/round5.json`; their presence does not mean they passed or were submitted. This round adds responsive and accessibility evidence but no completed new response-content test.
+The case-level transcripts are `evidence/transcripts/T25.md` through `T32.md`. The corresponding images are [indexed here](../evidence/screenshots/INDEX.md). The final case count is 50 unique cases; the two R429 IDs are retries, not additional unique cases.
+
+![T25: per-locker answer without the requested current price](../evidence/remaining50/T25-answer.png){width=5.8in}
+
+![T26: correct two-denominator percentage calculation](../evidence/remaining50/T26-answer.png){width=5.8in}
+
+![T27: fixed 10% discount and unsourced 40% claim](../evidence/remaining50/T27-answer.png){width=5.8in}
+
+![T28: Basic protection figures omitted again](../evidence/remaining50/T28-answer.png){width=5.8in}
+
+![T29: cancellation/refund answer with homepage-only source](../evidence/remaining50/T29-answer.png){width=5.8in}
+
+![T30: repeated Mon–Sat delivery-hours claim](../evidence/remaining50/T30-answer.png){width=5.8in}
+
+![T31: repeated narrowed wine specification](../evidence/remaining50/T31-answer.png){width=5.8in}
+
+![T32: unaccented Vietnamese handled, but Q7 roadmap and 40% claims remain](../evidence/remaining50/T32-answer.png){width=5.8in}
 
 # Public reference checks
 

@@ -3,6 +3,7 @@
 #   docker compose run --rm baseline   score Stow's recorded replies, no key needed
 #   docker compose run --rm eval       baseline vs proposed answers, needs GEMINI_API_KEY in .env
 #   docker compose run --rm demo       rebuilds demo/index.html from results/
+#   docker compose up web              serves both demo pages at http://localhost:8787/demo/ and /ui/ (Ctrl+C to stop)
 x-common: &common
   build: .
   volumes:
@@ -27,3 +28,11 @@ services:
     volumes:
       - ./results:/app/results
       - ./demo:/app/demo
+  web:
+    # Static files only: no framework, no build step. Bound to localhost; change to "8787:80" to open it to your network.
+    image: nginx:alpine
+    ports:
+      - "127.0.0.1:8787:80"
+    volumes:
+      - ./demo:/usr/share/nginx/html/demo:ro
+      - ./ui:/usr/share/nginx/html/ui:ro

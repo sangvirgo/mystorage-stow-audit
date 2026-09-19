@@ -60,6 +60,7 @@ cp .env.example .env                # put your Gemini key in .env yourself (giti
 docker compose run --rm eval node src/run.ts --set=dev --runs=3
 docker compose run --rm eval node src/run.ts --set=holdout --runs=3
 docker compose run --rm demo        # rebuilds demo/index.html from results/
+docker compose up web               # http://localhost:8787/demo/ (answer inspector) and /ui/ (responsive fix)
 ```
 
 Without Docker (Node 22.18 or newer, no dependencies): `npm test`, `npm run baseline`, `node --env-file=.env src/run.ts --set=holdout --runs=3`, `npm run demo`.
