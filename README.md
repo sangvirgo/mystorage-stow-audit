@@ -2,7 +2,7 @@
 
 Black-box audit of https://stow.mystorage.vn (own account, real UI, one message at a time) plus two prototypes.
 
-Latest revised submission: [Word report](reports/final-report.docx), [PDF report](reports/final-report.pdf), [editable source](reports/final-report.md). These supersede the earlier submission draft and include seven captioned evidence/prototype images. Historical reports remain unchanged for traceability.
+**Live prototypes (no install):** [Answer Inspector](https://sangvirgo.github.io/mystorage-stow-audit/demo/) · [Chat screen rebuild](https://sangvirgo.github.io/mystorage-stow-audit/ui/)
 
 | Path | What it is |
 |---|---|

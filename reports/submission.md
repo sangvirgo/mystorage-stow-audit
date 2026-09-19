@@ -6,7 +6,9 @@ date: "19 September 2026"
 
 **Applicant:** Nguyen Luu Tan Sang · tansang.dev@gmail.com · 0379641599
 
-**Code, evidence and demos:** [github.com/sangvirgo/mystorage-stow-audit](https://github.com/sangvirgo/mystorage-stow-audit) (open `prototype/demo/index.html` and `prototype/ui/index.html` in a browser) · **Time spent:** 8 hours
+**Live prototypes (no install):** [Answer Inspector](https://sangvirgo.github.io/mystorage-stow-audit/demo/) · [Chat screen rebuild](https://sangvirgo.github.io/mystorage-stow-audit/ui/) · **Code and evidence:** [github.com/sangvirgo/mystorage-stow-audit](https://github.com/sangvirgo/mystorage-stow-audit) · **Time spent:** 8 hours
+
+**Earlier projects:** [KilnFlow, multi-agent AI workflow](https://github.com/sangvirgo/kilnflow) (live demo: [task.tansang.dpdns.org](https://task.tansang.dpdns.org/)) · [Secure Task and Document Management Platform](https://github.com/sangvirgo/task-doc-microservices) · [GitHub profile](https://github.com/sangvirgo) · CV on the first page.
 
 # 1. Summary
 
@@ -318,7 +320,7 @@ cp .env.example .env                # put a Gemini API key in .env (never commit
 docker compose run --rm eval node src/run.ts --set=holdout --runs=3
 ```
 
-Without Docker: Node 22.18 or newer, no dependencies (`npm test`, `npm run demo`), and open the two `index.html` files. To re-measure the layout: `npm install` at the repository root, then `node prototype/ui/check-layout.mjs`. The two long model runs in this report used Node directly; Docker ran the tests, the demo build and a live case. A re-run of the model evaluation will not reproduce the tables exactly.
+The two prototypes are also live at [sangvirgo.github.io/mystorage-stow-audit](https://sangvirgo.github.io/mystorage-stow-audit/). Without Docker: Node 22.18 or newer, no dependencies (`npm test`, `npm run demo`), and open the two `index.html` files. To re-measure the layout: `npm install` at the repository root, then `node prototype/ui/check-layout.mjs`. The two long model runs in this report used Node directly; Docker ran the tests, the demo build and a live case. A re-run of the model evaluation will not reproduce the tables exactly.
 
 # 10. What I rejected or rewrote from AI output, and why
 
